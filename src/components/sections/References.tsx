@@ -7,24 +7,24 @@ const row2 = ["hoover","viltur","candy","bundy","altinok","bergama","billur","co
 function LogoRow({ logos, reverse }: { logos: string[]; reverse?: boolean }) {
   return (
     <div className="relative">
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-surface-dark to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-surface-dark to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-surface-dark to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-surface-dark to-transparent z-10" />
       <div
-        className="animate-marquee marquee-track py-3"
+        className="animate-marquee marquee-track py-4"
         style={reverse ? { animationDirection: "reverse", animationDuration: "35s" } : undefined}
       >
         {[0, 1].map((setIdx) => (
-          <div key={setIdx} className="flex items-center gap-6 flex-shrink-0 px-3">
+          <div key={setIdx} className="flex items-center gap-8 flex-shrink-0 px-4">
             {logos.map((name) => (
               <div
                 key={`${setIdx}-${name}`}
-                className="flex-shrink-0 bg-white/[0.03] border border-white/[0.05] rounded-xl p-5 w-[140px] h-[60px] flex items-center justify-center"
+                className="flex-shrink-0 bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 w-[160px] h-[72px] flex items-center justify-center hover:bg-white/[0.06] transition-colors duration-300"
               >
                 <Image
                   src={`/references/${name}.png`}
                   alt={name}
-                  width={100}
-                  height={40}
+                  width={110}
+                  height={44}
                   className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 brightness-0 invert"
                 />
               </div>
@@ -38,7 +38,7 @@ function LogoRow({ logos, reverse }: { logos: string[]; reverse?: boolean }) {
 
 export default function References() {
   return (
-    <section className="bg-surface-dark py-32 lg:py-40 border-y border-gray-800/50 overflow-hidden">
+    <section className="bg-surface-dark py-32 lg:py-44 border-y border-white/[0.04] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <SectionTitle
           label="Referanslarımız"
@@ -47,7 +47,7 @@ export default function References() {
         />
       </div>
       <LogoRow logos={row1} />
-      <div className="mt-4">
+      <div className="mt-6">
         <LogoRow logos={row2} reverse />
       </div>
     </section>

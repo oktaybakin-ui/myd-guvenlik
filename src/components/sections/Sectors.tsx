@@ -12,41 +12,41 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section className="relative py-32 lg:py-40 overflow-hidden">
+    <section className="relative py-36 lg:py-48 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <Image src="/services/services4.png" alt="" fill className="object-cover" style={{ objectPosition: "center 30%" }} />
-        <div className="absolute inset-0 bg-black/75" />
-        <div className="absolute inset-0 bg-gradient-to-b from-red-dark/20 via-transparent to-dark/90" />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-red-dark/15 via-transparent to-dark/95" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <ScrollReveal>
-          <div className="flex items-center gap-3 justify-center mb-4">
-            <span className="w-6 h-0.5 bg-red rounded" />
-            <span className="text-red text-[13px] font-semibold tracking-[0.15em] uppercase">Hizmet Verdiğimiz Sektörler</span>
+          <div className="flex items-center gap-3 justify-center mb-6">
+            <span className="w-10 h-[2px] bg-red rounded-full" />
+            <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Hizmet Verdiğimiz Sektörler</span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-7">
             Her Sektöre Özel{" "}
             <span className="text-gradient-red">Güvenlik Çözümleri</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-[1.8] mb-14">
+          <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-[1.9] mb-16">
             Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap justify-center gap-3.5">
+          <div className="flex flex-wrap justify-center gap-4">
             {sectors.map((s) => (
               <span
                 key={s}
-                className="sector-pill text-white rounded-full px-7 py-3.5 text-sm font-medium cursor-default"
+                className="sector-pill text-white rounded-full px-8 py-4 text-base font-medium cursor-default"
               >
                 {s}
               </span>
