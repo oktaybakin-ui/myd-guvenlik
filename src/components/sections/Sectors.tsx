@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const sectors = [
@@ -12,13 +11,18 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section className="relative py-36 lg:py-48 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <Image src="/services/services4.png" alt="" fill className="object-cover" style={{ objectPosition: "center 30%" }} />
-        <div className="absolute inset-0 bg-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-red-dark/15 via-transparent to-dark/95" />
-      </div>
+    <section
+      className="relative py-36 lg:py-48 overflow-hidden"
+      style={{
+        backgroundImage: "url('/services/services4.png')",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center 30%",
+      }}
+    >
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-red-dark/15 via-transparent to-dark/95" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <ScrollReveal>

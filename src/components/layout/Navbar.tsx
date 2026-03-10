@@ -21,7 +21,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -35,10 +35,10 @@ export default function Navbar() {
       <TopBar hidden={scrolled} />
 
       <nav
-        className={`transition-all duration-500 ${
+        className={`transition-all duration-300 ${
           scrolled
-            ? "bg-dark/95 backdrop-blur-xl shadow-xl shadow-black/30 border-b border-white/[0.04]"
-            : "bg-dark/30 backdrop-blur-sm"
+            ? "bg-black/90 backdrop-blur-md shadow-xl shadow-black/30 border-b border-gray-800/50"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between relative">

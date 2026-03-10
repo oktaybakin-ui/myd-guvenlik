@@ -78,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="hidden md:block w-full lg:w-2/5"
+            className="hidden lg:block w-full lg:w-2/5"
           >
             <div className="relative">
               <div className="rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/50">
