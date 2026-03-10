@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #0a1628;
+  --color-navy-light: #132040;
+  --color-navy-dark: #060e1a;
+  --color-gold: #c8a951;
+  --color-gold-light: #e0c778;
+  --color-gold-dark: #a8892e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a1628;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8a951;
+  border-radius: 4px;
+}
+
+/* Counter Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(200, 169, 81, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(200, 169, 81, 0);
+  }
+}
+
+.pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* Gradient overlay for hero */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(10, 22, 40, 0.7) 100%);
+}
+
+/* Service card hover */
+.service-card {
+  transition: all 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(200, 169, 81, 0.15);
+}
+
+/* Section divider */
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #c8a951, #e0c778);
+}
