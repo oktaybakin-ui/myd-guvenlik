@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MYD Özel Güvenlik Hizmetleri",
+  title: {
+    default: "MYD Özel Güvenlik Hizmetleri",
+    template: "%s | MYD Özel Güvenlik",
+  },
   description:
-    "MYD Özel Güvenlik - Profesyonel güvenlik hizmetleri, fiziki koruma, teknolojik güvenlik çözümleri ve eğitim hizmetleri.",
+    "MYD Özel Güvenlik - Profesyonel güvenlik hizmetleri, fiziki koruma, elektronik güvenlik, etkinlik güvenliği ve güvenlik danışmanlığı.",
   keywords:
-    "özel güvenlik, güvenlik hizmetleri, fiziki koruma, güvenlik eğitimi, MYD güvenlik",
+    "özel güvenlik, güvenlik hizmetleri, fiziki koruma, güvenlik eğitimi, MYD güvenlik, Isparta güvenlik",
 };
 
 export default function RootLayout({
@@ -16,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
