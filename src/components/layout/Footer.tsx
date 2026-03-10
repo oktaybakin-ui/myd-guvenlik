@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="bg-surface-dark border-t border-gray-800">
       {/* Main */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div>
@@ -116,7 +116,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-gray-600 text-xs">&copy; {new Date().getFullYear()} MYD Özel Güvenlik Hizmetleri. Tüm hakları saklıdır.</p>
           <div className="flex gap-5 text-xs text-gray-600">
             <a href="#" className="hover:text-gray-400 transition-colors">Gizlilik Politikası</a>

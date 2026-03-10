@@ -32,10 +32,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top Bar */}
       <TopBar hidden={scrolled} />
 
-      {/* Main Nav */}
       <nav
         className={`transition-all duration-500 ${
           scrolled
@@ -43,39 +41,37 @@ export default function Navbar() {
             : "bg-dark/30 backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
-          {/* Logo */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+          {/* Logo — Sol */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <div className="bg-white rounded-lg p-1.5">
-              <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={32} height={32} className="rounded" />
+              <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={34} height={34} className="rounded" />
             </div>
-            <div className="leading-tight hidden sm:block">
-              <span className="text-base font-bold text-white">MYD</span>
+            <div className="leading-tight">
+              <span className="text-lg font-bold text-white">MYD</span>
               <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
             </div>
           </Link>
 
-          {/* Desktop Links */}
-          <ul className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`nav-link text-[13px] font-medium uppercase tracking-[1px] transition-colors ${
-                    pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          {/* Menü + CTA — Sağ */}
+          <div className="hidden lg:flex items-center gap-10">
+            <ul className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
+                      pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <Link
               href="/iletisim"
-              className="btn-primary text-white font-semibold px-6 py-2.5 rounded-full text-sm"
+              className="btn-primary text-white font-semibold px-7 py-3 rounded-full text-sm"
             >
               Teklif Alın
             </Link>
@@ -88,17 +84,14 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu - Full Screen Overlay */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 top-0 bg-dark/98 backdrop-blur-xl z-40 lg:hidden flex items-center justify-center">
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 text-white p-2"
-          >
+        <div className="fixed inset-0 bg-dark/98 backdrop-blur-xl z-40 lg:hidden flex items-center justify-center">
+          <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-white p-2">
             <FiX size={28} />
           </button>
           <nav className="text-center">
-            <ul className="space-y-6">
+            <ul className="space-y-7">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link

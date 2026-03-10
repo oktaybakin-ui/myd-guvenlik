@@ -15,7 +15,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
 body {
   background: var(--color-dark);
@@ -198,6 +198,18 @@ body {
 }
 .img-zoom:hover img, .img-zoom:hover > div {
   transform: scale(1.05);
+}
+
+/* ═══ Section Label ═══ */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-red);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 /* ═══ WhatsApp pulse ═══ */

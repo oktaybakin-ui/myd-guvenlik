@@ -51,7 +51,7 @@ export default function EgitimlerPage() {
           <div className="space-y-20">
             {trainings.map((t, i) => (
               <ScrollReveal key={t.title} delay={0.05}>
-                <div className={`grid lg:grid-cols-2 gap-16 lg:gap-20 items-center ${i % 2 === 1 ? "direction-rtl" : ""}`}>
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                   {/* Image */}
                   <div className={`relative ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <div className="rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/30 img-zoom">
@@ -65,7 +65,7 @@ export default function EgitimlerPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
                     </div>
                     {/* Badge */}
-                    <div className="absolute -bottom-5 -right-5 bg-red text-white rounded-xl px-6 py-4 shadow-2xl shadow-red/20">
+                    <div className="absolute -bottom-5 -right-5 bg-red text-white rounded-xl px-6 py-4 shadow-2xl shadow-red/20 hidden sm:block">
                       <div className="flex items-center gap-2">
                         <FiClock size={18} />
                         <span className="font-bold text-lg">{t.hours}</span>

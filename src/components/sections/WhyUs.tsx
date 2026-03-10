@@ -14,7 +14,7 @@ const advantages = [
 export default function WhyUs() {
   return (
     <section className="bg-dark-light py-32 lg:py-44">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Neden MYD Güvenlik?"
           title="Farkımız"

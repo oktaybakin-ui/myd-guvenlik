@@ -14,7 +14,7 @@ const stats = [
 export default function Stats() {
   return (
     <section className="bg-dark-light border-y border-white/[0.04] py-24 lg:py-28">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={i * 0.1}>

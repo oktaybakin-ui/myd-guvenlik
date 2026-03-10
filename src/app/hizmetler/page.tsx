@@ -20,26 +20,26 @@ export default function HizmetlerPage() {
     <>
       <PageBanner title="Hizmetlerimiz" subtitle="İşletmenizin güvenlik ihtiyaçlarına özel, kapsamlı ve profesyonel güvenlik çözümleri sunuyoruz." breadcrumb="Hizmetler" />
 
-      <section className="bg-dark py-28 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-8">
-            {services.map((s, i) => (
+      <section className="bg-dark py-32 lg:py-44">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="space-y-12">
+            {services.map((s) => (
               <ScrollReveal key={s.title} delay={0.05}>
                 <div className="bg-dark-card border border-border rounded-2xl overflow-hidden hover-lift">
-                  <div className="relative h-56 w-full">
+                  <div className="relative h-64 w-full">
                     <Image src={s.image} alt={s.title} fill className="object-cover opacity-30" />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/80 to-transparent" />
-                    <div className="absolute bottom-6 left-8 w-14 h-14 bg-red/15 backdrop-blur-sm rounded-xl flex items-center justify-center border border-red/20">
+                    <div className="absolute bottom-6 left-8 w-14 h-14 bg-red/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-red/20">
                       <s.icon className="text-red" size={26} />
                     </div>
                   </div>
-                  <div className="p-10">
-                    <h3 className="text-2xl font-semibold mb-4">{s.title}</h3>
-                    <p className="text-gray-400 text-base leading-[1.7] mb-7">{s.desc}</p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  <div className="p-10 lg:p-12">
+                    <h3 className="text-2xl font-bold mb-5">{s.title}</h3>
+                    <p className="text-gray-400 text-lg leading-[1.85] mb-8">{s.desc}</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {s.features.map((f) => (
-                        <div key={f} className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.04] rounded-xl px-4 py-3">
-                          <div className="w-1.5 h-1.5 bg-red rounded-full flex-shrink-0" />
+                        <div key={f} className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.05] rounded-2xl px-5 py-4">
+                          <div className="w-2 h-2 bg-red rounded-full flex-shrink-0" />
                           <span className="text-sm text-gray-400">{f}</span>
                         </div>
                       ))}
@@ -53,13 +53,13 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white tracking-tight">Güvenlik İhtiyaçlarınız İçin Teklif Alın</h2>
-            <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-[1.7]">İşletmenize özel güvenlik planı ve fiyat teklifi için bizimle iletişime geçin.</p>
-            <Link href="/iletisim" className="btn-white inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base">
+            <h2 className="text-4xl md:text-5xl font-bold mb-7 text-white tracking-tight">Güvenlik İhtiyaçlarınız İçin Teklif Alın</h2>
+            <p className="text-white/50 text-xl mb-12 max-w-xl mx-auto leading-[1.8]">İşletmenize özel güvenlik planı ve fiyat teklifi için bizimle iletişime geçin.</p>
+            <Link href="/iletisim" className="btn-white inline-flex items-center gap-3 font-bold px-10 py-5 rounded-full text-base">
               İletişime Geçin <FiArrowRight size={18} />
             </Link>
           </ScrollReveal>

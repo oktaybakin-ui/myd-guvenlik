@@ -17,7 +17,7 @@ const features = [
 export default function About() {
   return (
     <section className="bg-dark py-32 lg:py-44">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
           {/* Left - Image */}
           <ScrollReveal direction="left">
@@ -32,7 +32,7 @@ export default function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-red text-white rounded-2xl px-9 py-7 shadow-2xl shadow-red/25 animate-float">
+              <div className="absolute -bottom-8 -right-8 bg-red text-white rounded-2xl px-9 py-7 shadow-2xl shadow-red/25 animate-float hidden sm:block">
                 <div className="stat-value text-5xl font-bold">10+</div>
                 <div className="text-base font-medium text-white/80 mt-1.5">Yıllık Tecrübe</div>
               </div>

@@ -52,8 +52,8 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-32">
-        <div className="max-w-3xl mx-auto px-6">
+      <section className="bg-dark py-32 lg:py-44">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <ScrollReveal key={index} delay={index * 0.03}>

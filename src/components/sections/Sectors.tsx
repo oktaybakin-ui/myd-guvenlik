@@ -20,7 +20,7 @@ export default function Sectors() {
         <div className="absolute inset-0 bg-gradient-to-b from-red-dark/15 via-transparent to-dark/95" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <ScrollReveal>
           <div className="flex items-center gap-3 justify-center mb-6">
             <span className="w-10 h-[2px] bg-red rounded-full" />

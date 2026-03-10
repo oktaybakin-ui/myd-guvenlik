@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/40" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-52 pb-44 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-52 pb-44 w-full">
         <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
           {/* Left */}
           <div>
@@ -78,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="hidden lg:block"
+            className="hidden md:block"
           >
             <div className="relative">
               <div className="rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/50">
@@ -92,7 +92,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent" />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-8 -left-8 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/25">
+              <div className="absolute -bottom-8 -left-8 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/25 hidden lg:block">
                 <div className="stat-value text-4xl font-bold">10+</div>
                 <div className="text-sm font-medium text-white/80 mt-1">Yıllık Tecrübe</div>
               </div>
