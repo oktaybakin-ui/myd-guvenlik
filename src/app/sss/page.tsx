@@ -51,36 +51,36 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-28">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="bg-dark py-32">
+        <div className="max-w-3xl mx-auto px-6">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-border rounded-xl overflow-hidden bg-dark-light">
+              <div key={index} className="border border-border rounded-2xl overflow-hidden bg-dark-light hover:border-white/[0.08] transition-colors duration-300">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-dark-card transition-colors"
+                  className="w-full flex items-center justify-between p-7 text-left"
                 >
-                  <span className="font-semibold text-base pr-6">{faq.q}</span>
+                  <span className="font-semibold text-base pr-8 leading-relaxed">{faq.q}</span>
                   <FiChevronDown
                     className={`text-red-light flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
                     size={20}
                   />
                 </button>
                 <div className={`accordion-content ${openIndex === index ? "open" : ""}`}>
-                  <div className="px-6 pb-6">
+                  <div className="px-7 pb-7">
                     <div className="w-full h-px bg-border mb-5" />
-                    <p className="text-muted text-[15px] leading-relaxed">{faq.a}</p>
+                    <p className="text-muted text-base leading-[1.8]">{faq.a}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 bg-dark-light border border-border rounded-xl p-10 text-center">
-            <h3 className="text-xl font-bold mb-3">Başka Sorunuz mu Var?</h3>
-            <p className="text-muted text-sm mb-7">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
-            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
-              Destek Talebi Oluşturun <FiArrowRight size={16} />
+          <div className="mt-20 bg-dark-light border border-border rounded-2xl p-12 text-center">
+            <h3 className="text-2xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
+            <p className="text-muted text-base mb-8 leading-relaxed">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
+            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
+              Destek Talebi Oluşturun <FiArrowRight size={18} />
             </Link>
           </div>
         </div>

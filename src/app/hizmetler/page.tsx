@@ -86,25 +86,25 @@ export default function HizmetlerPage() {
       />
 
       {/* Services */}
-      <section className="bg-dark py-28">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-dark py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-8">
-            {services.map((s, i) => (
-              <div key={s.title} className="bg-dark-card border border-border rounded-xl overflow-hidden hover-lift">
+            {services.map((s) => (
+              <div key={s.title} className="bg-dark-card border border-border rounded-2xl overflow-hidden hover-lift">
                 <div className="relative h-56 w-full">
-                  <Image src={s.image} alt={s.title} fill className="object-cover opacity-40" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card to-transparent" />
-                  <div className="absolute bottom-5 left-8 w-14 h-14 bg-red/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-red/20">
-                    <s.icon className="text-red-light" size={28} />
+                  <Image src={s.image} alt={s.title} fill className="object-cover opacity-30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/80 to-transparent" />
+                  <div className="absolute bottom-6 left-8 w-14 h-14 bg-red/15 backdrop-blur-sm rounded-xl flex items-center justify-center border border-red/20">
+                    <s.icon className="text-red-light" size={26} />
                   </div>
                 </div>
                 <div className="p-10">
-                  <h3 className="text-xl font-bold mb-4">{s.title}</h3>
-                  <p className="text-muted text-[15px] leading-relaxed mb-6">{s.desc}</p>
+                  <h3 className="text-2xl font-semibold mb-4">{s.title}</h3>
+                  <p className="text-muted text-base leading-[1.7] mb-7">{s.desc}</p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {s.features.map((f) => (
-                      <div key={f} className="flex items-center gap-2.5 bg-white/[0.03] rounded-lg px-4 py-2.5">
-                        <div className="w-1.5 h-1.5 bg-red rounded-full flex-shrink-0" />
+                      <div key={f} className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.04] rounded-xl px-4 py-3">
+                        <div className="w-1.5 h-1.5 bg-red-light rounded-full flex-shrink-0" />
                         <span className="text-sm text-muted">{f}</span>
                       </div>
                     ))}
@@ -117,20 +117,21 @@ export default function HizmetlerPage() {
       </section>
 
       {/* Sectors */}
-      <section className="bg-dark-light py-28">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-dark-light py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-red-light text-xs font-semibold tracking-widest uppercase">Hizmet Verdiğimiz Sektörler</span>
-            <h2 className="text-3xl font-bold mt-3 mb-4">Her Sektöre Özel <span className="text-gradient-red">Güvenlik</span></h2>
-            <div className="section-divider mx-auto" />
+            <span className="section-label justify-center">Hizmet Verdiğimiz Sektörler</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+              Her Sektöre Özel <span className="text-gradient-red">Güvenlik</span>
+            </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {sectors.map((s) => (
-              <div key={s.label} className="bg-dark-card border border-border rounded-xl p-8 text-center group hover-lift">
-                <div className="w-14 h-14 bg-red/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red/20 transition-colors">
-                  <s.icon className="text-red-light" size={24} />
+              <div key={s.label} className="bg-dark-card border border-border rounded-2xl p-8 text-center group hover-lift">
+                <div className="w-16 h-16 bg-red/8 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:bg-red/15 transition-colors duration-300">
+                  <s.icon className="text-red-light" size={26} />
                 </div>
-                <span className="text-[15px] font-medium text-muted group-hover:text-foreground transition-colors">{s.label}</span>
+                <span className="text-base font-medium text-muted group-hover:text-foreground transition-colors duration-300">{s.label}</span>
               </div>
             ))}
           </div>
@@ -138,15 +139,16 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark py-28">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-5">
-            Güvenlik İhtiyaçlarınız İçin <span className="text-gradient-red">Teklif Alın</span>
+      <section className="relative py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white tracking-tight">
+            Güvenlik İhtiyaçlarınız İçin Teklif Alın
           </h2>
-          <p className="text-muted text-base mb-10">
+          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-[1.7]">
             İşletmenize özel güvenlik planı ve fiyat teklifi için bizimle iletişime geçin.
           </p>
-          <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
+          <Link href="/iletisim" className="inline-flex items-center gap-3 bg-white text-red-dark font-bold px-8 py-4 rounded-xl text-base hover:bg-white/90 transition-colors">
             İletişime Geçin <FiArrowRight size={18} />
           </Link>
         </div>

@@ -12,154 +12,127 @@ import {
   FiCheckCircle,
   FiTarget,
   FiHeadphones,
-  FiHome,
-  FiShoppingBag,
-  FiHeart,
-  FiBookOpen,
-  FiTool,
-  FiGlobe,
-  FiTruck,
-  FiCoffee,
   FiPhone,
+  FiTruck,
 } from "react-icons/fi";
 
 /* ───── DATA ───── */
-const stats = [
-  { icon: FiShield, value: "1000+", label: "Güvenlik Personeli" },
-  { icon: FiUsers, value: "150+", label: "Kurumsal İş Ortağı" },
-  { icon: FiAward, value: "10+", label: "Yıllık Deneyim" },
-  { icon: FiClock, value: "7/24", label: "Kesintisiz Hizmet" },
-];
-
 const services = [
-  { icon: FiShield, title: "Güvenlik Hizmetleri", desc: "Yetkin personel ve standartlara uygun operasyon yapısı ile sürdürülebilir güvenlik hizmetleri sunuyoruz." },
+  { icon: FiShield, title: "Fiziki Güvenlik", desc: "Silahlı ve silahsız özel güvenlik görevlilerimiz ile tesislerinizin 7/24 fiziksel güvenliğini sağlıyoruz." },
   { icon: FiFileText, title: "Risk Analiz Raporu", desc: "Mevzuata uygun risk analizleriyle potansiyel tehditleri belirliyor ve önleyici çözümler geliştiriyoruz." },
   { icon: FiCamera, title: "Elektronik Güvenlik", desc: "CCTV, erişim kontrol ve alarm sistemleri ile teknolojik güvenlik altyapısı kuruyoruz." },
-  { icon: FiMonitor, title: "Dijital Çözümler", desc: "Dijital altyapılar ve akıllı sistemlerle operasyonları anlık izliyor ve raporluyoruz." },
+  { icon: FiUsers, title: "Etkinlik Güvenliği", desc: "Konser, kongre ve organizasyonlarda profesyonel kalabalık yönetimi ve güvenlik hizmeti sunuyoruz." },
+  { icon: FiTruck, title: "Yakın Koruma (VIP)", desc: "Üst düzey yöneticiler ve özel kişiler için eğitimli yakın koruma personeli hizmeti veriyoruz." },
+  { icon: FiMonitor, title: "Dijital Çözümler", desc: "GPS takip, dijital raporlama ve personel yönetim sistemi ile operasyonları anlık izliyoruz." },
 ];
 
-const sectors = [
-  { icon: FiHome, label: "Rezidans & Site" },
-  { icon: FiShoppingBag, label: "AVM & Mağaza" },
-  { icon: FiHeart, label: "Sağlık Kuruluşları" },
-  { icon: FiBookOpen, label: "Eğitim Kurumları" },
-  { icon: FiTool, label: "Üretim & Sanayi" },
-  { icon: FiGlobe, label: "Kamu Kurumları" },
-  { icon: FiTruck, label: "Lojistik & Depo" },
-  { icon: FiCoffee, label: "Otel & Turizm" },
-];
-
-const whyUs = [
-  { icon: FiTarget, title: "Sektörel Uzmanlık", desc: "Her sektörün ihtiyacına özel güvenlik planlaması yapıyoruz." },
-  { icon: FiUsers, title: "Eğitimli Kadro", desc: "Tüm personelimiz yasal mevzuata uygun eğitimli profesyonellerdir." },
-  { icon: FiMonitor, title: "Teknoloji Destekli", desc: "Dijital sistemlerle operasyonları takip ediyor ve raporluyoruz." },
-  { icon: FiHeadphones, title: "Hızlı Müdahale", desc: "7/24 aktif merkezimiz ile acil durumlarda anında müdahale ediyoruz." },
+const advantages = [
+  { icon: FiTarget, title: "Sektörel Uzmanlık", desc: "Her sektörün kendine özgü güvenlik ihtiyaçlarını analiz eder, size özel planlama yaparız." },
+  { icon: FiUsers, title: "1000+ Eğitimli Personel", desc: "5188 sayılı kanun kapsamında eğitimli, sertifikalı ve sürekli gelişim programlarına dahil kadro." },
+  { icon: FiMonitor, title: "Teknoloji Entegrasyonu", desc: "Dijital sistemlerle operasyonları takip ediyor, ölçüyor ve raporlanabilir hale getiriyoruz." },
+  { icon: FiHeadphones, title: "7/24 Müdahale Merkezi", desc: "Aktif alarm izleme merkezimiz ile acil durumlarda anında saha müdahalesi yapıyoruz." },
 ];
 
 const features = [
-  "5188 Sayılı Kanun kapsamında yetkili",
+  "5188 Sayılı Kanun kapsamında tam yetkili",
   "ISO sertifikalı hizmet kalitesi",
-  "Deneyimli profesyonel kadro",
+  "10+ yıllık sektör deneyimi",
+  "150+ kurumsal iş ortağı",
   "Modern teknoloji altyapısı",
-  "7/24 kesintisiz operasyon merkezi",
-  "Sektöre özel güvenlik planlaması",
+  "Şeffaf raporlama ve denetim",
 ];
 
 export default function Home() {
   return (
     <>
       {/* ══════════ HERO ══════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
+      <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-dark">
         <div className="absolute inset-0">
-          <Image src="/hero.png" alt="" fill className="object-cover opacity-15" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/40" />
+          <Image src="/hero.png" alt="" fill className="object-cover opacity-20" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/30" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-28 w-full">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Left */}
-            <div>
-              <div className="inline-flex items-center gap-2.5 bg-red/8 border border-red/15 rounded-full px-4 py-2 mb-8 animate-fade-in">
-                <FiShield className="text-red-light" size={14} />
-                <span className="text-red-light text-xs font-medium tracking-wider uppercase">Güvenlik & Koruma Hizmetleri</span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-7 animate-fade-in-up">
-                Siz Sadece{" "}
-                <br className="hidden sm:block" />
-                Asıl İşinize{" "}
-                <span className="text-gradient-red">Odaklanın</span>
-              </h1>
-
-              <p className="text-muted text-lg leading-relaxed mb-10 max-w-lg animate-fade-in-up delay-100">
-                MYD Özel Güvenlik olarak, profesyonel kadromuz ve entegre hizmet anlayışımızla güvenliğinizi en üst düzeyde sağlıyoruz.
-              </p>
-
-              <div className="flex flex-wrap gap-4 animate-fade-in-up delay-200">
-                <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
-                  Teklif Alın
-                  <FiArrowRight size={16} />
-                </Link>
-                <Link href="/hizmetler" className="btn-outline inline-flex items-center gap-2.5 text-white font-medium px-7 py-3.5 rounded-lg text-sm">
-                  Hizmetlerimiz
-                </Link>
-              </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-40 pb-24 w-full">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2.5 bg-white/[0.04] border border-white/[0.08] rounded-full px-5 py-2.5 mb-10 animate-fade-in">
+              <div className="w-2 h-2 bg-red-light rounded-full" />
+              <span className="text-white/70 text-sm font-medium">Profesyonel Güvenlik Hizmetleri</span>
             </div>
 
-            {/* Right - Stats */}
-            <div className="flex flex-col items-center gap-8">
-              <div className="relative animate-fade-in delay-100">
-                <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-red/20 shadow-2xl shadow-red/5 animate-float animate-pulse-glow">
-                  <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={208} height={208} className="w-full h-full object-cover" />
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8 animate-fade-in-up">
+              Güvenliğiniz{" "}
+              <br />
+              Bizim{" "}
+              <span className="text-gradient-red">Önceliğimiz</span>
+            </h1>
+
+            <p className="text-white/50 text-xl leading-[1.7] mb-12 max-w-2xl animate-fade-in-up delay-100">
+              MYD Özel Güvenlik olarak, 1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mb-20 animate-fade-in-up delay-200">
+              <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
+                Ücretsiz Teklif Alın
+                <FiArrowRight size={18} />
+              </Link>
+              <a href="tel:+905437125904" className="btn-outline inline-flex items-center gap-3 text-white font-medium px-8 py-4 rounded-xl text-base">
+                <FiPhone size={18} />
+                0 (543) 712 59 04
+              </a>
+            </div>
+
+            {/* Stats inline */}
+            <div className="flex flex-wrap gap-12 animate-fade-in-up delay-300">
+              {[
+                { value: "1000+", label: "Güvenlik Personeli" },
+                { value: "150+", label: "Kurumsal İş Ortağı" },
+                { value: "10+", label: "Yıllık Deneyim" },
+                { value: "7/24", label: "Kesintisiz Hizmet" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="stat-value text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-white/40">{stat.label}</div>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4 w-full max-w-md">
-                {stats.map((stat, i) => (
-                  <div key={stat.label} className={`glass rounded-xl p-6 text-center animate-scale-in delay-${(i + 1) * 100}`}>
-                    <stat.icon className="text-red-light mx-auto mb-2.5" size={20} />
-                    <div className="text-2xl font-bold text-white mb-0.5">{stat.value}</div>
-                    <div className="text-xs text-muted">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
-
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-light to-transparent" />
       </section>
 
       {/* ══════════ HİZMETLER ══════════ */}
-      <section className="bg-dark-light py-28">
+      <section className="bg-dark-light py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Hizmetlerimiz</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
-              Profesyonel Güvenlik <span className="text-gradient-red">Çözümleri</span>
-            </h2>
-            <div className="section-divider mx-auto" />
-            <p className="text-muted max-w-xl mx-auto text-base leading-relaxed mt-5">
-              İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz.
-            </p>
+          <div className="grid lg:grid-cols-12 gap-16 mb-16">
+            <div className="lg:col-span-5">
+              <span className="section-label">Hizmetlerimiz</span>
+              <h2 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+                Kapsamlı Güvenlik{" "}
+                <span className="text-gradient-red">Çözümleri</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-7 flex items-end">
+              <p className="text-muted text-lg leading-[1.8] max-w-2xl">
+                İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz. Fiziki güvenlikten dijital sistemlere kadar tüm alanlarda yanınızdayız.
+              </p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
-              <div key={s.title} className="hover-lift bg-dark-card border border-border rounded-xl p-8 group">
-                <div className="w-14 h-14 bg-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red/20 transition-colors duration-300">
+              <div key={s.title} className="hover-lift bg-dark-card border border-border rounded-2xl p-10 group">
+                <div className="w-14 h-14 bg-red/8 rounded-xl flex items-center justify-center mb-7 group-hover:bg-red/15 transition-colors duration-300">
                   <s.icon className="text-red-light" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold mb-3 group-hover:text-red-light transition-colors duration-300">{s.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-red-light transition-colors duration-300">{s.title}</h3>
+                <p className="text-muted text-base leading-[1.7]">{s.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/hizmetler" className="inline-flex items-center gap-2 text-red-light hover:text-red font-medium text-sm transition-colors">
-              Tüm Hizmetleri Görüntüle <FiArrowRight size={16} />
+          <div className="text-center mt-14">
+            <Link href="/hizmetler" className="inline-flex items-center gap-2 text-red-light hover:text-white font-medium text-base transition-colors">
+              Tüm Hizmetleri İnceleyin <FiArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -167,25 +140,24 @@ export default function Home() {
 
       {/* ══════════ REFERANSLAR ══════════ */}
       <section className="bg-dark py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-14">
           <div className="text-center">
-            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Referanslarımız</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
-              Birlikte Çalıştığımız <span className="text-gradient-red">Kurumlar</span>
+            <span className="section-label justify-center">Referanslarımız</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+              Birlikte Çalıştığımız <span className="text-gradient-red">Değerli Kurumlar</span>
             </h2>
-            <div className="section-divider mx-auto" />
           </div>
         </div>
         {/* Marquee Row 1 */}
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-dark to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-dark to-transparent z-10" />
           <div className="animate-marquee marquee-track py-3">
             {[...Array(2)].map((_, setIdx) => (
               <div key={setIdx} className="flex items-center gap-6 flex-shrink-0 px-3">
                 {["haier","katmerciler","roca","tei","iyte","bilnet","taris","megapol","hapimag","gulermak","tolkar","vansan","bgbatigrup","erkholding","novus","bonfiglioli","betonstar","tescom","sunchemical","akcelik"].map((name) => (
-                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.05] rounded-lg p-4 w-[130px] h-[60px] flex items-center justify-center">
-                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 brightness-0 invert" />
+                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 w-[140px] h-[65px] flex items-center justify-center">
+                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-50 hover:opacity-90 transition-opacity duration-300 brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -194,14 +166,14 @@ export default function Home() {
         </div>
         {/* Marquee Row 2 */}
         <div className="relative mt-4">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-dark to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-dark to-transparent z-10" />
           <div className="animate-marquee marquee-track py-3" style={{ animationDirection: "reverse", animationDuration: "35s" }}>
             {[...Array(2)].map((_, setIdx) => (
               <div key={setIdx} className="flex items-center gap-6 flex-shrink-0 px-3">
                 {["hoover","viltur","candy","bundy","altinok","bergama","billur","coffeemania","egeyapi","gimas","superpar","donmez","borovali","kansan","barankaya","maxwell","ersa","aytas","uniteks","saygilirulman"].map((name) => (
-                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.05] rounded-lg p-4 w-[130px] h-[60px] flex items-center justify-center">
-                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 brightness-0 invert" />
+                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 w-[140px] h-[65px] flex items-center justify-center">
+                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-50 hover:opacity-90 transition-opacity duration-300 brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -211,103 +183,79 @@ export default function Home() {
       </section>
 
       {/* ══════════ HAKKIMIZDA ══════════ */}
-      <section className="bg-dark-light py-28">
+      <section className="bg-dark-light py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left */}
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* Left - Image area */}
             <div className="relative">
-              <div className="bg-dark rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border border-border">
-                <div className="text-center p-12">
-                  <Image src="/logo.jpg" alt="MYD" width={140} height={140} className="rounded-full mx-auto mb-6 border-2 border-red/20" />
-                  <h3 className="text-xl font-bold mb-1.5">MYD Özel Güvenlik</h3>
-                  <p className="text-muted text-sm">Profesyonel Güvenlik Hizmetleri</p>
-                </div>
+              <div className="rounded-2xl overflow-hidden aspect-[4/3] img-zoom border border-border">
+                <Image src="/hero.png" alt="MYD Güvenlik Ekibi" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-red text-white rounded-xl px-6 py-4 shadow-xl shadow-red/15">
-                <div className="text-2xl font-bold">10+</div>
-                <div className="text-xs font-medium opacity-90">Yıllık Tecrübe</div>
+              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/20">
+                <div className="stat-value text-4xl font-bold">10+</div>
+                <div className="text-sm font-medium opacity-80 mt-1">Yıllık Tecrübe</div>
               </div>
             </div>
 
             {/* Right */}
             <div>
-              <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Biz MYD&apos;yiz</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 tracking-tight">
-                Profesyonel Güvenlik & <span className="text-gradient-red">Entegre Hizmet</span> Çözümleri
+              <span className="section-label">Hakkımızda</span>
+              <h2 className="text-3xl md:text-4xl font-bold leading-[1.15] tracking-tight mb-6">
+                Güvenlikte Güvenilir{" "}
+                <span className="text-gradient-red">Çözüm Ortağınız</span>
               </h2>
-              <div className="section-divider mb-7" />
-              <p className="text-muted leading-relaxed mb-8 text-[15px]">
-                MYD Özel Güvenlik Hizmetleri olarak, sektördeki derin bilgi birikimi ve tecrübemizle kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunmaktayız. 5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
+              <p className="text-muted text-lg leading-[1.8] mb-10">
+                MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-3 mb-8">
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 mb-10">
                 {features.map((f) => (
-                  <div key={f} className="flex items-center gap-2.5">
-                    <FiCheckCircle className="text-red-light flex-shrink-0" size={16} />
-                    <span className="text-sm text-muted">{f}</span>
+                  <div key={f} className="flex items-center gap-3">
+                    <FiCheckCircle className="text-red-light flex-shrink-0" size={18} />
+                    <span className="text-base text-muted">{f}</span>
                   </div>
                 ))}
               </div>
 
-              <Link href="/hakkimizda" className="inline-flex items-center gap-2 text-red-light hover:text-red font-medium text-sm transition-colors">
-                Hakkımızda <FiArrowRight size={16} />
+              <Link href="/hakkimizda" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-xl text-sm">
+                Daha Fazla Bilgi <FiArrowRight size={16} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════ SEKTÖRLER ══════════ */}
-      <section className="bg-dark py-28">
+      {/* ══════════ NEDEN BİZ ══════════ */}
+      <section className="bg-dark py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Hizmet Verdiğimiz Sektörler</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
-              Her Sektöre Özel <span className="text-gradient-red">Güvenlik Çözümleri</span>
+          <div className="text-center mb-20">
+            <span className="section-label justify-center">Neden MYD Güvenlik?</span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mt-2 mb-6">
+              Farkımız <span className="text-gradient-red">Ortada</span>
             </h2>
-            <div className="section-divider mx-auto" />
-            <p className="text-muted max-w-xl mx-auto text-base leading-relaxed mt-5">
-              Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
+            <p className="text-muted text-lg max-w-2xl mx-auto leading-[1.7]">
+              Operasyonel verimlilik, şeffaflık ve sürdürülebilirlik ilkeleriyle güvenlik ihtiyaçlarınızı tek merkezden yönetiyoruz.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {sectors.map((s) => (
-              <div key={s.label} className="hover-lift bg-dark-card border border-border rounded-xl p-7 text-center group cursor-default">
-                <div className="w-14 h-14 bg-red/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red/20 transition-colors duration-300">
-                  <s.icon className="text-red-light" size={24} />
-                </div>
-                <span className="text-sm font-medium text-muted group-hover:text-foreground transition-colors duration-300">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════ NEDEN BİZ ══════════ */}
-      <section className="bg-dark-light py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Neden MYD Güvenlik?</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
-              Operasyonlarınızı Güçlendiren <span className="text-gradient-red">Profesyonel</span> Çözümler
-            </h2>
-            <div className="section-divider mx-auto" />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyUs.map((item, i) => (
-              <div key={item.title} className="text-center p-8 bg-dark-card border border-border rounded-xl hover-lift">
-                <div className="relative mx-auto mb-5 w-fit">
-                  <div className="w-16 h-16 bg-red/10 rounded-xl flex items-center justify-center mx-auto">
-                    <item.icon className="text-red-light" size={28} />
-                  </div>
-                  <div className="absolute -top-1.5 -right-1.5 w-6 h-6 bg-red rounded-md flex items-center justify-center text-white text-xs font-bold">
-                    {i + 1}
+          <div className="grid md:grid-cols-2 gap-6">
+            {advantages.map((item, i) => (
+              <div key={item.title} className="flex gap-7 p-10 bg-dark-card border border-border rounded-2xl hover-lift group">
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-red/8 rounded-xl flex items-center justify-center group-hover:bg-red/15 transition-colors duration-300">
+                      <item.icon className="text-red-light" size={28} />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-7 h-7 bg-red rounded-lg flex items-center justify-center text-white text-xs font-bold">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-base font-semibold mb-2.5">{item.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                  <p className="text-muted text-base leading-[1.7]">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -315,22 +263,26 @@ export default function Home() {
       </section>
 
       {/* ══════════ CTA ══════════ */}
-      <section className="bg-dark py-28 relative overflow-hidden">
-        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(185,28,28,0.06) 0%, transparent 70%)" }} />
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10">
-          <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Bize Ulaşın</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5 tracking-tight">
-            Sizin İçin <span className="text-gradient-red">Buradayız</span>
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
+        <div className="absolute inset-0 opacity-10">
+          <Image src="/hero.png" alt="" fill className="object-cover" />
+        </div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
+            Güvenlik İhtiyaçlarınız İçin
+            <br />
+            Hemen İletişime Geçin
           </h2>
-          <p className="text-muted mb-10 text-base max-w-lg mx-auto leading-relaxed">
-            İşletmenizin ihtiyaçlarını analiz ederek en uygun güvenlik çözümlerini sunuyoruz.
+          <p className="text-white/60 text-lg mb-12 max-w-xl mx-auto leading-[1.7]">
+            İşletmenize özel güvenlik planı ve ücretsiz fiyat teklifi için bizi arayın.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
-              İletişime Geçin <FiArrowRight size={16} />
+            <Link href="/iletisim" className="inline-flex items-center gap-3 bg-white text-red-dark font-bold px-8 py-4 rounded-xl text-base hover:bg-white/90 transition-colors">
+              Teklif Formu <FiArrowRight size={18} />
             </Link>
-            <a href="tel:+905437125904" className="btn-outline inline-flex items-center gap-2.5 text-white font-medium px-7 py-3.5 rounded-lg text-sm">
-              <FiPhone size={16} /> 0 (543) 712 59 04
+            <a href="tel:+905437125904" className="inline-flex items-center gap-3 border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-white/10 transition-colors">
+              <FiPhone size={18} /> 0 (543) 712 59 04
             </a>
           </div>
         </div>

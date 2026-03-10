@@ -38,41 +38,37 @@ export default function HakkimizdaPage() {
       />
 
       {/* About Content */}
-      <section className="bg-dark py-28">
+      <section className="bg-dark py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
-              <div className="bg-dark-light rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border border-border">
-                <div className="text-center p-12">
-                  <Image src="/logo.jpg" alt="MYD" width={140} height={140} className="rounded-full mx-auto mb-6 border-2 border-red/20" />
-                  <h3 className="text-xl font-bold mb-1.5">MYD Özel Güvenlik</h3>
-                  <p className="text-muted text-sm">Profesyonel Güvenlik Hizmetleri</p>
-                </div>
+              <div className="rounded-2xl overflow-hidden aspect-[4/3] img-zoom border border-border">
+                <Image src="/hero.png" alt="MYD Güvenlik" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-red text-white rounded-xl px-6 py-4 shadow-xl shadow-red/15">
-                <div className="text-2xl font-bold">10+</div>
-                <div className="text-xs font-medium opacity-90">Yıllık Tecrübe</div>
+              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/20">
+                <div className="stat-value text-4xl font-bold">10+</div>
+                <div className="text-sm font-medium opacity-80 mt-1">Yıllık Tecrübe</div>
               </div>
             </div>
 
             <div>
-              <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Biz Kimiz?</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 tracking-tight">
+              <span className="section-label">Biz Kimiz?</span>
+              <h2 className="text-3xl md:text-4xl font-bold leading-[1.15] tracking-tight mb-6">
                 Güvenlikte <span className="text-gradient-red">Güvenilir</span> Çözüm Ortağınız
               </h2>
-              <div className="section-divider mb-7" />
-              <p className="text-muted leading-relaxed mb-5 text-[15px]">
-                MYD Özel Güvenlik Hizmetleri, sektördeki derin bilgi birikimi ve tecrübesiyle kurumsal ve bireysel müşterilerine en üst düzeyde güvenlik hizmeti sunmaktadır. 5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
+              <p className="text-muted text-lg leading-[1.8] mb-6">
+                MYD Özel Güvenlik Hizmetleri, sektördeki derin bilgi birikimi ve tecrübesiyle kurumsal ve bireysel müşterilerine en üst düzeyde güvenlik hizmeti sunmaktadır.
               </p>
-              <p className="text-muted leading-relaxed mb-8 text-[15px]">
-                Profesyonel kadromuz ve modern teknolojik altyapımız ile müşterilerimizin güvenlik ihtiyaçlarını en üst düzeyde karşılıyoruz.
+              <p className="text-muted text-lg leading-[1.8] mb-10">
+                5188 sayılı kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
                 {features.map((f) => (
-                  <div key={f} className="flex items-start gap-2.5">
-                    <FiCheckCircle className="text-red-light flex-shrink-0 mt-0.5" size={15} />
-                    <span className="text-sm text-muted leading-relaxed">{f}</span>
+                  <div key={f} className="flex items-start gap-3">
+                    <FiCheckCircle className="text-red-light flex-shrink-0 mt-1" size={17} />
+                    <span className="text-base text-muted leading-relaxed">{f}</span>
                   </div>
                 ))}
               </div>
@@ -82,14 +78,14 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-dark-light py-20">
+      <section className="bg-dark-light py-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat) => (
-              <div key={stat.label} className="bg-dark-card border border-border rounded-xl p-7 text-center">
-                <stat.icon className="text-red-light mx-auto mb-3" size={24} />
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs text-muted">{stat.label}</div>
+              <div key={stat.label} className="bg-dark-card border border-border rounded-2xl p-8 text-center hover-lift">
+                <stat.icon className="text-red-light mx-auto mb-4" size={26} />
+                <div className="stat-value text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-sm text-muted">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -97,18 +93,19 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-dark py-28">
+      <section className="bg-dark py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Değerlerimiz</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">Temel <span className="text-gradient-red">Değerlerimiz</span></h2>
-            <div className="section-divider mx-auto" />
+            <span className="section-label justify-center">Değerlerimiz</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+              Temel <span className="text-gradient-red">Değerlerimiz</span>
+            </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="bg-dark-card border border-border rounded-xl p-9 hover-lift">
-                <h3 className="text-lg font-semibold mb-3 text-red-light">{v.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{v.desc}</p>
+              <div key={v.title} className="bg-dark-card border border-border rounded-2xl p-10 hover-lift">
+                <h3 className="text-xl font-semibold mb-4 text-red-light">{v.title}</h3>
+                <p className="text-muted text-base leading-[1.7]">{v.desc}</p>
               </div>
             ))}
           </div>
