@@ -86,31 +86,29 @@ export default function HizmetlerPage() {
       />
 
       {/* Services */}
-      <section className="bg-dark py-20">
+      <section className="bg-dark py-28">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-6">
+          <div className="space-y-8">
             {services.map((s, i) => (
-              <div key={s.title} className={`bg-dark-card border border-white/5 rounded-xl overflow-hidden card-hover`}>
-                <div className="relative h-48 w-full">
+              <div key={s.title} className="bg-dark-card border border-border rounded-xl overflow-hidden hover-lift">
+                <div className="relative h-56 w-full">
                   <Image src={s.image} alt={s.title} fill className="object-cover opacity-40" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-card to-transparent" />
-                  <div className="absolute bottom-4 left-6 w-14 h-14 bg-red/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-red/20">
-                    <s.icon className="text-red" size={28} />
+                  <div className="absolute bottom-5 left-8 w-14 h-14 bg-red/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-red/20">
+                    <s.icon className="text-red-light" size={28} />
                   </div>
                 </div>
-                <div className="p-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-5">{s.desc}</p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <div className="p-10">
+                  <h3 className="text-xl font-bold mb-4">{s.title}</h3>
+                  <p className="text-muted text-[15px] leading-relaxed mb-6">{s.desc}</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {s.features.map((f) => (
-                      <div key={f} className="flex items-center gap-2 bg-white/[0.03] rounded-lg px-3 py-2">
+                      <div key={f} className="flex items-center gap-2.5 bg-white/[0.03] rounded-lg px-4 py-2.5">
                         <div className="w-1.5 h-1.5 bg-red rounded-full flex-shrink-0" />
-                        <span className="text-xs text-gray-400">{f}</span>
+                        <span className="text-sm text-muted">{f}</span>
                       </div>
                     ))}
                   </div>
-                </div>
                 </div>
               </div>
             ))}
@@ -119,20 +117,20 @@ export default function HizmetlerPage() {
       </section>
 
       {/* Sectors */}
-      <section className="bg-dark-light py-20">
+      <section className="bg-dark-light py-28">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <span className="text-red text-[11px] font-semibold tracking-widest uppercase">Hizmet Verdiğimiz Sektörler</span>
-            <h2 className="text-3xl font-bold mt-2 mb-3">Her Sektöre Özel <span className="text-gradient-red">Güvenlik</span></h2>
+          <div className="text-center mb-16">
+            <span className="text-red-light text-xs font-semibold tracking-widest uppercase">Hizmet Verdiğimiz Sektörler</span>
+            <h2 className="text-3xl font-bold mt-3 mb-4">Her Sektöre Özel <span className="text-gradient-red">Güvenlik</span></h2>
             <div className="section-divider mx-auto" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {sectors.map((s) => (
-              <div key={s.label} className="bg-dark-card border border-white/5 rounded-xl p-5 text-center group card-hover">
-                <div className="w-12 h-12 bg-red/10 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-red/20 transition-colors">
-                  <s.icon className="text-red" size={22} />
+              <div key={s.label} className="bg-dark-card border border-border rounded-xl p-8 text-center group hover-lift">
+                <div className="w-14 h-14 bg-red/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red/20 transition-colors">
+                  <s.icon className="text-red-light" size={24} />
                 </div>
-                <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">{s.label}</span>
+                <span className="text-[15px] font-medium text-muted group-hover:text-foreground transition-colors">{s.label}</span>
               </div>
             ))}
           </div>
@@ -140,16 +138,16 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+      <section className="bg-dark py-28">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-5">
             Güvenlik İhtiyaçlarınız İçin <span className="text-gradient-red">Teklif Alın</span>
           </h2>
-          <p className="text-gray-500 text-sm mb-8">
+          <p className="text-muted text-base mb-10">
             İşletmenize özel güvenlik planı ve fiyat teklifi için bizimle iletişime geçin.
           </p>
-          <Link href="/iletisim" className="btn-primary inline-flex items-center gap-2 text-white font-bold px-7 py-3.5 rounded-lg text-sm">
-            İletişime Geçin <FiArrowRight size={15} />
+          <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
+            İletişime Geçin <FiArrowRight size={18} />
           </Link>
         </div>
       </section>

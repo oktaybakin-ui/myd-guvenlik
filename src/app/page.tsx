@@ -25,9 +25,9 @@ import {
 
 /* ───── DATA ───── */
 const stats = [
-  { icon: FiShield, value: "500+", label: "Güvenlik Personeli" },
+  { icon: FiShield, value: "1000+", label: "Güvenlik Personeli" },
   { icon: FiUsers, value: "150+", label: "Kurumsal İş Ortağı" },
-  { icon: FiAward, value: "15+", label: "Yıllık Deneyim" },
+  { icon: FiAward, value: "10+", label: "Yıllık Deneyim" },
   { icon: FiClock, value: "7/24", label: "Kesintisiz Hizmet" },
 ];
 
@@ -71,116 +71,121 @@ export default function Home() {
       {/* ══════════ HERO ══════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
         <div className="absolute inset-0">
-          <Image src="/hero.png" alt="" fill className="object-cover opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/50" />
+          <Image src="/hero.png" alt="" fill className="object-cover opacity-15" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-12 pt-36 pb-32 w-full">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-28 w-full">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             {/* Left */}
             <div>
-              <div className="inline-flex items-center gap-3 bg-red/10 border border-red/20 rounded-full px-5 py-2 mb-8 animate-fade-in">
-                <FiShield className="text-red" size={15} />
-                <span className="text-red text-xs font-semibold tracking-wider uppercase">Güvenlik & Koruma Hizmetleri</span>
+              <div className="inline-flex items-center gap-2.5 bg-red/8 border border-red/15 rounded-full px-4 py-2 mb-8 animate-fade-in">
+                <FiShield className="text-red-light" size={14} />
+                <span className="text-red-light text-xs font-medium tracking-wider uppercase">Güvenlik & Koruma Hizmetleri</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 animate-fade-in-up">
-                Siz Sadece Asıl İşinize{" "}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-7 animate-fade-in-up">
+                Siz Sadece{" "}
+                <br className="hidden sm:block" />
+                Asıl İşinize{" "}
                 <span className="text-gradient-red">Odaklanın</span>
               </h1>
 
-              <p className="text-gray-400 text-lg leading-relaxed mb-12 max-w-xl animate-fade-in-up delay-100">
-                MYD Özel Güvenlik olarak, profesyonel kadromuz ve entegre hizmet anlayışımızla kurumların güvenliğini en üst düzeyde sağlıyor, güvenilir ve sürdürülebilir çözümler sunuyoruz.
+              <p className="text-muted text-lg leading-relaxed mb-10 max-w-lg animate-fade-in-up delay-100">
+                MYD Özel Güvenlik olarak, profesyonel kadromuz ve entegre hizmet anlayışımızla güvenliğinizi en üst düzeyde sağlıyoruz.
               </p>
 
-              <div className="flex flex-wrap gap-5 animate-fade-in-up delay-200">
-                <Link href="/iletisim" className="btn-primary inline-flex items-center gap-3 text-white font-bold px-10 py-4 rounded-xl text-base">
-                  Hizmetlerimiz için Teklif Alın
-                  <FiArrowRight size={18} />
+              <div className="flex flex-wrap gap-4 animate-fade-in-up delay-200">
+                <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
+                  Teklif Alın
+                  <FiArrowRight size={16} />
                 </Link>
-                <Link href="/hizmetler" className="btn-outline inline-flex items-center gap-3 text-white font-semibold px-10 py-4 rounded-xl text-base">
+                <Link href="/hizmetler" className="btn-outline inline-flex items-center gap-2.5 text-white font-medium px-7 py-3.5 rounded-lg text-sm">
                   Hizmetlerimiz
                 </Link>
               </div>
             </div>
 
-            {/* Right - Logo + Stats */}
-            <div className="flex flex-col items-center gap-10">
-              <div className="relative">
-                <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-red/20 shadow-2xl shadow-red/10 animate-float">
-                  <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={256} height={256} className="w-full h-full object-cover" />
+            {/* Right - Stats */}
+            <div className="flex flex-col items-center gap-8">
+              <div className="relative animate-fade-in delay-100">
+                <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-red/20 shadow-2xl shadow-red/5 animate-float animate-pulse-glow">
+                  <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={208} height={208} className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-5 w-full max-w-lg">
+              <div className="grid grid-cols-2 gap-4 w-full max-w-md">
                 {stats.map((stat, i) => (
-                  <div key={stat.label} className={`bg-white/[0.03] border border-white/[0.06] rounded-2xl p-7 text-center animate-scale-in delay-${(i + 1) * 100}`}>
-                    <stat.icon className="text-red mx-auto mb-3" size={24} />
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-500">{stat.label}</div>
+                  <div key={stat.label} className={`glass rounded-xl p-6 text-center animate-scale-in delay-${(i + 1) * 100}`}>
+                    <stat.icon className="text-red-light mx-auto mb-2.5" size={20} />
+                    <div className="text-2xl font-bold text-white mb-0.5">{stat.value}</div>
+                    <div className="text-xs text-muted">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-light to-transparent" />
       </section>
 
       {/* ══════════ HİZMETLER ══════════ */}
-      <section className="bg-dark-light py-32">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12">
-          <div className="text-center mb-20">
-            <span className="text-red text-xs font-semibold tracking-widest uppercase">Hizmetlerimiz</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-5">
+      <section className="bg-dark-light py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Hizmetlerimiz</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
               Profesyonel Güvenlik <span className="text-gradient-red">Çözümleri</span>
             </h2>
-            <div className="section-divider mx-auto mb-6" />
-            <p className="text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
+            <div className="section-divider mx-auto" />
+            <p className="text-muted max-w-xl mx-auto text-base leading-relaxed mt-5">
               İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
-              <div key={s.title} className="hover-lift bg-dark-card border border-border rounded-2xl p-8 group">
-                <div className="w-16 h-16 bg-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red/20 transition-colors">
-                  <s.icon className="text-red" size={28} />
+              <div key={s.title} className="hover-lift bg-dark-card border border-border rounded-xl p-8 group">
+                <div className="w-14 h-14 bg-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red/20 transition-colors duration-300">
+                  <s.icon className="text-red-light" size={24} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 group-hover:text-red transition-colors">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-red-light transition-colors duration-300">{s.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-14">
-            <Link href="/hizmetler" className="inline-flex items-center gap-2 text-red hover:text-red-light font-semibold text-base transition-colors">
-              Tüm Hizmetleri Görüntüle <FiArrowRight size={18} />
+          <div className="text-center mt-12">
+            <Link href="/hizmetler" className="inline-flex items-center gap-2 text-red-light hover:text-red font-medium text-sm transition-colors">
+              Tüm Hizmetleri Görüntüle <FiArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* ══════════ REFERANSLAR ══════════ */}
-      <section className="bg-dark py-28 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12 mb-14">
+      <section className="bg-dark py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
           <div className="text-center">
-            <span className="text-red text-xs font-semibold tracking-widest uppercase">Referanslarımız</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-5">
-              Birlikte Çalıştığımız <span className="text-gradient-red">Değerli Kurumlar</span>
+            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Referanslarımız</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
+              Birlikte Çalıştığımız <span className="text-gradient-red">Kurumlar</span>
             </h2>
             <div className="section-divider mx-auto" />
           </div>
         </div>
         {/* Marquee Row 1 */}
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-dark to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-dark to-transparent z-10" />
-          <div className="animate-marquee marquee-track py-4">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark to-transparent z-10" />
+          <div className="animate-marquee marquee-track py-3">
             {[...Array(2)].map((_, setIdx) => (
-              <div key={setIdx} className="flex items-center gap-8 flex-shrink-0 px-4">
+              <div key={setIdx} className="flex items-center gap-6 flex-shrink-0 px-3">
                 {["haier","katmerciler","roca","tei","iyte","bilnet","taris","megapol","hapimag","gulermak","tolkar","vansan","bgbatigrup","erkholding","novus","bonfiglioli","betonstar","tescom","sunchemical","akcelik"].map((name) => (
-                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 w-[140px] h-[70px] flex items-center justify-center">
-                    <Image src={`/references/${name}.png`} alt={name} width={110} height={45} className="object-contain opacity-50 hover:opacity-100 transition-opacity brightness-0 invert" />
+                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.05] rounded-lg p-4 w-[130px] h-[60px] flex items-center justify-center">
+                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -188,15 +193,15 @@ export default function Home() {
           </div>
         </div>
         {/* Marquee Row 2 */}
-        <div className="relative mt-5">
-          <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-dark to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-dark to-transparent z-10" />
-          <div className="animate-marquee marquee-track py-4" style={{ animationDirection: "reverse", animationDuration: "35s" }}>
+        <div className="relative mt-4">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark to-transparent z-10" />
+          <div className="animate-marquee marquee-track py-3" style={{ animationDirection: "reverse", animationDuration: "35s" }}>
             {[...Array(2)].map((_, setIdx) => (
-              <div key={setIdx} className="flex items-center gap-8 flex-shrink-0 px-4">
+              <div key={setIdx} className="flex items-center gap-6 flex-shrink-0 px-3">
                 {["hoover","viltur","candy","bundy","altinok","bergama","billur","coffeemania","egeyapi","gimas","superpar","donmez","borovali","kansan","barankaya","maxwell","ersa","aytas","uniteks","saygilirulman"].map((name) => (
-                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 w-[140px] h-[70px] flex items-center justify-center">
-                    <Image src={`/references/${name}.png`} alt={name} width={110} height={45} className="object-contain opacity-50 hover:opacity-100 transition-opacity brightness-0 invert" />
+                  <div key={`${setIdx}-${name}`} className="flex-shrink-0 bg-white/[0.03] border border-white/[0.05] rounded-lg p-4 w-[130px] h-[60px] flex items-center justify-center">
+                    <Image src={`/references/${name}.png`} alt={name} width={100} height={40} className="object-contain opacity-40 hover:opacity-80 transition-opacity duration-300 brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -206,46 +211,46 @@ export default function Home() {
       </section>
 
       {/* ══════════ HAKKIMIZDA ══════════ */}
-      <section className="bg-dark-light py-32">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="bg-dark-light py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left */}
             <div className="relative">
-              <div className="bg-dark rounded-3xl overflow-hidden aspect-[4/3] flex items-center justify-center border border-border">
+              <div className="bg-dark rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border border-border">
                 <div className="text-center p-12">
-                  <Image src="/logo.jpg" alt="MYD" width={150} height={150} className="rounded-full mx-auto mb-6 border-4 border-red/20" />
-                  <h3 className="text-2xl font-bold mb-2">MYD Özel Güvenlik</h3>
-                  <p className="text-gray-500">Profesyonel Güvenlik Hizmetleri</p>
+                  <Image src="/logo.jpg" alt="MYD" width={140} height={140} className="rounded-full mx-auto mb-6 border-2 border-red/20" />
+                  <h3 className="text-xl font-bold mb-1.5">MYD Özel Güvenlik</h3>
+                  <p className="text-muted text-sm">Profesyonel Güvenlik Hizmetleri</p>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-5 shadow-2xl shadow-red/20">
-                <div className="text-3xl font-bold">15+</div>
-                <div className="text-sm font-medium opacity-90">Yıllık Tecrübe</div>
+              <div className="absolute -bottom-5 -right-5 bg-red text-white rounded-xl px-6 py-4 shadow-xl shadow-red/15">
+                <div className="text-2xl font-bold">10+</div>
+                <div className="text-xs font-medium opacity-90">Yıllık Tecrübe</div>
               </div>
             </div>
 
             {/* Right */}
             <div>
-              <span className="text-red text-xs font-semibold tracking-widest uppercase">Biz MYD&apos;yiz</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-5">
+              <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Biz MYD&apos;yiz</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 tracking-tight">
                 Profesyonel Güvenlik & <span className="text-gradient-red">Entegre Hizmet</span> Çözümleri
               </h2>
-              <div className="section-divider mb-8" />
-              <p className="text-gray-400 leading-relaxed mb-10 text-base">
+              <div className="section-divider mb-7" />
+              <p className="text-muted leading-relaxed mb-8 text-[15px]">
                 MYD Özel Güvenlik Hizmetleri olarak, sektördeki derin bilgi birikimi ve tecrübemizle kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunmaktayız. 5188 sayılı Özel Güvenlik Hizmetlerine Dair Kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-10">
+              <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {features.map((f) => (
-                  <div key={f} className="flex items-center gap-3">
-                    <FiCheckCircle className="text-red flex-shrink-0" size={18} />
-                    <span className="text-base text-gray-400">{f}</span>
+                  <div key={f} className="flex items-center gap-2.5">
+                    <FiCheckCircle className="text-red-light flex-shrink-0" size={16} />
+                    <span className="text-sm text-muted">{f}</span>
                   </div>
                 ))}
               </div>
 
-              <Link href="/hakkimizda" className="inline-flex items-center gap-2 text-red hover:text-red-light font-semibold text-base transition-colors">
-                Hakkımızda <FiArrowRight size={18} />
+              <Link href="/hakkimizda" className="inline-flex items-center gap-2 text-red-light hover:text-red font-medium text-sm transition-colors">
+                Hakkımızda <FiArrowRight size={16} />
               </Link>
             </div>
           </div>
@@ -253,26 +258,26 @@ export default function Home() {
       </section>
 
       {/* ══════════ SEKTÖRLER ══════════ */}
-      <section className="bg-dark py-32">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12">
-          <div className="text-center mb-20">
-            <span className="text-red text-xs font-semibold tracking-widest uppercase">Hizmet Verdiğimiz Sektörler</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-5">
+      <section className="bg-dark py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Hizmet Verdiğimiz Sektörler</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
               Her Sektöre Özel <span className="text-gradient-red">Güvenlik Çözümleri</span>
             </h2>
-            <div className="section-divider mx-auto mb-6" />
-            <p className="text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
+            <div className="section-divider mx-auto" />
+            <p className="text-muted max-w-xl mx-auto text-base leading-relaxed mt-5">
               Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {sectors.map((s) => (
-              <div key={s.label} className="hover-lift bg-dark-card border border-border rounded-2xl p-8 text-center group cursor-default">
-                <div className="w-16 h-16 bg-red/10 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:bg-red/20 transition-colors">
-                  <s.icon className="text-red" size={28} />
+              <div key={s.label} className="hover-lift bg-dark-card border border-border rounded-xl p-7 text-center group cursor-default">
+                <div className="w-14 h-14 bg-red/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red/20 transition-colors duration-300">
+                  <s.icon className="text-red-light" size={24} />
                 </div>
-                <span className="text-base font-medium text-gray-400 group-hover:text-white transition-colors">{s.label}</span>
+                <span className="text-sm font-medium text-muted group-hover:text-foreground transition-colors duration-300">{s.label}</span>
               </div>
             ))}
           </div>
@@ -280,29 +285,29 @@ export default function Home() {
       </section>
 
       {/* ══════════ NEDEN BİZ ══════════ */}
-      <section className="bg-dark-light py-32">
-        <div className="max-w-7xl mx-auto px-8 lg:px-12">
-          <div className="text-center mb-20">
-            <span className="text-red text-xs font-semibold tracking-widest uppercase">Neden MYD Güvenlik?</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-5">
+      <section className="bg-dark-light py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Neden MYD Güvenlik?</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
               Operasyonlarınızı Güçlendiren <span className="text-gradient-red">Profesyonel</span> Çözümler
             </h2>
             <div className="section-divider mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((item, i) => (
-              <div key={item.title} className="text-center p-8 bg-dark-card border border-border rounded-2xl hover-lift">
-                <div className="relative mx-auto mb-6 w-fit">
-                  <div className="w-20 h-20 bg-red/10 rounded-2xl flex items-center justify-center mx-auto">
-                    <item.icon className="text-red" size={34} />
+              <div key={item.title} className="text-center p-8 bg-dark-card border border-border rounded-xl hover-lift">
+                <div className="relative mx-auto mb-5 w-fit">
+                  <div className="w-16 h-16 bg-red/10 rounded-xl flex items-center justify-center mx-auto">
+                    <item.icon className="text-red-light" size={28} />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-red rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                  <div className="absolute -top-1.5 -right-1.5 w-6 h-6 bg-red rounded-md flex items-center justify-center text-white text-xs font-bold">
                     {i + 1}
                   </div>
                 </div>
-                <h3 className="text-lg font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-base font-semibold mb-2.5">{item.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -310,22 +315,22 @@ export default function Home() {
       </section>
 
       {/* ══════════ CTA ══════════ */}
-      <section className="bg-dark py-32 relative overflow-hidden">
-        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(196,30,42,0.06) 0%, transparent 70%)" }} />
-        <div className="max-w-4xl mx-auto px-8 lg:px-12 text-center relative z-10">
-          <span className="text-red text-xs font-semibold tracking-widest uppercase">Bize Ulaşın</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+      <section className="bg-dark py-28 relative overflow-hidden">
+        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(185,28,28,0.06) 0%, transparent 70%)" }} />
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          <span className="text-red-light text-xs font-semibold tracking-[0.2em] uppercase">Bize Ulaşın</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5 tracking-tight">
             Sizin İçin <span className="text-gradient-red">Buradayız</span>
           </h2>
-          <p className="text-gray-400 mb-12 text-lg max-w-xl mx-auto leading-relaxed">
-            İşletmenizin ihtiyaçlarını analiz ederek en uygun güvenlik çözümlerini sunuyoruz. Ücretsiz teklif için hemen arayın.
+          <p className="text-muted mb-10 text-base max-w-lg mx-auto leading-relaxed">
+            İşletmenizin ihtiyaçlarını analiz ederek en uygun güvenlik çözümlerini sunuyoruz.
           </p>
-          <div className="flex flex-wrap justify-center gap-5">
-            <Link href="/iletisim" className="btn-primary inline-flex items-center gap-3 text-white font-bold px-10 py-4 rounded-xl text-base">
-              İletişime Geçin <FiArrowRight size={18} />
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
+              İletişime Geçin <FiArrowRight size={16} />
             </Link>
-            <a href="tel:+905437125904" className="btn-outline inline-flex items-center gap-3 text-white font-semibold px-10 py-4 rounded-xl text-base">
-              <FiPhone size={18} /> 0 (543) 712 59 04
+            <a href="tel:+905437125904" className="btn-outline inline-flex items-center gap-2.5 text-white font-medium px-7 py-3.5 rounded-lg text-sm">
+              <FiPhone size={16} /> 0 (543) 712 59 04
             </a>
           </div>
         </div>

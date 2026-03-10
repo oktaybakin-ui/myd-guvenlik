@@ -26,29 +26,29 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${scrolled ? "shadow-md" : "shadow-sm"}`}>
-      <nav className="bg-dark-light border-b border-border">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "shadow-lg shadow-black/20" : ""}`}>
+      <nav className={`border-b transition-colors duration-300 ${scrolled ? "bg-dark-light/95 backdrop-blur-md border-border" : "bg-dark-light border-border/50"}`}>
+        <div className="max-w-7xl mx-auto px-6 h-[72px] flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="bg-white rounded px-2 py-1.5">
-              <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={40} height={40} className="rounded" />
+            <div className="bg-white rounded-lg px-1.5 py-1">
+              <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={36} height={36} className="rounded" />
             </div>
             <div className="leading-tight hidden sm:block">
-              <span className="text-lg font-bold text-foreground tracking-wide">MYD</span>
-              <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
+              <span className="text-base font-bold text-foreground tracking-wide">MYD</span>
+              <span className="block text-[9px] text-red-light tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative text-sm font-medium transition-colors after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-red after:origin-left after:transition-transform after:duration-300 ${
+                  className={`relative text-[13px] font-medium transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-red after:origin-left after:transition-transform after:duration-300 ${
                     pathname === link.href
-                      ? "text-red after:scale-x-100"
+                      ? "text-red-light after:scale-x-100"
                       : "text-muted hover:text-foreground after:scale-x-0 hover:after:scale-x-100"
                   }`}
                 >
@@ -59,12 +59,12 @@ export default function Header() {
           </ul>
 
           {/* Right side */}
-          <div className="hidden lg:flex items-center gap-5">
-            <a href="tel:+905437125904" className="text-sm text-muted hover:text-foreground transition-colors flex items-center gap-2">
-              <FiPhone size={14} className="text-red" />
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="tel:+905437125904" className="text-[13px] text-muted hover:text-foreground transition-colors flex items-center gap-2">
+              <FiPhone size={13} className="text-red-light" />
               0 (543) 712 59 04
             </a>
-            <Link href="/iletisim" className="btn-primary btn-shine text-white font-semibold px-5 py-2.5 rounded text-sm">
+            <Link href="/iletisim" className="btn-primary btn-shine text-white font-semibold px-5 py-2.5 rounded-lg text-[13px]">
               Teklif Alın
             </Link>
           </div>
@@ -78,19 +78,19 @@ export default function Header() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="lg:hidden bg-dark-light border-t border-border animate-fade-in">
-            <ul className="flex flex-col p-6 gap-2">
+            <ul className="flex flex-col p-5 gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} onClick={() => setMenuOpen(false)}
-                    className={`block px-4 py-3 rounded text-sm font-medium transition-colors ${
-                      pathname === link.href ? "text-red bg-red/5" : "text-muted hover:text-foreground hover:bg-white/5"
+                    className={`block px-4 py-3 rounded-lg text-[13px] font-medium transition-colors ${
+                      pathname === link.href ? "text-red-light bg-red/5" : "text-muted hover:text-foreground hover:bg-white/5"
                     }`}>
                     {link.label}
                   </Link>
                 </li>
               ))}
-              <li className="mt-4">
-                <Link href="/iletisim" onClick={() => setMenuOpen(false)} className="block text-center btn-primary text-white font-semibold px-6 py-3 rounded text-sm">
+              <li className="mt-3">
+                <Link href="/iletisim" onClick={() => setMenuOpen(false)} className="block text-center btn-primary text-white font-semibold px-6 py-3 rounded-lg text-[13px]">
                   Teklif Alın
                 </Link>
               </li>

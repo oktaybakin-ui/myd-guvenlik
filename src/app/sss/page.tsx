@@ -51,36 +51,36 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="space-y-3">
+      <section className="bg-dark py-28">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-white/5 rounded-xl overflow-hidden bg-dark-card">
+              <div key={index} className="border border-border rounded-xl overflow-hidden bg-dark-light">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.02] transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-dark-card transition-colors"
                 >
-                  <span className="font-semibold text-[15px] pr-4">{faq.q}</span>
+                  <span className="font-semibold text-base pr-6">{faq.q}</span>
                   <FiChevronDown
-                    className={`text-red flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
-                    size={18}
+                    className={`text-red-light flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                    size={20}
                   />
                 </button>
                 <div className={`accordion-content ${openIndex === index ? "open" : ""}`}>
-                  <div className="px-5 pb-5">
-                    <div className="w-full h-px bg-white/5 mb-4" />
-                    <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+                  <div className="px-6 pb-6">
+                    <div className="w-full h-px bg-border mb-5" />
+                    <p className="text-muted text-[15px] leading-relaxed">{faq.a}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-14 bg-dark-card border border-white/5 rounded-xl p-8 text-center">
-            <h3 className="text-xl font-bold mb-2">Başka Sorunuz mu Var?</h3>
-            <p className="text-gray-500 text-sm mb-5">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
-            <Link href="/iletisim" className="btn-primary inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg text-sm">
-              Destek Talebi Oluşturun <FiArrowRight size={15} />
+          <div className="mt-16 bg-dark-light border border-border rounded-xl p-10 text-center">
+            <h3 className="text-xl font-bold mb-3">Başka Sorunuz mu Var?</h3>
+            <p className="text-muted text-sm mb-7">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
+            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-lg text-sm">
+              Destek Talebi Oluşturun <FiArrowRight size={16} />
             </Link>
           </div>
         </div>
