@@ -7,6 +7,7 @@ const pages = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "Hizmetler", href: "/hizmetler" },
+  { label: "Eğitimler", href: "/egitimler" },
   { label: "S.S.S", href: "/sss" },
   { label: "İletişim", href: "/iletisim" },
 ];

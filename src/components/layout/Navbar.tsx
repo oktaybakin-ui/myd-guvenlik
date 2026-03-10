@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "Hizmetler", href: "/hizmetler" },
-  { label: "S.S.S", href: "/sss" },
+  { label: "Eğitimler", href: "/egitimler" },
   { label: "İletişim", href: "/iletisim" },
 ];
 

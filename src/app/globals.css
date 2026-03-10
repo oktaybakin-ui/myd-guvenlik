@@ -149,8 +149,8 @@ body {
 
 /* ═══ Page Banner ═══ */
 .page-banner {
-  background: linear-gradient(135deg, var(--color-red-dark) 0%, var(--color-red) 100%);
-  color: white;
+  background: var(--color-dark-light);
+  color: var(--color-foreground);
 }
 
 /* ═══ Stat counter ═══ */

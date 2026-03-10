@@ -17,8 +17,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/30" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-44 pb-32 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-48 pb-40 w-full">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-28 items-center">
           {/* Left */}
           <div>
             <motion.div
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-lg lg:text-xl leading-[1.7] mb-10 max-w-xl"
+              className="text-gray-400 text-lg lg:text-xl leading-[1.8] mb-12 max-w-xl"
             >
               MYD Özel Güvenlik olarak, 1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
             </motion.p>

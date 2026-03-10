@@ -12,7 +12,7 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section className="relative py-28 lg:py-32 overflow-hidden">
+    <section className="relative py-32 lg:py-40 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <Image src="/services/services4.png" alt="" fill className="object-cover" style={{ objectPosition: "center 30%" }} />
@@ -36,17 +36,17 @@ export default function Sectors() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-[1.7] mb-12">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-[1.8] mb-14">
             Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3.5">
             {sectors.map((s) => (
               <span
                 key={s}
-                className="sector-pill text-white rounded-full px-6 py-3 text-sm font-medium cursor-default"
+                className="sector-pill text-white rounded-full px-7 py-3.5 text-sm font-medium cursor-default"
               >
                 {s}
               </span>

@@ -25,7 +25,7 @@ export default function SectionTitle({ label, title, highlight, description, cen
       </ScrollReveal>
       {description && (
         <ScrollReveal delay={0.2}>
-          <p className={`text-muted text-lg leading-[1.8] mt-5 ${center ? "max-w-2xl mx-auto" : "max-w-2xl"}`}>
+          <p className={`text-gray-400 text-lg leading-[1.8] mt-6 ${center ? "max-w-2xl mx-auto" : "max-w-2xl"}`}>
             {description}
           </p>
         </ScrollReveal>
