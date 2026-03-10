@@ -49,14 +49,20 @@ export default function Footer() {
               teknolojisi ile güvenliğinizi en üst düzeyde sağlar.
             </p>
             <div className="flex gap-3">
-              {[FiFacebook, FaXTwitter, FiInstagram, FiLinkedin].map(
-                (Icon, i) => (
+              {[
+                { Icon: FiFacebook, href: "https://www.facebook.com/p/MYD-%C3%96ZEL-G%C3%9CVENL%C4%B0K-100067031853886/" },
+                { Icon: FaXTwitter, href: "#" },
+                { Icon: FiInstagram, href: "https://www.instagram.com/mydguvenlik/" },
+                { Icon: FiLinkedin, href: "#" },
+              ].map((item, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={item.href}
+                    target={item.href !== "#" ? "_blank" : undefined}
+                    rel={item.href !== "#" ? "noopener noreferrer" : undefined}
                     className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-gold hover:text-navy hover:border-gold transition-all text-gray-400"
                   >
-                    <Icon size={16} />
+                    <item.Icon size={16} />
                   </a>
                 )
               )}

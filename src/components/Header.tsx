@@ -57,7 +57,7 @@ export default function Header() {
             <a href="#" className="hover:text-gold transition-colors">
               <FaXTwitter size={14} />
             </a>
-            <a href="#" className="hover:text-gold transition-colors">
+            <a href="https://www.instagram.com/mydguvenlik/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
               <FiInstagram size={14} />
             </a>
             <a href="#" className="hover:text-gold transition-colors">
