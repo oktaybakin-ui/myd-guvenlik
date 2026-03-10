@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import PageBanner from "@/components/PageBanner";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const faqs = [
   {
@@ -55,34 +56,38 @@ export default function SSSPage() {
         <div className="max-w-3xl mx-auto px-6">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-border rounded-2xl overflow-hidden bg-dark-light hover:border-white/[0.08] transition-colors duration-300">
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-7 text-left"
-                >
-                  <span className="font-semibold text-base pr-8 leading-relaxed">{faq.q}</span>
-                  <FiChevronDown
-                    className={`text-red-light flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
-                    size={20}
-                  />
-                </button>
-                <div className={`accordion-content ${openIndex === index ? "open" : ""}`}>
-                  <div className="px-7 pb-7">
-                    <div className="w-full h-px bg-border mb-5" />
-                    <p className="text-muted text-base leading-[1.8]">{faq.a}</p>
+              <ScrollReveal key={index} delay={index * 0.03}>
+                <div className="border border-border rounded-2xl overflow-hidden bg-dark-light hover:border-white/[0.08] transition-colors duration-300">
+                  <button
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    className="w-full flex items-center justify-between p-7 text-left"
+                  >
+                    <span className="font-semibold text-base pr-8 leading-relaxed">{faq.q}</span>
+                    <FiChevronDown
+                      className={`text-red flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                      size={20}
+                    />
+                  </button>
+                  <div className={`accordion-content ${openIndex === index ? "open" : ""}`}>
+                    <div className="px-7 pb-7">
+                      <div className="w-full h-px bg-border mb-5" />
+                      <p className="text-gray-400 text-base leading-[1.8]">{faq.a}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
-          <div className="mt-20 bg-dark-light border border-border rounded-2xl p-12 text-center">
-            <h3 className="text-2xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
-            <p className="text-muted text-base mb-8 leading-relaxed">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
-            <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
-              Destek Talebi Oluşturun <FiArrowRight size={18} />
-            </Link>
-          </div>
+          <ScrollReveal delay={0.1}>
+            <div className="mt-20 bg-dark-light border border-border rounded-2xl p-12 text-center">
+              <h3 className="text-2xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
+              <p className="text-gray-400 text-base mb-8 leading-relaxed">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
+              <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
+                Destek Talebi Oluşturun <FiArrowRight size={18} />
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

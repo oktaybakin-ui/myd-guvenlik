@@ -1,12 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { FiCheckCircle, FiShield, FiUsers, FiAward, FiClock } from "react-icons/fi";
 import PageBanner from "@/components/PageBanner";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const stats = [
-  { icon: FiShield, value: "1000+", label: "Uzman Personel" },
-  { icon: FiUsers, value: "150+", label: "Kurumsal İş Ortağı" },
-  { icon: FiAward, value: "10+", label: "Yıllık Deneyim" },
-  { icon: FiClock, value: "7/24", label: "Kesintisiz Hizmet" },
+  { icon: FiShield, value: 1000, suffix: "+", label: "Uzman Personel" },
+  { icon: FiUsers, value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
+  { icon: FiAward, value: 10, suffix: "+", label: "Yıllık Deneyim" },
+  { icon: FiClock, value: 7, suffix: "/24", label: "Kesintisiz Hizmet" },
 ];
 
 const features = [
@@ -26,8 +30,6 @@ const values = [
   { title: "Teknoloji", desc: "Operasyonel süreçleri dijital sistemlerle izliyor, ölçüyor ve raporlanabilir hale getiriyoruz." },
 ];
 
-export const metadata = { title: "Hakkımızda" };
-
 export default function HakkimizdaPage() {
   return (
     <>
@@ -37,76 +39,93 @@ export default function HakkimizdaPage() {
         breadcrumb="Hakkımızda"
       />
 
-      {/* About Content */}
-      <section className="bg-dark py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden aspect-[4/3] img-zoom border border-border">
-                <Image src="/hero.png" alt="MYD Güvenlik" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
+      <section className="bg-dark py-28 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <ScrollReveal direction="left">
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden img-zoom border border-border shadow-2xl">
+                  <Image src="/hero.png" alt="MYD Güvenlik" width={640} height={480} className="w-full h-auto object-cover aspect-[4/3]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/20">
+                  <div className="stat-value text-4xl font-bold">10+</div>
+                  <div className="text-sm font-medium text-white/80 mt-1">Yıllık Tecrübe</div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/20">
-                <div className="stat-value text-4xl font-bold">10+</div>
-                <div className="text-sm font-medium opacity-80 mt-1">Yıllık Tecrübe</div>
-              </div>
-            </div>
+            </ScrollReveal>
 
             <div>
-              <span className="section-label">Biz Kimiz?</span>
-              <h2 className="text-3xl md:text-4xl font-bold leading-[1.15] tracking-tight mb-6">
-                Güvenlikte <span className="text-gradient-red">Güvenilir</span> Çözüm Ortağınız
-              </h2>
-              <p className="text-muted text-lg leading-[1.8] mb-6">
-                MYD Özel Güvenlik Hizmetleri, sektördeki derin bilgi birikimi ve tecrübesiyle kurumsal ve bireysel müşterilerine en üst düzeyde güvenlik hizmeti sunmaktadır.
-              </p>
-              <p className="text-muted text-lg leading-[1.8] mb-10">
-                5188 sayılı kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
-                {features.map((f) => (
-                  <div key={f} className="flex items-start gap-3">
-                    <FiCheckCircle className="text-red-light flex-shrink-0 mt-1" size={17} />
-                    <span className="text-base text-muted leading-relaxed">{f}</span>
-                  </div>
-                ))}
-              </div>
+              <ScrollReveal>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-6 h-0.5 bg-red rounded" />
+                  <span className="text-red text-[13px] font-semibold tracking-[0.15em] uppercase">Biz Kimiz?</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold leading-[1.15] tracking-tight mb-6">
+                  Güvenlikte <span className="text-gradient-red">Güvenilir</span> Çözüm Ortağınız
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <p className="text-gray-400 text-lg leading-[1.8] mb-5">
+                  MYD Özel Güvenlik, sektördeki derin bilgi birikimi ve tecrübesiyle kurumsal müşterilerine en üst düzeyde güvenlik hizmeti sunmaktadır.
+                </p>
+                <p className="text-gray-400 text-lg leading-[1.8] mb-10">
+                  5188 sayılı kanun kapsamında faaliyet gösteren firmamız, güvenlik ihtiyaçlarınızı analiz ederek size özel çözümler üretir.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                  {features.map((f) => (
+                    <div key={f} className="flex items-start gap-3">
+                      <FiCheckCircle className="text-red flex-shrink-0 mt-1" size={17} />
+                      <span className="text-gray-400 text-base leading-relaxed">{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-dark-light py-24">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <div key={stat.label} className="bg-dark-card border border-border rounded-2xl p-8 text-center hover-lift">
-                <stat.icon className="text-red-light mx-auto mb-4" size={26} />
-                <div className="stat-value text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-sm text-muted">{stat.label}</div>
-              </div>
+      <section className="bg-dark-light py-20 border-y border-red/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, i) => (
+              <ScrollReveal key={stat.label} delay={i * 0.1}>
+                <div className="text-center relative">
+                  <stat.icon className="text-red mx-auto mb-3" size={24} />
+                  <div className="text-4xl font-bold text-white mb-2">
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wide">{stat.label}</div>
+                  {i < stats.length - 1 && <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-800" />}
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="bg-dark py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="section-label justify-center">Değerlerimiz</span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-2">
-              Temel <span className="text-gradient-red">Değerlerimiz</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="bg-dark-card border border-border rounded-2xl p-10 hover-lift">
-                <h3 className="text-xl font-semibold mb-4 text-red-light">{v.title}</h3>
-                <p className="text-muted text-base leading-[1.7]">{v.desc}</p>
+      <section className="bg-dark py-28 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <div className="flex items-center gap-3 justify-center mb-4">
+                <span className="w-6 h-0.5 bg-red rounded" />
+                <span className="text-red text-[13px] font-semibold tracking-[0.15em] uppercase">Değerlerimiz</span>
               </div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Temel <span className="text-gradient-red">Değerlerimiz</span></h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {values.map((v, i) => (
+              <ScrollReveal key={v.title} delay={i * 0.1}>
+                <div className="bg-dark-card border border-border rounded-2xl p-10 hover-lift h-full">
+                  <h3 className="text-xl font-semibold mb-4 text-red">{v.title}</h3>
+                  <p className="text-gray-400 text-base leading-[1.7]">{v.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
