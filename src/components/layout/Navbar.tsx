@@ -41,7 +41,7 @@ export default function Navbar() {
             : "bg-dark/30 backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between relative">
           {/* Logo — Sol */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <div className="bg-white rounded-lg p-1.5">
@@ -53,29 +53,29 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Menü + CTA — Sağ */}
-          <div className="hidden lg:flex items-center gap-10">
-            <ul className="flex items-center gap-8">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
-                      pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/iletisim"
-              className="btn-primary text-white font-semibold px-7 py-3 rounded-full text-sm"
-            >
-              Teklif Alın
-            </Link>
-          </div>
+          {/* Menü — Merkez */}
+          <ul className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
+                    pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* CTA — Sağ */}
+          <Link
+            href="/iletisim"
+            className="hidden lg:inline-flex btn-primary text-white font-semibold px-7 py-3 rounded-full text-sm"
+          >
+            Teklif Alın
+          </Link>
 
           {/* Mobile Toggle */}
           <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-white p-2">

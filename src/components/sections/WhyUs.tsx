@@ -22,12 +22,12 @@ export default function WhyUs() {
           description="Operasyonel verimlilik, şeffaflık ve sürdürülebilirlik ilkeleriyle güvenlik ihtiyaçlarınızı tek merkezden yönetiyoruz."
         />
 
-        <div className="grid md:grid-cols-2 gap-10 mt-20">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 mt-20">
           {advantages.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
-              <div className="relative hover-lift bg-gradient-to-br from-dark-card to-dark border border-border rounded-2xl p-12 group overflow-hidden h-full">
+              <div className="relative hover-lift bg-gradient-to-br from-dark-card to-dark border border-border rounded-2xl p-10 lg:p-12 group overflow-hidden h-full">
                 {/* Big number background */}
-                <span className="absolute top-6 right-8 text-8xl font-bold text-red/[0.04] select-none pointer-events-none leading-none">
+                <span className="absolute top-6 right-8 text-[7rem] font-bold text-red/[0.04] select-none pointer-events-none leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 

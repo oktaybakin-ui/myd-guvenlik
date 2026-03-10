@@ -83,7 +83,7 @@ export default function SSSPage() {
             <div className="mt-20 bg-dark-light border border-border rounded-2xl p-12 text-center">
               <h3 className="text-2xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
               <p className="text-gray-400 text-base mb-8 leading-relaxed">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
-              <Link href="/iletisim" className="btn-primary btn-shine inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
+              <Link href="/iletisim" className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
                 Destek Talebi Oluşturun <FiArrowRight size={18} />
               </Link>
             </div>

@@ -34,13 +34,13 @@ export default function CTA() {
           <div className="flex flex-wrap justify-center gap-5">
             <Link
               href="/iletisim"
-              className="btn-white inline-flex items-center gap-3 font-bold px-10 py-5 rounded-full text-lg"
+              className="btn-white inline-flex items-center gap-3 font-bold px-12 py-5 rounded-full text-lg"
             >
               Teklif Formu <FiArrowRight size={20} />
             </Link>
             <a
               href="tel:+905437125904"
-              className="inline-flex items-center gap-3 border-2 border-white/30 text-white font-semibold px-10 py-5 rounded-full text-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center gap-3 border-2 border-white/30 text-white font-bold px-12 py-5 rounded-full text-lg hover:bg-white/10 transition-colors"
             >
               <FiPhone size={20} /> 0 (543) 712 59 04
             </a>
