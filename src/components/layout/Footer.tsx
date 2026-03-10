@@ -28,11 +28,11 @@ export default function Footer() {
   return (
     <footer className="bg-surface-dark border-t border-gray-800">
       {/* Main */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-16">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-7">
+            <Link href="/" className="flex items-center gap-3 mb-8">
               <div className="bg-white rounded-lg p-1.5">
                 <Image src="/logo.jpg" alt="MYD" width={32} height={32} className="rounded" />
               </div>
@@ -41,10 +41,10 @@ export default function Footer() {
                 <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
               </div>
             </Link>
-            <p className="text-gray-500 text-sm leading-[1.7] mb-7">
+            <p className="text-gray-500 text-[15px] leading-[1.9] mb-8">
               Profesyonel güvenlik hizmetleri ile operasyonlarınızı daha güvenilir ve verimli hale getiriyoruz.
             </p>
-            <div className="flex gap-2.5">
+            <div className="flex gap-3">
               {socials.map((s, i) => (
                 <a
                   key={i}
@@ -61,11 +61,11 @@ export default function Footer() {
 
           {/* Kurumsal */}
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">Kurumsal</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold text-[13px] uppercase tracking-[0.2em] mb-8">Kurumsal</h4>
+            <ul className="space-y-4">
               {pages.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-500 text-sm hover:text-red transition-colors duration-200">{link.label}</Link>
+                  <Link href={link.href} className="text-gray-500 text-[15px] hover:text-red transition-colors duration-200">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -73,11 +73,11 @@ export default function Footer() {
 
           {/* Hizmetler */}
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">Hizmetlerimiz</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold text-[13px] uppercase tracking-[0.2em] mb-8">Hizmetlerimiz</h4>
+            <ul className="space-y-4">
               {services.map((s) => (
                 <li key={s}>
-                  <Link href="/hizmetler" className="text-gray-500 text-sm hover:text-red transition-colors duration-200">{s}</Link>
+                  <Link href="/hizmetler" className="text-gray-500 text-[15px] hover:text-red transition-colors duration-200">{s}</Link>
                 </li>
               ))}
             </ul>
@@ -85,40 +85,40 @@ export default function Footer() {
 
           {/* İletişim */}
           <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6">İletişim</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <FiPhone className="text-red mt-1 flex-shrink-0" size={14} />
-                <a href="tel:+905437125904" className="text-gray-500 text-sm hover:text-white transition-colors">0 (543) 712 59 04</a>
+            <h4 className="text-white font-semibold text-[13px] uppercase tracking-[0.2em] mb-8">İletişim</h4>
+            <ul className="space-y-5">
+              <li className="flex items-start gap-4">
+                <FiPhone className="text-red mt-1 flex-shrink-0" size={15} />
+                <a href="tel:+905437125904" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (543) 712 59 04</a>
               </li>
-              <li className="flex items-start gap-3">
-                <FiMail className="text-red mt-1 flex-shrink-0" size={14} />
-                <a href="mailto:info@mydozelguvenlik.com" className="text-gray-500 text-sm hover:text-white transition-colors">info@mydozelguvenlik.com</a>
+              <li className="flex items-start gap-4">
+                <FiMail className="text-red mt-1 flex-shrink-0" size={15} />
+                <a href="mailto:info@mydozelguvenlik.com" className="text-gray-500 text-[15px] hover:text-white transition-colors">info@mydozelguvenlik.com</a>
               </li>
-              <li className="flex items-start gap-3">
-                <FiMapPin className="text-red mt-1 flex-shrink-0" size={14} />
-                <span className="text-gray-500 text-sm leading-relaxed">İskender Mah. 106 Cad.<br />No:36-38/4, Merkez / Isparta</span>
+              <li className="flex items-start gap-4">
+                <FiMapPin className="text-red mt-1 flex-shrink-0" size={15} />
+                <span className="text-gray-500 text-[15px] leading-[1.7]">İskender Mah. 106 Cad.<br />No:36-38/4, Merkez / Isparta</span>
               </li>
             </ul>
-            <div className="mt-6 pt-4 border-t border-gray-800">
-              <p className="text-gray-600 text-xs uppercase tracking-wider mb-2">Çalışma Saatleri</p>
-              <p className="text-gray-500 text-sm">Hafta İçi: 08:30 - 18:00</p>
-              <p className="text-gray-500 text-sm">Cumartesi: 09:00 - 14:00</p>
+            <div className="mt-8 pt-5 border-t border-gray-800">
+              <p className="text-gray-600 text-xs uppercase tracking-[0.2em] mb-3">Çalışma Saatleri</p>
+              <p className="text-gray-500 text-[15px] leading-[1.8]">Hafta İçi: 08:30 - 18:00</p>
+              <p className="text-gray-500 text-[15px] leading-[1.8]">Cumartesi: 09:00 - 14:00</p>
             </div>
           </div>
         </div>
 
         {/* Slogan */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-2xl font-bold text-white italic">&ldquo;Siz Sadece Asıl İşinize Odaklanın!&rdquo;</p>
+        <div className="border-t border-gray-800 mt-16 pt-10 text-center">
+          <p className="text-2xl lg:text-3xl font-bold text-white italic">&ldquo;Siz Sadece Asıl İşinize Odaklanın!&rdquo;</p>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-gray-600 text-xs">&copy; {new Date().getFullYear()} MYD Özel Güvenlik Hizmetleri. Tüm hakları saklıdır.</p>
-          <div className="flex gap-5 text-xs text-gray-600">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-600 text-[13px]">&copy; {new Date().getFullYear()} MYD Özel Güvenlik Hizmetleri. Tüm hakları saklıdır.</p>
+          <div className="flex gap-6 text-[13px] text-gray-600">
             <a href="#" className="hover:text-gray-400 transition-colors">Gizlilik Politikası</a>
             <a href="#" className="hover:text-gray-400 transition-colors">Hizmet Şartları</a>
           </div>

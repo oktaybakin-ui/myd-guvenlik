@@ -25,17 +25,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-10"
+              className="flex items-center gap-3 mb-12"
             >
-              <span className="w-10 h-[2px] bg-red rounded-full" />
-              <span className="text-red text-sm font-semibold uppercase tracking-[0.2em]">Profesyonel Güvenlik Hizmetleri</span>
+              <span className="w-12 h-[2px] bg-red rounded-full" />
+              <span className="text-red text-[13px] font-semibold uppercase tracking-[0.25em]">Profesyonel Güvenlik Hizmetleri</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[1.05] tracking-tight mb-8"
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold leading-[1.08] tracking-tight mb-10"
             >
               Güvenliğiniz
               <br />
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-xl leading-[1.9] mb-14 max-w-xl"
+              className="text-gray-400 text-lg lg:text-xl leading-[2] mb-16 max-w-xl"
             >
               1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
             </motion.p>

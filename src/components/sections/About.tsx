@@ -16,7 +16,7 @@ const features = [
 
 export default function About() {
   return (
-    <section className="bg-dark py-32 lg:py-44">
+    <section className="bg-dark py-36 lg:py-48">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
           {/* Left - Image */}
@@ -34,7 +34,7 @@ export default function About() {
               </div>
               <div className="absolute -bottom-8 -right-8 bg-red text-white rounded-2xl px-9 py-7 shadow-2xl shadow-red/25 animate-float hidden sm:block">
                 <div className="stat-value text-5xl font-bold">10+</div>
-                <div className="text-base font-medium text-white/80 mt-1.5">Yıllık Tecrübe</div>
+                <div className="text-base font-medium text-white/80 mt-2">Yıllık Tecrübe</div>
               </div>
             </div>
           </ScrollReveal>
@@ -42,31 +42,33 @@ export default function About() {
           {/* Right - Content */}
           <div>
             <ScrollReveal>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[2px] bg-red rounded-full" />
-                <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Hakkımızda</span>
+              <div className="flex items-center gap-3 mb-7">
+                <span className="w-12 h-[2px] bg-red rounded-full" />
+                <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hakkımızda</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h2 className="text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight mb-10">
                 Güvenlikte Güvenilir{" "}
                 <span className="text-gradient-red">Çözüm Ortağınız</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="text-gray-400 text-lg leading-[1.9] mb-12">
+              <p className="text-gray-400 text-lg leading-[2] mb-14">
                 MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5 mb-12">
+              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14">
                 {features.map((f) => (
-                  <div key={f} className="flex items-center gap-3.5">
-                    <FiCheckCircle className="text-red flex-shrink-0" size={20} />
-                    <span className="text-gray-300 text-[17px]">{f}</span>
+                  <div key={f} className="flex items-center gap-4">
+                    <div className="w-8 h-8 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FiCheckCircle className="text-red" size={16} />
+                    </div>
+                    <span className="text-gray-300 text-[15px] leading-[1.6]">{f}</span>
                   </div>
                 ))}
               </div>
@@ -75,7 +77,7 @@ export default function About() {
             <ScrollReveal delay={0.4}>
               <Link
                 href="/hakkimizda"
-                className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-9 py-4.5 rounded-full text-base"
+                className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-10 py-5 rounded-full text-base"
               >
                 Daha Fazla Bilgi <FiArrowRight size={17} />
               </Link>

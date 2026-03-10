@@ -12,7 +12,7 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section className="bg-dark-light py-32 lg:py-44">
+    <section className="bg-dark-light py-36 lg:py-48">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Operasyonlarımız"
@@ -21,7 +21,7 @@ export default function Gallery() {
           description="Profesyonel güvenlik hizmetlerimizden kesitler."
         />
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mt-20">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mt-24">
           {photos.map((photo, i) => (
             <ScrollReveal key={photo.label} delay={i * 0.1}>
               <div className="group relative rounded-2xl overflow-hidden border border-border cursor-pointer aspect-[4/3]">

@@ -38,8 +38,8 @@ function LogoRow({ logos, reverse }: { logos: string[]; reverse?: boolean }) {
 
 export default function References() {
   return (
-    <section className="bg-surface-dark py-32 lg:py-44 border-y border-white/[0.04] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+    <section className="bg-surface-dark py-36 lg:py-48 border-y border-white/[0.04] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-20">
         <SectionTitle
           label="Referanslarımız"
           title="Birlikte Çalıştığımız"
@@ -47,7 +47,7 @@ export default function References() {
         />
       </div>
       <LogoRow logos={row1} />
-      <div className="mt-6">
+      <div className="mt-8">
         <LogoRow logos={row2} reverse />
       </div>
     </section>

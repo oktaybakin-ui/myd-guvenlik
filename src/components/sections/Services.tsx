@@ -17,7 +17,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-dark py-32 lg:py-44">
+    <section className="bg-dark py-36 lg:py-48">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Hizmetlerimiz"
@@ -26,7 +26,7 @@ export default function Services() {
           description="İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-24">
           {services.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 0.08}>
               <Link href="/hizmetler" className="group block h-full">
@@ -41,14 +41,14 @@ export default function Services() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/30 to-transparent" />
                     {/* Icon overlay */}
-                    <div className="absolute bottom-5 left-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-red group-hover:border-red transition-all duration-300">
+                    <div className="absolute bottom-5 left-7 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-red group-hover:border-red transition-all duration-300">
                       <s.icon className="text-white" size={22} />
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="p-8">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-red transition-colors duration-300">{s.title}</h3>
-                    <p className="text-gray-400 text-base leading-[1.8] mb-5">{s.desc}</p>
+                  <div className="p-9 lg:p-10">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-red transition-colors duration-300">{s.title}</h3>
+                    <p className="text-gray-400 text-[15px] leading-[2] mb-7">{s.desc}</p>
                     <span className="text-red text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3.5 transition-all duration-300">
                       Detaylı Bilgi <FiArrowRight size={15} />
                     </span>

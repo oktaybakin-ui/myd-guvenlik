@@ -52,26 +52,26 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-32 lg:py-44">
+      <section className="bg-dark py-36 lg:py-48">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="space-y-4">
+          <div className="space-y-5">
             {faqs.map((faq, index) => (
               <ScrollReveal key={index} delay={index * 0.03}>
                 <div className="border border-border rounded-2xl overflow-hidden bg-dark-light hover:border-white/[0.08] transition-colors duration-300">
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full flex items-center justify-between p-7 text-left"
+                    className="w-full flex items-center justify-between p-8 text-left"
                   >
-                    <span className="font-semibold text-base pr-8 leading-relaxed">{faq.q}</span>
+                    <span className="font-semibold text-[15px] pr-8 leading-[1.6]">{faq.q}</span>
                     <FiChevronDown
                       className={`text-red flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
                       size={20}
                     />
                   </button>
                   <div className={`accordion-content ${openIndex === index ? "open" : ""}`}>
-                    <div className="px-7 pb-7">
-                      <div className="w-full h-px bg-border mb-5" />
-                      <p className="text-gray-400 text-base leading-[1.8]">{faq.a}</p>
+                    <div className="px-8 pb-8">
+                      <div className="w-full h-px bg-border mb-6" />
+                      <p className="text-gray-400 text-[15px] leading-[2]">{faq.a}</p>
                     </div>
                   </div>
                 </div>
@@ -80,10 +80,10 @@ export default function SSSPage() {
           </div>
 
           <ScrollReveal delay={0.1}>
-            <div className="mt-20 bg-dark-light border border-border rounded-2xl p-12 text-center">
-              <h3 className="text-2xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
-              <p className="text-gray-400 text-base mb-8 leading-relaxed">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
-              <Link href="/iletisim" className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base">
+            <div className="mt-24 bg-dark-light border border-border rounded-2xl p-14 text-center">
+              <h3 className="text-2xl font-bold mb-5">Başka Sorunuz mu Var?</h3>
+              <p className="text-gray-400 text-[15px] mb-10 leading-[2]">Aklınızdaki tüm sorular için destek ekibimize ulaşabilirsiniz.</p>
+              <Link href="/iletisim" className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-10 py-5 rounded-full text-base">
                 Destek Talebi Oluşturun <FiArrowRight size={18} />
               </Link>
             </div>

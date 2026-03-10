@@ -26,27 +26,27 @@ export default function Sectors() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <ScrollReveal>
-          <div className="flex items-center gap-3 justify-center mb-6">
-            <span className="w-10 h-[2px] bg-red rounded-full" />
-            <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Hizmet Verdiğimiz Sektörler</span>
+          <div className="flex items-center gap-3 justify-center mb-7">
+            <span className="w-12 h-[2px] bg-red rounded-full" />
+            <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hizmet Verdiğimiz Sektörler</span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-7">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
             Her Sektöre Özel{" "}
             <span className="text-gradient-red">Güvenlik Çözümleri</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-[1.9] mb-16">
+          <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-[2] mb-18">
             Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 lg:gap-5">
             {sectors.map((s) => (
               <span
                 key={s}
