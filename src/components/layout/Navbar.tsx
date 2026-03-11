@@ -56,10 +56,7 @@ export default function Navbar() {
             <div className="bg-white rounded-lg p-1.5">
               <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={34} height={34} className="rounded" />
             </div>
-            <div className="leading-tight">
-              <span className="text-lg font-bold text-white">MYD</span>
-              <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
-            </div>
+            <span className="text-xl font-bold tracking-wide"><span className="text-red">MYD</span> <span className="text-white">ÖZEL GÜVENLİK</span></span>
           </Link>
 
           {/* Desktop Menu */}
