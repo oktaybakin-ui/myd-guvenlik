@@ -1,16 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import TopBar from "./TopBar";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hakkımızda", href: "/hakkimizda" },
-  { label: "Eğitimler", href: "/egitimler" },
+  {
+    label: "Eğitimler",
+    href: "/egitimler",
+    children: [
+      { label: "Eğitim Programları", href: "/egitimler" },
+      { label: "Eğitim Şartları ve Gerekli Evraklar", href: "/egitim-sartlari" },
+    ],
+  },
   { label: "Hizmetler", href: "/hizmetler" },
   { label: "Projelerimiz", href: "/projelerimiz" },
   { label: "İletişim", href: "/iletisim" },
@@ -56,18 +63,51 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
-                    pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) =>
+              link.children ? (
+                <li key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors inline-flex items-center gap-1 ${
+                      pathname === link.href || pathname === "/egitim-sartlari"
+                        ? "text-white active"
+                        : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                    <FiChevronDown size={13} className="transition-transform group-hover:rotate-180" />
+                  </Link>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-dark-card border border-border rounded-xl shadow-2xl shadow-black/40 py-2 min-w-[280px]">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`block px-5 py-3 text-sm transition-colors ${
+                            pathname === child.href
+                              ? "text-red bg-red/5"
+                              : "text-gray-400 hover:text-white hover:bg-white/5"
+                          }`}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ) : (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
+                      pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
 
           {/* CTA */}
@@ -104,6 +144,22 @@ export default function Navbar() {
                   >
                     {link.label}
                   </Link>
+                  {link.children && (
+                    <div className="mt-3 space-y-2">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setMenuOpen(false)}
+                          className={`block text-base transition-colors ${
+                            pathname === child.href ? "text-red" : "text-gray-500 hover:text-white"
+                          }`}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
