@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
 import { services } from "@/data/services";
 import SectionTitle from "@/components/ui/SectionTitle";
@@ -38,19 +39,23 @@ export default function Services() {
                     </div>
 
                     {/* Back */}
-                    <div className="flip-card-back bg-gradient-to-br from-red-dark via-red to-red-dark border border-red/30 flex flex-col items-center justify-center p-8 lg:p-10 text-center">
-                      <s.icon className="text-white/80 mb-4" size={28} />
-                      <h3 className="text-lg font-bold text-white mb-4">{s.title}</h3>
-                      <div className="flex flex-wrap gap-2 justify-center mb-5">
-                        {s.features.slice(0, 4).map((f) => (
-                          <span key={f} className="text-xs font-medium bg-white/15 text-white px-3 py-1.5 rounded-full">
-                            {f}
-                          </span>
-                        ))}
+                    <div className="flip-card-back border border-red/30 flex flex-col items-center justify-center p-8 lg:p-10 text-center relative">
+                      <Image src={s.image} alt={s.title} fill className="object-cover opacity-20" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-dark/90 via-red/85 to-red-dark/90 rounded-2xl" />
+                      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                        <s.icon className="text-white/80 mb-4" size={28} />
+                        <h3 className="text-lg font-bold text-white mb-4">{s.title}</h3>
+                        <div className="flex flex-wrap gap-2 justify-center mb-5">
+                          {s.features.slice(0, 4).map((f) => (
+                            <span key={f} className="text-xs font-medium bg-white/15 text-white px-3 py-1.5 rounded-full">
+                              {f}
+                            </span>
+                          ))}
+                        </div>
+                        <span className="inline-flex items-center gap-2 text-white font-semibold text-sm">
+                          Sayfaya Git <FiArrowRight size={14} />
+                        </span>
                       </div>
-                      <span className="inline-flex items-center gap-2 text-white font-semibold text-sm">
-                        Sayfaya Git <FiArrowRight size={14} />
-                      </span>
                     </div>
                   </div>
                 </div>

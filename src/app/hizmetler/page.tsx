@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
 import { services } from "@/data/services";
 import PageBanner from "@/components/PageBanner";
@@ -48,7 +49,10 @@ export default function HizmetlerPage() {
                       </div>
 
                       {/* Back */}
-                      <div className="flip-card-back bg-gradient-to-br from-red-dark via-red to-red-dark border border-red/30 flex flex-col items-center justify-center p-10 text-center">
+                      <div className="flip-card-back border border-red/30 flex flex-col items-center justify-center p-10 text-center relative">
+                        <Image src={s.image} alt={s.title} fill className="object-cover opacity-20" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-dark/90 via-red/85 to-red-dark/90 rounded-2xl" />
+                        <div className="relative z-10 flex flex-col items-center justify-center h-full">
                         <s.icon className="text-white/80 mb-5" size={32} />
                         <h3 className="text-xl font-bold text-white mb-5">{s.title}</h3>
                         <div className="flex flex-wrap gap-2 justify-center mb-6">
@@ -61,6 +65,7 @@ export default function HizmetlerPage() {
                         <span className="inline-flex items-center gap-2 text-white font-semibold text-sm mt-auto">
                           Detaylı Bilgi <FiArrowRight size={14} />
                         </span>
+                        </div>
                       </div>
                     </div>
                   </div>
