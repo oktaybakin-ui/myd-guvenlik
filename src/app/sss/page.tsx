@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const faqs = [
@@ -46,13 +45,7 @@ export default function SSSPage() {
 
   return (
     <>
-      <PageBanner
-        title="Sıkça Sorulan Sorular"
-        subtitle="Merak ettiğiniz soruların cevaplarını burada bulabilirsiniz."
-        breadcrumb="S.S.S"
-      />
-
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (

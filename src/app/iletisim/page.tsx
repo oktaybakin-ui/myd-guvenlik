@@ -1,7 +1,6 @@
 "use client";
 
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { useBranch } from "@/context/BranchContext";
 
@@ -39,13 +38,7 @@ export default function IletisimPage() {
 
   return (
     <>
-      <PageBanner
-        title="İletişim"
-        subtitle="Güvenlik ihtiyaçlarınız için bizimle iletişime geçin, size en uygun çözümü birlikte belirleyelim."
-        breadcrumb="İletişim"
-      />
-
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Contact Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-28">

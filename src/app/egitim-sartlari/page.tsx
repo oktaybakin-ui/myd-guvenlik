@@ -2,7 +2,6 @@
 
 import { FiCheckCircle, FiFileText, FiAlertCircle, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const gerekliEvraklar = [
@@ -69,14 +68,8 @@ const egitimSureci = [
 export default function EgitimSartlariPage() {
   return (
     <>
-      <PageBanner
-        title="Eğitim Şartları ve Gerekli Evraklar"
-        subtitle="Özel güvenlik eğitimlerimize katılmak için gerekli şartlar ve hazırlamanız gereken belgeler hakkında bilgi edinin."
-        breadcrumb="Eğitim Şartları"
-      />
-
       {/* Şartlar */}
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-16">

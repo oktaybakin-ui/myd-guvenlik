@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiCheckCircle, FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { services } from "@/data/services";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ServiceDetailPage() {
@@ -27,14 +26,8 @@ export default function ServiceDetailPage() {
 
   return (
     <>
-      <PageBanner
-        title={service.title}
-        subtitle={service.shortDesc}
-        breadcrumb={service.title}
-      />
-
       {/* Detail Section */}
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Image */}

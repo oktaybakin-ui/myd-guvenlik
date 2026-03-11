@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiClock, FiAward, FiArrowRight, FiCheckCircle } from "react-icons/fi";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const trainings = [
@@ -40,13 +39,7 @@ const trainings = [
 export default function EgitimlerPage() {
   return (
     <>
-      <PageBanner
-        title="Eğitim Programları"
-        subtitle="5188 sayılı kanun kapsamında, profesyonel güvenlik sektörünün ihtiyaç duyduğu tüm eğitim programlarını sunuyoruz."
-        breadcrumb="Eğitimler"
-      />
-
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="space-y-28">
             {trainings.map((t, i) => (

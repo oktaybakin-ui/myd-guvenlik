@@ -2,7 +2,6 @@
 
 import { FiShield, FiUsers, FiHome, FiTruck, FiMapPin, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
@@ -73,14 +72,8 @@ const projectStats = [
 export default function ProjelerimizPage() {
   return (
     <>
-      <PageBanner
-        title="Projelerimiz"
-        subtitle="Farklı sektörlerde yürüttüğümüz projelerle güvenlik ve entegre hizmet alanında güçlü bir portföy oluşturduk."
-        breadcrumb="Projelerimiz"
-      />
-
       {/* Proje İstatistikleri */}
-      <section className="bg-dark-light py-16 lg:py-20 border-b border-white/[0.04]">
+      <section className="bg-dark-light pt-40 lg:pt-48 pb-16 lg:pb-20 border-b border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
             {projectStats.map((stat, i) => (

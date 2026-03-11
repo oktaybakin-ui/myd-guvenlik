@@ -2,7 +2,6 @@
 
 import { FiFileText, FiDownload, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const dokumanlar = [
@@ -51,13 +50,7 @@ const dokumanlar = [
 export default function EgitimDokumanlariPage() {
   return (
     <>
-      <PageBanner
-        title="Eğitim Dokümanları"
-        subtitle="Özel güvenlik eğitim programlarımıza ait müfredatlar, başvuru formları ve mevzuat dokümanlarına bu sayfadan ulaşabilirsiniz."
-        breadcrumb="Eğitim Dokümanları"
-      />
-
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-16">

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiCheckCircle, FiShield, FiUsers, FiAward, FiClock, FiTarget, FiEye, FiArrowRight } from "react-icons/fi";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
@@ -43,14 +42,8 @@ const timeline = [
 export default function HakkimizdaPage() {
   return (
     <>
-      <PageBanner
-        title="Hakkımızda"
-        subtitle="MYD Özel Güvenlik Hizmetleri olarak, sektördeki derin bilgi birikimi ve tecrübemizle hizmet veriyoruz."
-        breadcrumb="Hakkımızda"
-      />
-
       {/* Biz Kimiz */}
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
             <ScrollReveal>

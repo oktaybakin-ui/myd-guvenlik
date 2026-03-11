@@ -4,19 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
 import { services } from "@/data/services";
-import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function HizmetlerPage() {
   return (
     <>
-      <PageBanner
-        title="Hizmetlerimiz"
-        subtitle="İşletmenizin güvenlik ihtiyaçlarına özel, kapsamlı ve profesyonel güvenlik çözümleri sunuyoruz."
-        breadcrumb="Hizmetler"
-      />
-
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
