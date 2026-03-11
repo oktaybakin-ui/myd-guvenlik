@@ -48,8 +48,8 @@ export default function IletisimPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-28">
             {contactInfo.map((info, i) => (
               <ScrollReveal key={info.title} delay={i * 0.1}>
-                <div className="bg-dark-light border border-border rounded-2xl p-9 group hover-lift h-full">
-                  <div className="w-14 h-14 bg-red/10 rounded-2xl flex items-center justify-center mb-7 group-hover:bg-red/20 transition-colors duration-300">
+                <div className="bg-dark-light border border-border rounded-2xl p-9 group hover-lift h-full text-center">
+                  <div className="w-14 h-14 bg-red/10 rounded-2xl flex items-center justify-center mb-7 group-hover:bg-red/20 transition-colors duration-300 mx-auto">
                     <info.icon className="text-red" size={22} />
                   </div>
                   <h4 className="font-bold text-lg mb-4">{info.title}</h4>

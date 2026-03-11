@@ -18,8 +18,31 @@ export default function About() {
   return (
     <section className="bg-dark py-40 lg:py-52">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-28 items-center">
-          {/* Left - Image */}
+        {/* Top: Centered intro */}
+        <div className="text-center mb-20">
+          <ScrollReveal>
+            <div className="flex items-center gap-3 mb-7 justify-center">
+              <span className="w-12 h-[2px] bg-red rounded-full" />
+              <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hakkımızda</span>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight mb-10">
+              Güvenlikte Güvenilir{" "}
+              <span className="text-gradient-red">Çözüm Ortağınız</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <p className="text-gray-400 text-lg leading-[2] max-w-3xl mx-auto">
+              MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
+            </p>
+          </ScrollReveal>
+        </div>
+
+        {/* Bottom: Image + Features side by side */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <ScrollReveal direction="left">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden img-zoom border border-border shadow-2xl shadow-black/40">
@@ -39,50 +62,26 @@ export default function About() {
             </div>
           </ScrollReveal>
 
-          {/* Right - Content */}
-          <div className="text-center lg:text-left">
-            <ScrollReveal>
-              <div className="flex items-center gap-3 mb-7 justify-center lg:justify-start">
-                <span className="w-12 h-[2px] bg-red rounded-full" />
-                <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hakkımızda</span>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight mb-10">
-                Güvenlikte Güvenilir{" "}
-                <span className="text-gradient-red">Çözüm Ortağınız</span>
-              </h2>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <p className="text-gray-400 text-lg leading-[2] mb-14 max-w-xl mx-auto lg:mx-0">
-                MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14 text-left">
-                {features.map((f) => (
-                  <div key={f} className="flex items-center gap-4">
-                    <div className="w-8 h-8 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <FiCheckCircle className="text-red" size={16} />
-                    </div>
-                    <span className="text-gray-300 text-[15px] leading-[1.6]">{f}</span>
+          <ScrollReveal delay={0.3}>
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14">
+              {features.map((f) => (
+                <div key={f} className="flex items-center gap-4">
+                  <div className="w-8 h-8 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <FiCheckCircle className="text-red" size={16} />
                   </div>
-                ))}
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
+                  <span className="text-gray-300 text-[15px] leading-[1.6]">{f}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-center sm:text-left">
               <Link
                 href="/hakkimizda"
                 className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-10 py-5 rounded-full text-base"
               >
                 Daha Fazla Bilgi <FiArrowRight size={17} />
               </Link>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -25,22 +25,18 @@ export default function WhyUs() {
         <div className="grid md:grid-cols-2 gap-10 lg:gap-12 mt-28">
           {advantages.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
-              <div className="relative hover-lift bg-gradient-to-br from-dark-card to-dark border border-border rounded-2xl p-11 lg:p-14 group overflow-hidden h-full">
+              <div className="relative hover-lift bg-gradient-to-br from-dark-card to-dark border border-border rounded-2xl p-11 lg:p-14 group overflow-hidden h-full text-center">
                 {/* Big number background */}
                 <span className="absolute top-6 right-8 text-[7rem] font-bold text-red/[0.04] select-none pointer-events-none leading-none">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
-                <div className="relative z-10 flex gap-8">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-red/10 rounded-2xl flex items-center justify-center group-hover:bg-red transition-colors duration-300">
-                      <item.icon className="text-red group-hover:text-white transition-colors duration-300" size={28} />
-                    </div>
+                <div className="relative z-10">
+                  <div className="mx-auto mb-7 w-16 h-16 bg-red/10 rounded-2xl flex items-center justify-center group-hover:bg-red transition-colors duration-300">
+                    <item.icon className="text-red group-hover:text-white transition-colors duration-300" size={28} />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-5">{item.title}</h3>
-                    <p className="text-gray-400 text-[15px] leading-[2]">{item.desc}</p>
-                  </div>
+                  <h3 className="text-2xl font-bold mb-5">{item.title}</h3>
+                  <p className="text-gray-400 text-[15px] leading-[2] max-w-sm mx-auto">{item.desc}</p>
                 </div>
               </div>
             </ScrollReveal>

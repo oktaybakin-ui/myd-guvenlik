@@ -74,14 +74,14 @@ export default function EgitimlerPage() {
                   </div>
 
                   {/* Content */}
-                  <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                    <div className="flex items-center gap-2.5 mb-4">
+                  <div className={`text-center lg:text-left ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <div className="flex items-center gap-2.5 mb-4 justify-center lg:justify-start">
                       <FiAward className="text-red" size={18} />
                       <span className="text-red text-sm font-semibold uppercase tracking-widest">Sertifikalı Program</span>
                     </div>
                     <h3 className="text-2xl lg:text-3xl font-bold mb-5 leading-tight">{t.title}</h3>
                     <p className="text-gray-400 text-lg leading-[1.8] mb-8">{t.desc}</p>
-                    <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3.5 mb-8">
+                    <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3.5 mb-8 text-left">
                       {t.features.map((f) => (
                         <div key={f} className="flex items-center gap-3">
                           <FiCheckCircle className="text-red flex-shrink-0" size={16} />

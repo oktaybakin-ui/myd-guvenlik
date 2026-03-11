@@ -30,7 +30,7 @@ export default function Services() {
           {services.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 0.08}>
               <Link href="/hizmetler" className="group block h-full">
-                <div className="hover-lift bg-dark-card border border-border rounded-2xl overflow-hidden h-full">
+                <div className="hover-lift bg-dark-card border border-border rounded-2xl overflow-hidden h-full text-center">
                   {/* Photo */}
                   <div className="relative h-56 overflow-hidden">
                     <Image
@@ -41,7 +41,7 @@ export default function Services() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/30 to-transparent" />
                     {/* Icon overlay */}
-                    <div className="absolute bottom-5 left-7 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-red group-hover:border-red transition-all duration-300">
+                    <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-red group-hover:border-red transition-all duration-300">
                       <s.icon className="text-white" size={22} />
                     </div>
                   </div>
