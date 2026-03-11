@@ -13,7 +13,7 @@ const advantages = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-dark-light py-36 lg:py-48">
+    <section className="bg-dark-light py-40 lg:py-52">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Neden MYD Güvenlik?"
@@ -22,7 +22,7 @@ export default function WhyUs() {
           description="Operasyonel verimlilik, şeffaflık ve sürdürülebilirlik ilkeleriyle güvenlik ihtiyaçlarınızı tek merkezden yönetiyoruz."
         />
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 mt-24">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-12 mt-28">
           {advantages.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.1}>
               <div className="relative hover-lift bg-gradient-to-br from-dark-card to-dark border border-border rounded-2xl p-11 lg:p-14 group overflow-hidden h-full">

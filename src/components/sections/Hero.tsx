@@ -18,14 +18,14 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-52 pb-44 w-full">
-        <div className="flex flex-col lg:flex-row gap-20 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-20 items-center">
           {/* Left — %60 */}
-          <div className="w-full lg:w-3/5">
+          <div className="w-full lg:w-3/5 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-12"
+              className="flex items-center gap-3 mb-12 justify-center lg:justify-start"
             >
               <span className="w-12 h-[2px] bg-red rounded-full" />
               <span className="text-red text-[13px] font-semibold uppercase tracking-[0.25em]">Profesyonel Güvenlik Hizmetleri</span>
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-gray-400 text-lg lg:text-xl leading-[2] mb-16 max-w-xl"
+              className="text-gray-400 text-lg lg:text-xl leading-[2] mb-16 max-w-xl mx-auto lg:mx-0"
             >
               1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
             </motion.p>
@@ -56,7 +56,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="flex flex-wrap gap-5"
+              className="flex flex-wrap gap-5 justify-center lg:justify-start"
             >
               <Link
                 href="/iletisim"

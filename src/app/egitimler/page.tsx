@@ -46,12 +46,12 @@ export default function EgitimlerPage() {
         breadcrumb="Eğitimler"
       />
 
-      <section className="bg-dark py-32 lg:py-40">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="space-y-20">
+      <section className="bg-dark py-36 lg:py-48">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="space-y-28">
             {trainings.map((t, i) => (
               <ScrollReveal key={t.title} delay={0.05}>
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
                   {/* Image */}
                   <div className={`relative ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <div className="rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/30 img-zoom">
@@ -104,9 +104,9 @@ export default function EgitimlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-36 lg:py-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">Eğitim Programlarımız Hakkında Bilgi Alın</h2>
             <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-[1.8]">Eğitim tarihleri, kontenjan bilgisi ve başvuru süreci için bizimle iletişime geçin.</p>

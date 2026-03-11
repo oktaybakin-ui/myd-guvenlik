@@ -17,7 +17,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-dark py-36 lg:py-48">
+    <section className="bg-dark py-40 lg:py-52">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Hizmetlerimiz"
@@ -26,7 +26,7 @@ export default function Services() {
           description="İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 mt-28">
           {services.map((s, i) => (
             <ScrollReveal key={s.title} delay={i * 0.08}>
               <Link href="/hizmetler" className="group block h-full">

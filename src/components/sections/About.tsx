@@ -16,9 +16,9 @@ const features = [
 
 export default function About() {
   return (
-    <section className="bg-dark py-36 lg:py-48">
+    <section className="bg-dark py-40 lg:py-52">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-28 items-center">
           {/* Left - Image */}
           <ScrollReveal direction="left">
             <div className="relative">
@@ -40,9 +40,9 @@ export default function About() {
           </ScrollReveal>
 
           {/* Right - Content */}
-          <div>
+          <div className="text-center lg:text-left">
             <ScrollReveal>
-              <div className="flex items-center gap-3 mb-7">
+              <div className="flex items-center gap-3 mb-7 justify-center lg:justify-start">
                 <span className="w-12 h-[2px] bg-red rounded-full" />
                 <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hakkımızda</span>
               </div>
@@ -56,13 +56,13 @@ export default function About() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="text-gray-400 text-lg leading-[2] mb-14">
+              <p className="text-gray-400 text-lg leading-[2] mb-14 max-w-xl mx-auto lg:mx-0">
                 MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14">
+              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14 text-left">
                 {features.map((f) => (
                   <div key={f} className="flex items-center gap-4">
                     <div className="w-8 h-8 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0">

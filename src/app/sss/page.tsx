@@ -52,9 +52,9 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-36 lg:py-48">
+      <section className="bg-dark py-40 lg:py-52">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="space-y-5">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <ScrollReveal key={index} delay={index * 0.03}>
                 <div className="border border-border rounded-2xl overflow-hidden bg-dark-light hover:border-white/[0.08] transition-colors duration-300">

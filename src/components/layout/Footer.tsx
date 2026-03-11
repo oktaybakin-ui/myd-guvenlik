@@ -28,8 +28,8 @@ export default function Footer() {
   return (
     <footer className="bg-surface-dark border-t border-gray-800">
       {/* Main */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-14 lg:gap-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-28">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20">
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-3 mb-8">

@@ -42,10 +42,10 @@ export default function IletisimPage() {
         breadcrumb="İletişim"
       />
 
-      <section className="bg-dark py-32 lg:py-44">
+      <section className="bg-dark py-36 lg:py-48">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Contact Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-28">
             {contactInfo.map((info, i) => (
               <ScrollReveal key={info.title} delay={i * 0.1}>
                 <div className="bg-dark-light border border-border rounded-2xl p-9 group hover-lift h-full">
@@ -67,7 +67,7 @@ export default function IletisimPage() {
           </div>
 
           <ScrollReveal>
-            <div className="grid lg:grid-cols-5 gap-10">
+            <div className="grid lg:grid-cols-5 gap-12">
               {/* Map */}
               <div className="lg:col-span-2">
                 <div className="bg-dark-light border border-border rounded-2xl overflow-hidden h-full min-h-[520px]">

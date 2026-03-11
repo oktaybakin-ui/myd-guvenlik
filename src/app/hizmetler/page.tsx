@@ -20,9 +20,9 @@ export default function HizmetlerPage() {
     <>
       <PageBanner title="Hizmetlerimiz" subtitle="İşletmenizin güvenlik ihtiyaçlarına özel, kapsamlı ve profesyonel güvenlik çözümleri sunuyoruz." breadcrumb="Hizmetler" />
 
-      <section className="bg-dark py-32 lg:py-44">
+      <section className="bg-dark py-36 lg:py-48">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="space-y-12">
+          <div className="space-y-16">
             {services.map((s) => (
               <ScrollReveal key={s.title} delay={0.05}>
                 <div className="bg-dark-card border border-border rounded-2xl overflow-hidden hover-lift">
@@ -33,9 +33,9 @@ export default function HizmetlerPage() {
                       <s.icon className="text-red" size={26} />
                     </div>
                   </div>
-                  <div className="p-10 lg:p-12">
+                  <div className="p-10 lg:p-14">
                     <h3 className="text-2xl font-bold mb-5">{s.title}</h3>
-                    <p className="text-gray-400 text-lg leading-[1.85] mb-8">{s.desc}</p>
+                    <p className="text-gray-400 text-lg leading-[1.85] mb-10">{s.desc}</p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {s.features.map((f) => (
                         <div key={f} className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.05] rounded-2xl px-5 py-4">
@@ -53,7 +53,7 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-32 lg:py-40 overflow-hidden">
+      <section className="relative py-36 lg:py-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal>

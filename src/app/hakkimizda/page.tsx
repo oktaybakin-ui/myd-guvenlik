@@ -39,7 +39,7 @@ export default function HakkimizdaPage() {
         breadcrumb="Hakkımızda"
       />
 
-      <section className="bg-dark py-32 lg:py-44">
+      <section className="bg-dark py-36 lg:py-48">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 lg:gap-28 items-center">
             <ScrollReveal direction="left">
@@ -55,9 +55,9 @@ export default function HakkimizdaPage() {
               </div>
             </ScrollReveal>
 
-            <div>
+            <div className="text-center lg:text-left">
               <ScrollReveal>
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                   <span className="w-10 h-[2px] bg-red rounded-full" />
                   <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Biz Kimiz?</span>
                 </div>
@@ -74,7 +74,7 @@ export default function HakkimizdaPage() {
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5">
+                <div className="grid sm:grid-cols-2 gap-x-10 gap-y-5 text-left">
                   {features.map((f) => (
                     <div key={f} className="flex items-start gap-3.5">
                       <FiCheckCircle className="text-red flex-shrink-0 mt-0.5" size={18} />
@@ -88,7 +88,7 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      <section className="bg-dark-light py-24 lg:py-28 border-y border-white/[0.04]">
+      <section className="bg-dark-light py-28 lg:py-36 border-y border-white/[0.04]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
             {stats.map((stat, i) => (
@@ -107,10 +107,10 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      <section className="bg-dark py-32 lg:py-44">
+      <section className="bg-dark py-36 lg:py-48">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-20">
+            <div className="text-center mb-24">
               <div className="flex items-center gap-3 justify-center mb-6">
                 <span className="w-10 h-[2px] bg-red rounded-full" />
                 <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Değerlerimiz</span>
@@ -118,7 +118,7 @@ export default function HakkimizdaPage() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Temel <span className="text-gradient-red">Değerlerimiz</span></h2>
             </div>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {values.map((v, i) => (
               <ScrollReveal key={v.title} delay={i * 0.1}>
                 <div className="bg-dark-card border border-border rounded-2xl p-10 lg:p-12 hover-lift h-full">

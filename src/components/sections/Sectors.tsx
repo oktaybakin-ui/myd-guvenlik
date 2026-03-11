@@ -12,7 +12,7 @@ const sectors = [
 export default function Sectors() {
   return (
     <section
-      className="relative py-36 lg:py-48 overflow-hidden"
+      className="relative py-40 lg:py-52 overflow-hidden"
       style={{
         backgroundImage: "url('/services/services4.png')",
         backgroundAttachment: "fixed",
@@ -40,7 +40,7 @@ export default function Sectors() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-[2] mb-18">
+          <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-[2] mb-20">
             Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
           </p>
         </ScrollReveal>
