@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
+import { useBranch } from "@/context/BranchContext";
 
 const quickLinks = [
   { label: "Hakkımızda", href: "/hakkimizda" },
@@ -19,6 +22,8 @@ const socials = [
 ];
 
 export default function Footer() {
+  const { branch } = useBranch();
+
   return (
     <footer className="bg-surface-dark border-t border-gray-800">
       {/* Main */}
@@ -76,7 +81,7 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3 justify-center">
                   <FiMapPin className="text-red mt-1 flex-shrink-0" size={14} />
-                  <span className="text-gray-500 text-[15px]">MYD Yönetim Merkezi Isparta / Türkiye</span>
+                  <span className="text-gray-500 text-[15px]">{branch.address.join(", ")} / Türkiye</span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <FiPhone className="text-red flex-shrink-0" size={14} />

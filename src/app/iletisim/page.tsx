@@ -3,37 +3,40 @@
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import PageBanner from "@/components/PageBanner";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const contactInfo = [
-  {
-    icon: FiPhone,
-    title: "Telefon",
-    lines: ["0 (543) 712 59 04"],
-    href: "tel:+905437125904",
-    cta: "Hemen Arayın",
-  },
-  {
-    icon: FiMail,
-    title: "E-posta",
-    lines: ["info@mydozelguvenlik.com"],
-    href: "mailto:info@mydozelguvenlik.com",
-    cta: "E-posta Gönderin",
-  },
-  {
-    icon: FiMapPin,
-    title: "Adres",
-    lines: ["İskender Mah. 106 Cad.", "No:36-38/4, Merkez / Isparta"],
-    href: "https://maps.google.com/?q=İskender+Mah+106+Cad+Isparta",
-    cta: "Yol Tarifi Alın",
-  },
-  {
-    icon: FiClock,
-    title: "Çalışma Saatleri",
-    lines: ["Hafta İçi: 08:30 - 18:00", "Cumartesi: 09:00 - 14:00"],
-  },
-];
+import { useBranch } from "@/context/BranchContext";
 
 export default function IletisimPage() {
+  const { branch } = useBranch();
+
+  const contactInfo = [
+    {
+      icon: FiPhone,
+      title: "Telefon",
+      lines: ["0 (543) 712 59 04"],
+      href: "tel:+905437125904",
+      cta: "Hemen Arayın",
+    },
+    {
+      icon: FiMail,
+      title: "E-posta",
+      lines: ["info@mydozelguvenlik.com"],
+      href: "mailto:info@mydozelguvenlik.com",
+      cta: "E-posta Gönderin",
+    },
+    {
+      icon: FiMapPin,
+      title: `Adres — ${branch.label} Şubesi`,
+      lines: branch.address,
+      href: `https://maps.google.com/?q=${branch.mapQuery}`,
+      cta: "Yol Tarifi Alın",
+    },
+    {
+      icon: FiClock,
+      title: "Çalışma Saatleri",
+      lines: ["Hafta İçi: 08:30 - 18:00", "Cumartesi: 09:00 - 14:00"],
+    },
+  ];
+
   return (
     <>
       <PageBanner
@@ -72,14 +75,14 @@ export default function IletisimPage() {
               <div className="lg:col-span-2">
                 <div className="bg-dark-light border border-border rounded-2xl overflow-hidden h-full min-h-[520px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.5!2d30.560273!3d37.760335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ1JzM3LjIiTiAzMMKwMzMnMzcuMCJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+                    src={branch.mapEmbed}
                     width="100%"
                     height="100%"
                     style={{ border: 0, minHeight: 520, filter: "grayscale(100%) contrast(1.1) invert(92%) hue-rotate(180deg)" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="MYD Güvenlik Konum"
+                    title={`MYD Güvenlik ${branch.label} Şubesi`}
                   />
                 </div>
               </div>
