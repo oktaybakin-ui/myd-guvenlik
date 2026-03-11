@@ -6,6 +6,7 @@ import Sectors from "@/components/sections/Sectors";
 import WhyUs from "@/components/sections/WhyUs";
 import Gallery from "@/components/sections/Gallery";
 import Training from "@/components/sections/Training";
+import Instagram from "@/components/sections/Instagram";
 import CTA from "@/components/sections/CTA";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyUs />
       <Gallery />
       <References />
+      <Instagram />
       <CTA />
     </>
   );
