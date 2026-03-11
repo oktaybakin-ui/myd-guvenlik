@@ -80,7 +80,7 @@ export default function ProjelerimizPage() {
       />
 
       {/* Proje İstatistikleri */}
-      <section className="bg-dark-light py-24 lg:py-32 border-b border-white/[0.04]">
+      <section className="bg-dark-light py-16 lg:py-20 border-b border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
             {projectStats.map((stat, i) => (
@@ -99,7 +99,7 @@ export default function ProjelerimizPage() {
       </section>
 
       {/* Projeler Grid */}
-      <section className="bg-dark py-32 lg:py-40">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -159,7 +159,7 @@ export default function ProjelerimizPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-light py-24 lg:py-32 border-t border-white/[0.04]">
+      <section className="bg-dark-light py-16 lg:py-20 border-t border-white/[0.04]">
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">

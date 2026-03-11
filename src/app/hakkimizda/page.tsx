@@ -50,7 +50,7 @@ export default function HakkimizdaPage() {
       />
 
       {/* Biz Kimiz */}
-      <section className="bg-dark py-32 lg:py-40">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
             <ScrollReveal>
@@ -101,7 +101,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* İstatistikler */}
-      <section className="bg-dark-light py-24 lg:py-32 border-y border-white/[0.04]">
+      <section className="bg-dark-light py-16 lg:py-20 border-y border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
             {stats.map((stat, i) => (
@@ -121,7 +121,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Misyon & Vizyon */}
-      <section className="bg-dark py-32 lg:py-40">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-10">
             <ScrollReveal>
@@ -151,7 +151,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Tarihçe */}
-      <section className="bg-dark-light py-32 lg:py-40 border-y border-white/[0.04]">
+      <section className="bg-dark-light py-20 lg:py-28 border-y border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -178,7 +178,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Temel Değerlerimiz */}
-      <section className="bg-dark py-32 lg:py-40">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -203,7 +203,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-light py-24 lg:py-32 border-t border-white/[0.04]">
+      <section className="bg-dark-light py-16 lg:py-20 border-t border-white/[0.04]">
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">

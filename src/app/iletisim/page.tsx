@@ -42,7 +42,7 @@ export default function IletisimPage() {
         breadcrumb="İletişim"
       />
 
-      <section className="bg-dark py-36 lg:py-48">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Contact Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-28">

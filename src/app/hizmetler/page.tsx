@@ -16,7 +16,7 @@ export default function HizmetlerPage() {
         breadcrumb="Hizmetler"
       />
 
-      <section className="bg-dark py-32 lg:py-40">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -77,7 +77,7 @@ export default function HizmetlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+      <section className="relative py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center relative z-10">
           <ScrollReveal>

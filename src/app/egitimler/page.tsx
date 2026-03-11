@@ -46,7 +46,7 @@ export default function EgitimlerPage() {
         breadcrumb="Eğitimler"
       />
 
-      <section className="bg-dark py-36 lg:py-48">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="space-y-28">
             {trainings.map((t, i) => (
@@ -104,7 +104,7 @@ export default function EgitimlerPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-36 lg:py-48 overflow-hidden">
+      <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center relative z-10">
           <ScrollReveal>

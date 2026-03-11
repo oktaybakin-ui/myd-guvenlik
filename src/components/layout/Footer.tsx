@@ -25,14 +25,11 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
         {/* Top: Brand + Description centered */}
         <div className="flex flex-col items-center text-center mb-12">
-          <Link href="/" className="inline-flex items-center gap-3 mb-6">
-            <div className="bg-white rounded-lg p-1.5">
-              <Image src="/logo.jpg" alt="MYD" width={32} height={32} className="rounded" />
+          <Link href="/" className="inline-flex items-center gap-4 mb-6">
+            <div className="bg-white rounded-xl p-2">
+              <Image src="/logo.jpg" alt="MYD" width={52} height={52} className="rounded-lg" />
             </div>
-            <div className="leading-tight">
-              <span className="text-base font-bold text-white">MYD</span>
-              <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
-            </div>
+            <span className="text-2xl font-bold text-white tracking-wide uppercase">MYD <span className="text-red">ÖZEL GÜVENLİK</span></span>
           </Link>
           <p className="text-gray-500 text-lg leading-relaxed mb-6 whitespace-nowrap">
             Güvenlik, temizlik, lojistik ve personel yönetiminde profesyonel çözümler sunuyoruz.

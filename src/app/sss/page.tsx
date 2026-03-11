@@ -52,7 +52,7 @@ export default function SSSPage() {
         breadcrumb="S.S.S"
       />
 
-      <section className="bg-dark py-40 lg:py-52">
+      <section className="bg-dark py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (
