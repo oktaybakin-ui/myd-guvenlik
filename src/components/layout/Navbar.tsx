@@ -16,6 +16,7 @@ const navLinks = [
     children: [
       { label: "Eğitim Programları", href: "/egitimler" },
       { label: "Eğitim Şartları ve Gerekli Evraklar", href: "/egitim-sartlari" },
+      { label: "Eğitim Dokümanları", href: "/egitim-dokumanlari" },
     ],
   },
   { label: "Hizmetler", href: "/hizmetler" },
@@ -69,7 +70,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors inline-flex items-center gap-1 ${
-                      pathname === link.href || pathname === "/egitim-sartlari"
+                      pathname === link.href || pathname === "/egitim-sartlari" || pathname === "/egitim-dokumanlari"
                         ? "text-white active"
                         : "text-gray-400 hover:text-white"
                     }`}
