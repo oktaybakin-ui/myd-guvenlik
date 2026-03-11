@@ -49,22 +49,22 @@ export default function HizmetlerPage() {
                       </div>
 
                       {/* Back */}
-                      <div className="flip-card-back border border-red/30 flex flex-col items-center justify-center p-10 text-center relative">
-                        <Image src={s.image} alt={s.title} fill className="object-cover opacity-20" />
-                        <div className="absolute inset-0 bg-gradient-to-br from-red-dark/90 via-red/85 to-red-dark/90 rounded-2xl" />
-                        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                        <s.icon className="text-white/80 mb-5" size={32} />
-                        <h3 className="text-xl font-bold text-white mb-5">{s.title}</h3>
-                        <div className="flex flex-wrap gap-2 justify-center mb-6">
-                          {s.features.slice(0, 4).map((f) => (
-                            <span key={f} className="text-xs font-medium bg-white/15 text-white px-3 py-1.5 rounded-full">
-                              {f}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="inline-flex items-center gap-2 text-white font-semibold text-sm mt-auto">
-                          Detaylı Bilgi <FiArrowRight size={14} />
-                        </span>
+                      <div className="flip-card-back border border-red/30">
+                        <Image src={s.image} alt={s.title} fill className="object-cover opacity-30" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-red-dark/80 via-red/70 to-red-dark/80" />
+                        <div className="relative z-10 flex flex-col items-center justify-center h-full p-10 text-center">
+                          <s.icon className="text-white/80 mb-5" size={32} />
+                          <h3 className="text-xl font-bold text-white mb-5">{s.title}</h3>
+                          <div className="flex flex-wrap gap-2 justify-center mb-6">
+                            {s.features.slice(0, 4).map((f) => (
+                              <span key={f} className="text-xs font-medium bg-white/15 text-white px-3 py-1.5 rounded-full">
+                                {f}
+                              </span>
+                            ))}
+                          </div>
+                          <span className="inline-flex items-center gap-2 text-white font-semibold text-sm">
+                            Detaylı Bilgi <FiArrowRight size={14} />
+                          </span>
                         </div>
                       </div>
                     </div>

@@ -39,10 +39,10 @@ export default function Services() {
                     </div>
 
                     {/* Back */}
-                    <div className="flip-card-back border border-red/30 flex flex-col items-center justify-center p-8 lg:p-10 text-center relative">
-                      <Image src={s.image} alt={s.title} fill className="object-cover opacity-20" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-red-dark/90 via-red/85 to-red-dark/90 rounded-2xl" />
-                      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                    <div className="flip-card-back border border-red/30">
+                      <Image src={s.image} alt={s.title} fill className="object-cover opacity-30" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-dark/80 via-red/70 to-red-dark/80" />
+                      <div className="relative z-10 flex flex-col items-center justify-center h-full p-8 lg:p-10 text-center">
                         <s.icon className="text-white/80 mb-4" size={28} />
                         <h3 className="text-lg font-bold text-white mb-4">{s.title}</h3>
                         <div className="flex flex-wrap gap-2 justify-center mb-5">
