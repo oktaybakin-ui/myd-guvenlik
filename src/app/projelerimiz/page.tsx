@@ -152,7 +152,7 @@ export default function ProjelerimizPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-light py-16 lg:py-20 border-t border-white/[0.04]">
+      <section className="bg-dark-light pt-24 lg:pt-28 pb-16 lg:pb-20 border-t border-white/[0.04]">
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
