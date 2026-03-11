@@ -47,7 +47,7 @@ export default function TopBar({ hidden }: { hidden: boolean }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="hidden sm:flex items-center gap-4">
           {socials.map((s, i) => (
             <a
               key={i}

@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
             <span className="text-2xl font-bold text-white tracking-wide uppercase">MYD <span className="text-red">ÖZEL GÜVENLİK</span></span>
           </Link>
-          <p className="text-gray-500 text-lg leading-relaxed mb-6 whitespace-nowrap">
+          <p className="text-gray-500 text-lg leading-relaxed mb-6">
             Güvenlik, temizlik, lojistik ve personel yönetiminde profesyonel çözümler sunuyoruz.
           </p>
           <div className="text-gray-600 text-sm font-medium mb-3">Bizi Takip Edebilirsiniz:</div>
