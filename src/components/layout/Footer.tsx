@@ -34,8 +34,8 @@ export default function Footer() {
               <span className="block text-[10px] text-red tracking-[2px] uppercase font-semibold">Özel Güvenlik</span>
             </div>
           </Link>
-          <p className="text-gray-500 text-[15px] leading-relaxed max-w-xl mb-6">
-            Güvenlik, temizlik, lojistik ve personel yönetiminde profesyonel çözümler sunuyor; operasyonlarınızı daha güvenilir ve verimli hale getiriyoruz.
+          <p className="text-gray-500 text-lg leading-relaxed mb-6 whitespace-nowrap">
+            Güvenlik, temizlik, lojistik ve personel yönetiminde profesyonel çözümler sunuyoruz.
           </p>
           <div className="text-gray-600 text-sm font-medium mb-3">Bizi Takip Edebilirsiniz:</div>
           <div className="flex gap-3">

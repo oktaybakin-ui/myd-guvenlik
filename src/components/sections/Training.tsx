@@ -13,7 +13,7 @@ const trainings = [
 
 export default function Training() {
   return (
-    <section className="relative py-32 lg:py-40 overflow-hidden">
+    <section className="relative py-20 lg:py-28 overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />

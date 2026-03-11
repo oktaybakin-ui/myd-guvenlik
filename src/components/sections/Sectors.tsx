@@ -13,7 +13,7 @@ const sectors = [
 export default function Sectors() {
   return (
     <section
-      className="relative py-32 lg:py-40 overflow-hidden"
+      className="relative py-20 lg:py-28 overflow-hidden"
       style={{
         backgroundImage: "url('/services/services4.png')",
         backgroundAttachment: "fixed",

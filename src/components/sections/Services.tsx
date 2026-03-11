@@ -9,7 +9,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Services() {
   return (
-    <section className="bg-dark py-32 lg:py-40">
+    <section className="bg-dark py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <SectionTitle
           label="Hizmetlerimiz"

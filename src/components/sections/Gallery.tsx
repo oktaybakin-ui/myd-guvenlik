@@ -21,7 +21,7 @@ export default function Gallery() {
   const next = () => setCurrent((c) => (c === photos.length - 1 ? 0 : c + 1));
 
   return (
-    <section className="bg-dark-light py-32 lg:py-40">
+    <section className="bg-dark-light py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <SectionTitle
           label="Operasyonlarımız"
