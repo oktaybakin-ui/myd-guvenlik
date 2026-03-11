@@ -3,16 +3,17 @@
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const sectors = [
-  "Rezidans & Site", "AVM & Mağaza", "Sağlık Kuruluşları", "Eğitim Kurumları",
-  "Üretim & Sanayi", "Kamu Kurumları", "Lojistik & Depo", "Otel & Turizm",
-  "Enerji & Altyapı", "Teknoloji & Bilişim", "Bankacılık", "Havalimanları",
-  "OSB", "Ofis & Plaza",
+  "Bankacılık", "Sağlık / Hastane", "Teknoloji / Bilişim",
+  "Enerji / Altyapı", "Lojistik / Depolama", "Üretim / Sanayi",
+  "Site / Residans", "AVM", "İlaç, Medikal",
+  "Turizm / Otel", "Eğitim Kurumları", "Kamu Kurumları",
+  "OSB", "Ofis / Plaza",
 ];
 
 export default function Sectors() {
   return (
     <section
-      className="relative py-40 lg:py-52 overflow-hidden"
+      className="relative py-32 lg:py-40 overflow-hidden"
       style={{
         backgroundImage: "url('/services/services4.png')",
         backgroundAttachment: "fixed",
@@ -20,37 +21,38 @@ export default function Sectors() {
         backgroundPosition: "center 30%",
       }}
     >
-      {/* Overlays */}
       <div className="absolute inset-0 bg-black/80" />
-      <div className="absolute inset-0 bg-gradient-to-b from-red-dark/15 via-transparent to-dark/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-red-dark/10 via-transparent to-dark/90" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
         <ScrollReveal>
-          <div className="flex items-center gap-3 justify-center mb-7">
-            <span className="w-12 h-[2px] bg-red rounded-full" />
-            <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hizmet Verdiğimiz Sektörler</span>
+          <div className="flex items-center gap-3 justify-center mb-6">
+            <span className="w-10 h-[2px] bg-red rounded-full" />
+            <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+              Hizmet Verdiğimiz Sektörler
+            </span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-8 leading-[1.1]">
-            Her Sektöre Özel{" "}
-            <span className="text-gradient-red">Güvenlik Çözümleri</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+            Her Sektöre Özel Entegre Hizmet ve Operasyon{" "}
+            <span className="text-gradient-red">Çözümleri</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-[2] mb-20">
-            Farklı sektörlerin ihtiyaçlarına özel planlanan güvenlik yapımızla operasyonel verimlilik sağlıyoruz.
+          <p className="text-gray-300 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-14">
+            Farklı sektörlerin ihtiyaçlarına özel planlanan entegre hizmet yapımızla operasyonel verimlilik ve sürdürülebilirlik sağlıyoruz.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-5">
+          <div className="flex flex-wrap justify-center gap-4">
             {sectors.map((s) => (
               <span
                 key={s}
-                className="sector-pill text-white rounded-full px-8 py-4 text-base font-medium cursor-default"
+                className="sector-pill text-white rounded-full px-7 py-3.5 text-sm font-medium cursor-default"
               >
                 {s}
               </span>

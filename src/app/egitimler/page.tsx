@@ -47,7 +47,7 @@ export default function EgitimlerPage() {
       />
 
       <section className="bg-dark py-36 lg:py-48">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="space-y-28">
             {trainings.map((t, i) => (
               <ScrollReveal key={t.title} delay={0.05}>
@@ -106,7 +106,7 @@ export default function EgitimlerPage() {
       {/* CTA */}
       <section className="relative py-36 lg:py-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">Eğitim Programlarımız Hakkında Bilgi Alın</h2>
             <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-[1.8]">Eğitim tarihleri, kontenjan bilgisi ve başvuru süreci için bizimle iletişime geçin.</p>

@@ -8,10 +8,10 @@ interface PageBannerProps {
 
 export default function PageBanner({ title, subtitle, breadcrumb }: PageBannerProps) {
   return (
-    <section className="bg-dark-light border-b border-border pt-48 pb-28 relative overflow-hidden">
+    <section className="bg-dark-light border-b border-border pt-48 pb-20 relative overflow-hidden">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-red/[0.03] via-transparent to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-center">
         <div className="flex items-center gap-2.5 text-[13px] mb-8 justify-center">
           <Link href="/" className="text-gray-500 hover:text-white transition-colors duration-200">Ana Sayfa</Link>
           <span className="text-gray-600">/</span>

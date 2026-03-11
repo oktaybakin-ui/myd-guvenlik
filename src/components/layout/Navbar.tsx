@@ -10,8 +10,9 @@ import TopBar from "./TopBar";
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hakkımızda", href: "/hakkimizda" },
-  { label: "Hizmetler", href: "/hizmetler" },
   { label: "Eğitimler", href: "/egitimler" },
+  { label: "Hizmetler", href: "/hizmetler" },
+  { label: "Projelerimiz", href: "/projelerimiz" },
   { label: "İletişim", href: "/iletisim" },
 ];
 
@@ -41,8 +42,8 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between relative">
-          {/* Logo — Sol */}
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <div className="bg-white rounded-lg p-1.5">
               <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={34} height={34} className="rounded" />
@@ -53,8 +54,8 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Menü — Merkez */}
-          <ul className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          {/* Desktop Menu */}
+          <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -69,7 +70,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA — Sağ */}
+          {/* CTA */}
           <Link
             href="/iletisim"
             className="hidden lg:inline-flex btn-primary text-white font-semibold px-7 py-3 rounded-full text-sm"

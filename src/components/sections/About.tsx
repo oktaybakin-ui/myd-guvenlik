@@ -1,82 +1,122 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const features = [
-  "5188 Sayılı Kanun kapsamında tam yetkili",
-  "ISO sertifikalı hizmet kalitesi",
-  "10+ yıllık sektör deneyimi",
-  "150+ kurumsal iş ortağı",
-  "Modern teknoloji altyapısı",
-  "Şeffaf raporlama ve denetim",
+const aboutStats = [
+  { value: 1000, suffix: "+", label: "Uzman Personel" },
+  { value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
+  { value: 25, suffix: "+", label: "Hizmet Kategorisi" },
+  { label: "Kesintisiz Hizmet", static: "7/24" },
+];
+
+const tabs = [
+  {
+    title: "Güvenilirlik",
+    content:
+      "5188 sayılı kanun kapsamında tam yetkili firmamız, ISO sertifikalı hizmet kalitesi ve şeffaf raporlama anlayışıyla güvenilir çözüm ortağınızdır.",
+  },
+  {
+    title: "Dijital Altyapı",
+    content:
+      "Operasyonel süreçleri dijital sistemlerle izliyor ve raporlanabilir hale getiriyoruz. GPS takip, anlık bildirimler ve dijital personel yönetimi.",
+  },
+  {
+    title: "Entegre Yönetim",
+    content:
+      "Güvenlik, temizlik, personel yönetimi ve teknoloji çözümlerini tek çatı altında entegre ederek operasyonel verimlilik sağlıyoruz.",
+  },
 ];
 
 export default function About() {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <section className="bg-dark py-40 lg:py-52">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Top: Centered intro */}
-        <div className="text-center mb-20">
-          <ScrollReveal>
-            <div className="flex items-center gap-3 mb-7 justify-center">
-              <span className="w-12 h-[2px] bg-red rounded-full" />
-              <span className="text-red text-[13px] font-semibold tracking-[0.25em] uppercase">Hakkımızda</span>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <h2 className="text-4xl md:text-5xl font-bold leading-[1.12] tracking-tight mb-10">
-              Güvenlikte Güvenilir{" "}
-              <span className="text-gradient-red">Çözüm Ortağınız</span>
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <p className="text-gray-400 text-lg leading-[2] max-w-3xl mx-auto">
-              MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Sektördeki derin bilgi birikimimiz ve profesyonel kadromuzla güvenlik ihtiyaçlarınızı analiz eder, size özel çözümler üretiriz.
-            </p>
-          </ScrollReveal>
-        </div>
-
-        {/* Bottom: Image + Features side by side */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section className="bg-dark-light py-32 lg:py-40">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          {/* Left: Image */}
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden img-zoom border border-border shadow-2xl shadow-black/40">
+              <div className="rounded-2xl overflow-hidden img-zoom border border-border">
                 <Image
                   src="/hero.png"
                   alt="MYD Güvenlik Ekibi"
-                  width={640}
-                  height={480}
+                  width={700}
+                  height={500}
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-red text-white rounded-2xl px-9 py-7 shadow-2xl shadow-red/25 animate-float hidden sm:block">
-                <div className="stat-value text-5xl font-bold">10+</div>
-                <div className="text-base font-medium text-white/80 mt-2">Yıllık Tecrübe</div>
+              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-7 py-5 shadow-2xl shadow-red/25 animate-float hidden sm:block">
+                <div className="stat-value text-4xl font-bold">10+</div>
+                <div className="text-sm font-medium text-white/80 mt-1">Yıllık Tecrübe</div>
               </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 mb-14">
-              {features.map((f) => (
-                <div key={f} className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <FiCheckCircle className="text-red" size={16} />
+          {/* Right: Content */}
+          <ScrollReveal delay={0.15}>
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-10 h-[2px] bg-red rounded-full" />
+                <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+                  Biz MYD Güvenlik&apos;iz
+                </span>
+              </div>
+
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight tracking-tight mb-6">
+                Güvenlikte Güvenilir{" "}
+                <span className="text-gradient-red">Çözüm Ortağınız</span>
+              </h2>
+
+              <p className="text-gray-400 text-[15px] leading-relaxed mb-8">
+                MYD Özel Güvenlik olarak, 5188 sayılı kanun kapsamında faaliyet gösteriyor ve kurumsal müşterilerimize en üst düzeyde güvenlik hizmeti sunuyoruz. Dijital ve teknolojik gelişmeleri hızla hizmetlerimize entegre ederek sürekli yenileniyoruz.
+              </p>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
+                {aboutStats.map((stat, i) => (
+                  <div key={i}>
+                    <div className="text-2xl font-bold text-white stat-value">
+                      {stat.static || <AnimatedCounter end={stat.value!} suffix={stat.suffix!} />}
+                    </div>
+                    <div className="text-[11px] text-gray-500 uppercase tracking-[0.12em] font-medium mt-1">
+                      {stat.label}
+                    </div>
                   </div>
-                  <span className="text-gray-300 text-[15px] leading-[1.6]">{f}</span>
+                ))}
+              </div>
+
+              {/* Tabs */}
+              <div className="border-b border-border mb-6">
+                <div className="flex gap-6 sm:gap-8">
+                  {tabs.map((tab, i) => (
+                    <button
+                      key={tab.title}
+                      onClick={() => setActiveTab(i)}
+                      className={`pb-3 text-sm font-semibold transition-all border-b-2 cursor-pointer ${
+                        activeTab === i
+                          ? "border-red text-white"
+                          : "border-transparent text-gray-500 hover:text-gray-300"
+                      }`}
+                    >
+                      {tab.title}
+                    </button>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="text-center sm:text-left">
+              </div>
+
+              <p className="text-gray-400 text-[15px] leading-relaxed mb-8 min-h-[60px]">
+                {tabs[activeTab].content}
+              </p>
+
               <Link
                 href="/hakkimizda"
-                className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-10 py-5 rounded-full text-base"
+                className="btn-primary inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-full text-base"
               >
                 Daha Fazla Bilgi <FiArrowRight size={17} />
               </Link>
