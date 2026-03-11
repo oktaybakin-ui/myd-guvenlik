@@ -72,27 +72,8 @@ const projectStats = [
 export default function ProjelerimizPage() {
   return (
     <>
-      {/* Proje İstatistikleri */}
-      <section className="bg-dark-light pt-40 lg:pt-48 pb-16 lg:pb-20 border-b border-white/[0.04]">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
-            {projectStats.map((stat, i) => (
-              <ScrollReveal key={stat.label} delay={i * 0.1}>
-                <div className="text-center relative">
-                  <div className="text-5xl lg:text-6xl font-bold text-white mb-3">
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-sm text-gray-500 uppercase tracking-[0.15em] font-medium">{stat.label}</div>
-                  {i < projectStats.length - 1 && <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-20 bg-white/[0.06]" />}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Projeler Grid */}
-      <section className="bg-dark py-20 lg:py-28">
+      <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <ScrollReveal>
             <div className="text-center mb-20">
@@ -144,6 +125,25 @@ export default function ProjelerimizPage() {
                       <p className="text-white text-sm font-medium mt-0.5">{project.personnel}+</p>
                     </div>
                   </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proje İstatistikleri */}
+      <section className="bg-dark-light py-16 lg:py-20 border-y border-white/[0.04]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16">
+            {projectStats.map((stat, i) => (
+              <ScrollReveal key={stat.label} delay={i * 0.1}>
+                <div className="text-center relative">
+                  <div className="text-5xl lg:text-6xl font-bold text-white mb-3">
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <div className="text-sm text-gray-500 uppercase tracking-[0.15em] font-medium">{stat.label}</div>
+                  {i < projectStats.length - 1 && <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-20 bg-white/[0.06]" />}
                 </div>
               </ScrollReveal>
             ))}
