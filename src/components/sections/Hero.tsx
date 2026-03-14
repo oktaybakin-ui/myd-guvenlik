@@ -65,12 +65,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 mb-8 max-w-2xl backdrop-blur-sm"
+            className="bg-red/10 border-2 border-red/40 rounded-xl px-8 py-5 mb-8 max-w-2xl backdrop-blur-sm"
           >
-            <p className="text-white font-semibold text-lg lg:text-xl">
+            <p className="text-white font-bold text-2xl lg:text-3xl">
               🎓 Özel Güvenlik Eğitimlerinde <span className="text-red">Lider Kurum</span>
             </p>
-            <p className="text-gray-400 text-sm mt-1">
+            <p className="text-gray-300 text-lg lg:text-xl mt-2">
               Temel, yenileme ve silah eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
             </p>
           </motion.div>
