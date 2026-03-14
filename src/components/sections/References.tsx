@@ -1,54 +1,67 @@
-import Image from "next/image";
+"use client";
+
 import SectionTitle from "@/components/ui/SectionTitle";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import { FiCheck } from "react-icons/fi";
 
-const row1 = ["haier","katmerciler","roca","tei","iyte","bilnet","taris","megapol","hapimag","gulermak","tolkar","vansan","bgbatigrup","erkholding","novus","bonfiglioli","betonstar","tescom","sunchemical","akcelik"];
-const row2 = ["hoover","viltur","candy","bundy","altinok","bergama","billur","coffeemania","egeyapi","gimas","superpar","donmez","borovali","kansan","barankaya","maxwell","ersa","aytas","uniteks","saygilirulman"];
+const references = [
+  "AKFEN Isparta Şehir Hastanesi",
+  "AKFEN Eskişehir Şehir Hastanesi",
+  "AKFEN Tekirdağ Şehir Hastanesi",
+  "ERN HOLDİNG Kara Havacılık Okulu",
+  "AKFEN 5000 Kişilik Öğrenci Yurdu",
+  "AEK Koleji",
+  "Ustampark-2 Sitesi",
+  "Ustampark-3 Sitesi",
+  "Metrocity Sitesi",
+  "Serracity Sitesi",
+];
 
-function LogoRow({ logos, reverse }: { logos: string[]; reverse?: boolean }) {
-  return (
-    <div className="relative">
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-surface-dark to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-surface-dark to-transparent z-10" />
-      <div
-        className="animate-marquee marquee-track py-4"
-        style={reverse ? { animationDirection: "reverse", animationDuration: "35s" } : undefined}
-      >
-        {[0, 1].map((setIdx) => (
-          <div key={setIdx} className="flex items-center gap-10 flex-shrink-0 px-5">
-            {logos.map((name) => (
-              <div
-                key={`${setIdx}-${name}`}
-                className="flex-shrink-0 bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 w-[170px] h-[80px] flex items-center justify-center hover:bg-white/[0.06] transition-colors duration-300"
-              >
-                <Image
-                  src={`/references/${name}.png`}
-                  alt={name}
-                  width={120}
-                  height={48}
-                  className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 brightness-0 invert"
-                />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+const categories = [
+  "AVM",
+  "Özel Hastane",
+  "Fabrika",
+  "Otel",
+  "Depo",
+  "Özel Okul",
+  "Enerji Santrali Güvenliği",
+];
 
 export default function References() {
   return (
-    <section className="bg-surface-dark py-20 lg:py-28 border-y border-white/[0.04] overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-14">
+    <section className="bg-surface-dark py-20 lg:py-28 border-y border-white/[0.04]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           label="Referanslarımız"
           title="Birlikte Çalıştığımız"
           highlight="Değerli Kurumlar"
         />
-      </div>
-      <LogoRow logos={row1} />
-      <div className="mt-10">
-        <LogoRow logos={row2} reverse />
+
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          {references.map((ref, i) => (
+            <ScrollReveal key={ref} delay={i * 0.05}>
+              <div className="bg-dark-light border border-border rounded-2xl p-6 flex items-center gap-4 hover-lift group h-full">
+                <div className="w-10 h-10 bg-red/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red/20 transition-colors">
+                  <FiCheck className="text-red" size={18} />
+                </div>
+                <span className="text-white font-medium text-sm leading-tight">{ref}</span>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-16 bg-dark-light border border-border rounded-2xl p-8 lg:p-10 text-center">
+            <p className="text-gray-400 text-lg mb-6">Ayrıca aşağıdaki sektörlerde de hizmetinizdeyiz:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((cat) => (
+                <span key={cat} className="bg-red/10 text-red border border-red/20 px-5 py-2.5 rounded-full text-sm font-semibold">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
