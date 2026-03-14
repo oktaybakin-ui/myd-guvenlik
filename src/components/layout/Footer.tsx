@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
-import { useBranch } from "@/context/BranchContext";
+import { branches } from "@/data/branches";
 
 const quickLinks = [
   { label: "Hakkımızda", href: "/hakkimizda" },
@@ -22,8 +22,6 @@ const socials = [
 ];
 
 export default function Footer() {
-  const { branch } = useBranch();
-
   return (
     <footer className="bg-surface-dark border-t border-gray-800">
       {/* Main */}
@@ -79,10 +77,12 @@ export default function Footer() {
             <div>
               <h4 className="text-gray-600 text-[12px] uppercase tracking-[0.2em] font-semibold mb-5">İletişim Bilgileri</h4>
               <div className="space-y-3">
-                <div className="flex items-start gap-3 justify-center">
-                  <FiMapPin className="text-red mt-1 flex-shrink-0" size={14} />
-                  <span className="text-gray-500 text-[15px]">{branch.address.join(", ")} / Türkiye</span>
-                </div>
+                {branches.map((b) => (
+                  <div key={b.id} className="flex items-start gap-3 justify-center">
+                    <FiMapPin className="text-red mt-1 flex-shrink-0" size={14} />
+                    <span className="text-gray-500 text-[15px]"><strong className="text-gray-400">{b.label}:</strong> {b.address.slice(0, 2).join(", ")}</span>
+                  </div>
+                ))}
                 <div className="flex items-center gap-3 justify-center">
                   <FiPhone className="text-red flex-shrink-0" size={14} />
                   <a href="tel:+905069038502" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (506) 903 85 02</a>
