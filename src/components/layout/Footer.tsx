@@ -15,7 +15,7 @@ const quickLinks = [
 ];
 
 const socials = [
-  { Icon: FaWhatsapp, href: "https://wa.me/905437125904" },
+  { Icon: FaWhatsapp, href: "https://wa.me/905069038502" },
   { Icon: FaXTwitter, href: "#" },
   { Icon: FiInstagram, href: "https://www.instagram.com/mydguvenlik/" },
   { Icon: FiLinkedin, href: "#" },
@@ -85,11 +85,15 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <FiPhone className="text-red flex-shrink-0" size={14} />
-                  <a href="tel:+905437125904" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (543) 712 59 04</a>
+                  <a href="tel:+905069038502" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (506) 903 85 02</a>
+                </div>
+                <div className="flex items-center gap-3 justify-center">
+                  <FiPhone className="text-red flex-shrink-0" size={14} />
+                  <a href="tel:+905550156576" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (555) 015 65 76</a>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <FiMail className="text-red flex-shrink-0" size={14} />
-                  <a href="mailto:info@mydozelguvenlik.com" className="text-gray-500 text-[15px] hover:text-white transition-colors">info@mydozelguvenlik.com</a>
+                  <a href="mailto:mayda.mehmet32@gmail.com" className="text-gray-500 text-[15px] hover:text-white transition-colors">mayda.mehmet32@gmail.com</a>
                 </div>
               </div>
             </div>

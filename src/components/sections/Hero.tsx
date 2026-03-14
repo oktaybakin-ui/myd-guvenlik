@@ -96,8 +96,8 @@ export default function Hero() {
             </Link>
             <div>
               <span className="text-gray-500 text-sm">Uzmanlarımıza Ulaşın:</span>
-              <a href="tel:+905437125904" className="block text-white font-semibold text-lg hover:text-red transition-colors">
-                Doğru Çözümü Birlikte Bulalım.
+              <a href="tel:+905069038502" className="block text-white font-semibold text-lg hover:text-red transition-colors">
+                0 (506) 903 85 02
               </a>
             </div>
           </motion.div>

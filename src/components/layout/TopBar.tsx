@@ -6,7 +6,7 @@ import { useBranch } from "@/context/BranchContext";
 import { branches } from "@/data/branches";
 
 const socials = [
-  { Icon: FaWhatsapp, href: "https://wa.me/905437125904" },
+  { Icon: FaWhatsapp, href: "https://wa.me/905069038502" },
   { Icon: FaXTwitter, href: "#" },
   { Icon: FiInstagram, href: "https://www.instagram.com/mydguvenlik/" },
   { Icon: FiLinkedin, href: "#" },
@@ -21,9 +21,9 @@ export default function TopBar({ hidden }: { hidden: boolean }) {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-10 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <a href="mailto:info@mydozelguvenlik.com" className="hidden sm:flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors">
+          <a href="mailto:mayda.mehmet32@gmail.com" className="hidden sm:flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors">
             <FiMail size={13} />
-            <span>info@mydozelguvenlik.com</span>
+            <span>mayda.mehmet32@gmail.com</span>
           </a>
 
           {/* Branch Selector */}

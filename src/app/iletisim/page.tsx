@@ -11,15 +11,15 @@ export default function IletisimPage() {
     {
       icon: FiPhone,
       title: "Telefon",
-      lines: ["0 (543) 712 59 04"],
-      href: "tel:+905437125904",
+      lines: ["0 (506) 903 85 02", "0 (555) 015 65 76", "0 (246) 232 22 42"],
+      href: "tel:+905069038502",
       cta: "Hemen Arayın",
     },
     {
       icon: FiMail,
       title: "E-posta",
-      lines: ["info@mydozelguvenlik.com"],
-      href: "mailto:info@mydozelguvenlik.com",
+      lines: ["mayda.mehmet32@gmail.com"],
+      href: "mailto:mayda.mehmet32@gmail.com",
       cta: "E-posta Gönderin",
     },
     {

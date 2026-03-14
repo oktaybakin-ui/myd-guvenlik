@@ -96,6 +96,68 @@ export default function EgitimlerPage() {
         </div>
       </section>
 
+      {/* Ders Saatleri Tablosu */}
+      <section className="bg-dark-light border-y border-border py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center gap-2.5 justify-center mb-4">
+                <span className="w-10 h-[2px] bg-red rounded-full" />
+                <span className="text-red text-sm font-semibold tracking-[0.2em] uppercase">Müfredat</span>
+                <span className="w-10 h-[2px] bg-red rounded-full" />
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold">Temel ve Yenileme Eğitimi Ders Saatleri</h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="overflow-x-auto">
+              <table className="w-full max-w-4xl mx-auto text-sm">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="text-left py-4 px-4 text-gray-400 font-semibold uppercase tracking-wider text-xs">Ders</th>
+                    <th className="text-center py-4 px-3 text-gray-400 font-semibold uppercase tracking-wider text-xs">Temel Saat</th>
+                    <th className="text-center py-4 px-3 text-gray-400 font-semibold uppercase tracking-wider text-xs">Devamsızlık</th>
+                    <th className="text-center py-4 px-3 text-gray-400 font-semibold uppercase tracking-wider text-xs">Yenileme Saat</th>
+                    <th className="text-center py-4 px-3 text-gray-400 font-semibold uppercase tracking-wider text-xs">Devamsızlık</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Özel Güvenlik Hukuku ve Kişi Hakları", 20, 5, 10, 2],
+                    ["Güvenlik Tedbirleri", 20, 5, 10, 2],
+                    ["Güvenlik Sistem ve Cihazları", 5, 1, 3, 1],
+                    ["Temel İlk Yardım", 10, 2, 4, 1],
+                    ["Yangın Güvenliği ve Tabii Felaketlerde Müdahale", 8, 2, 4, 1],
+                    ["Uyuşturucu Madde Bilgileri", 2, 2, 1, 1],
+                    ["Etkili İletişim", 12, 3, 8, 2],
+                    ["Kalabalık Yönetimi", 10, 2, 4, 1],
+                    ["Kişi Koruma", 9, 2, 4, 1],
+                    ["Genel Kollukla İlişkiler", 4, 1, 2, 2],
+                    ["Silah Bilgisi ve Atış", 20, 5, 10, 2],
+                  ].map(([ders, temel, devT, yenileme, devY], i) => (
+                    <tr key={i} className="border-b border-border/50 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3.5 px-4 text-gray-300">{ders}</td>
+                      <td className="py-3.5 px-3 text-center text-white font-medium">{temel}</td>
+                      <td className="py-3.5 px-3 text-center text-gray-500">{devT}</td>
+                      <td className="py-3.5 px-3 text-center text-white font-medium">{yenileme}</td>
+                      <td className="py-3.5 px-3 text-center text-gray-500">{devY}</td>
+                    </tr>
+                  ))}
+                  <tr className="border-t-2 border-red/30">
+                    <td className="py-4 px-4 text-white font-bold text-base">TOPLAM</td>
+                    <td className="py-4 px-3 text-center text-red font-bold text-lg">120</td>
+                    <td className="py-4 px-3 text-center text-gray-400 font-bold">30</td>
+                    <td className="py-4 px-3 text-center text-red font-bold text-lg">60</td>
+                    <td className="py-4 px-3 text-center text-gray-400 font-bold">16</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-dark via-red to-red-dark" />

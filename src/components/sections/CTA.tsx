@@ -51,10 +51,10 @@ export default function CTA() {
                   Teklif Formu <FiArrowRight size={18} />
                 </Link>
                 <a
-                  href="tel:+905437125904"
+                  href="tel:+905069038502"
                   className="btn-outline inline-flex items-center gap-3 text-white font-medium px-8 py-4 rounded-full text-base"
                 >
-                  <FiPhone size={18} /> 0 (543) 712 59 04
+                  <FiPhone size={18} /> 0 (506) 903 85 02
                 </a>
               </div>
             </div>

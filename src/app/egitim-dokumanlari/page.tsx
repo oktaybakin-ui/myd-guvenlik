@@ -6,6 +6,12 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const dokumanlar = [
   {
+    title: "Devamsızlık Hususları ve Ders Saatleri (EK-11 / EK-13)",
+    desc: "Özel güvenlik temel ve yenileme eğitimi ders saatleri, devamsızlık hakları tablosu.",
+    type: "PDF",
+    href: "/docs/devamsizlik-ders-saatleri.pdf",
+  },
+  {
     title: "Silahsız Özel Güvenlik Temel Eğitimi Müfredatı",
     desc: "100 saatlik silahsız özel güvenlik temel eğitim programının detaylı müfredat içeriği.",
     type: "PDF",
@@ -78,10 +84,17 @@ export default function EgitimDokumanlariPage() {
                   </div>
                   <div className="mt-auto pt-4 border-t border-border flex items-center justify-between">
                     <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">{doc.type}</span>
-                    <button className="text-red text-sm font-semibold inline-flex items-center gap-1.5 hover:text-white transition-colors duration-200">
-                      <FiDownload size={14} />
-                      İndir
-                    </button>
+                    {doc.href ? (
+                      <a href={doc.href} target="_blank" rel="noopener noreferrer" className="text-red text-sm font-semibold inline-flex items-center gap-1.5 hover:text-white transition-colors duration-200">
+                        <FiDownload size={14} />
+                        İndir
+                      </a>
+                    ) : (
+                      <button className="text-red text-sm font-semibold inline-flex items-center gap-1.5 hover:text-white transition-colors duration-200">
+                        <FiDownload size={14} />
+                        İndir
+                      </button>
+                    )}
                   </div>
                 </div>
               </ScrollReveal>
