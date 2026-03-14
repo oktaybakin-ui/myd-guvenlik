@@ -85,11 +85,11 @@ export default function Footer() {
                 ))}
                 <div className="flex items-center gap-3 justify-center">
                   <FiPhone className="text-red flex-shrink-0" size={14} />
-                  <a href="tel:+905069038502" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (506) 903 85 02</a>
+                  <span className="text-gray-500 text-[15px]"><strong className="text-gray-400">Isparta:</strong> <a href="tel:+905069038502" className="hover:text-white transition-colors">0 (506) 903 85 02</a></span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <FiPhone className="text-red flex-shrink-0" size={14} />
-                  <a href="tel:+905550156576" className="text-gray-500 text-[15px] hover:text-white transition-colors">0 (555) 015 65 76</a>
+                  <span className="text-gray-500 text-[15px]"><strong className="text-gray-400">Burdur:</strong> <a href="tel:+905010723215" className="hover:text-white transition-colors">0 (501) 072 32 15</a></span>
                 </div>
                 <div className="flex items-center gap-3 justify-center">
                   <FiMail className="text-red flex-shrink-0" size={14} />

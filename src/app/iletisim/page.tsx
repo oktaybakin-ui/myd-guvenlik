@@ -8,9 +8,16 @@ export default function IletisimPage() {
   const contactInfo = [
     {
       icon: FiPhone,
-      title: "Telefon",
-      lines: ["0 (506) 903 85 02", "0 (555) 015 65 76", "0 (246) 232 22 42"],
+      title: "Isparta Telefonları",
+      lines: ["0 (506) 903 85 02", "0 (555) 015 65 76", "0 (505) 696 79 78", "0 (246) 232 22 42"],
       href: "tel:+905069038502",
+      cta: "Hemen Arayın",
+    },
+    {
+      icon: FiPhone,
+      title: "Burdur Telefonları",
+      lines: ["0 (501) 072 32 15", "0 (506) 903 85 02"],
+      href: "tel:+905010723215",
       cta: "Hemen Arayın",
     },
     {
@@ -32,7 +39,7 @@ export default function IletisimPage() {
       <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Contact Cards */}
-          <div className="grid sm:grid-cols-3 gap-10 mb-20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
             {contactInfo.map((info, i) => (
               <ScrollReveal key={info.title} delay={i * 0.1}>
                 <div className="bg-dark-light border border-border rounded-2xl p-9 group hover-lift h-full text-center">
