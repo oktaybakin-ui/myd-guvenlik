@@ -7,7 +7,7 @@ const videos = [
   { src: "/videos/video1.mp4", title: "MYD Güvenlik Eğitim" },
   { src: "/videos/video2.mp4", title: "MYD Güvenlik Saha" },
   { src: "/videos/video3.mp4", title: "MYD Güvenlik Tanıtım" },
-  { src: "/videos/video4.mov", title: "MYD Güvenlik" },
+  { src: "/videos/video4.mp4", title: "MYD Güvenlik" },
 ];
 
 export default function VideoGallery() {
@@ -55,7 +55,7 @@ export default function VideoGallery() {
                   onEnded={() => handleEnded(i)}
                   onPlay={() => setActiveIndex(i)}
                 >
-                  <source src={video.src} type={video.src.endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
+                  <source src={video.src} type="video/mp4" />
                 </video>
               </div>
             </ScrollReveal>
