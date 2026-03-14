@@ -7,6 +7,7 @@ const videos = [
   { src: "/videos/video1.mp4", title: "MYD Güvenlik Eğitim" },
   { src: "/videos/video2.mp4", title: "MYD Güvenlik Saha" },
   { src: "/videos/video3.mp4", title: "MYD Güvenlik Tanıtım" },
+  { src: "/videos/video4.mov", title: "MYD Güvenlik" },
 ];
 
 export default function VideoGallery() {
@@ -39,7 +40,7 @@ export default function VideoGallery() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {videos.map((video, i) => (
             <ScrollReveal key={video.src} delay={i * 0.15}>
               <div className={`bg-dark-light border rounded-2xl overflow-hidden group hover-lift transition-all duration-300 ${activeIndex === i ? "border-red ring-1 ring-red/30" : "border-border"}`}>
@@ -50,11 +51,11 @@ export default function VideoGallery() {
                   muted
                   preload="metadata"
                   playsInline
-                  className="w-full aspect-video object-cover"
+                  className="w-full"
                   onEnded={() => handleEnded(i)}
                   onPlay={() => setActiveIndex(i)}
                 >
-                  <source src={video.src} type="video/mp4" />
+                  <source src={video.src} type={video.src.endsWith('.mov') ? 'video/quicktime' : 'video/mp4'} />
                 </video>
               </div>
             </ScrollReveal>
