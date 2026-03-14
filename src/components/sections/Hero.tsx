@@ -24,6 +24,17 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-dark/40 via-dark/60 to-dark" />
       </div>
 
+      {/* Watermark Logo */}
+      <div className="absolute inset-0 flex items-center justify-center z-[1] pointer-events-none">
+        <Image
+          src="/logo.jpg"
+          alt=""
+          width={500}
+          height={500}
+          className="opacity-[0.04] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] object-contain"
+        />
+      </div>
+
       {/* Main content */}
       <div className="relative z-10 flex-1 flex items-center">
         <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-40 pb-20">
