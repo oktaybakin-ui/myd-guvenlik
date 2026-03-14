@@ -69,7 +69,7 @@ export default function Hero() {
               🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red">Lider Kurum</span>
             </p>
             <p className="text-gray-300 text-lg lg:text-xl mt-2">
-              Isparta ve Burdur şubelerimizde temel, yenileme ve silah eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
+              Isparta ve Burdur şubelerimizde temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
             </p>
           </motion.div>
 

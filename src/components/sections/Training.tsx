@@ -38,7 +38,7 @@ export default function Training() {
               </h2>
 
               <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg">
-                Özel güvenlik temel eğitimi, yenileme eğitimi ve silah eğitimi programlarımızla sektöre nitelikli personel yetiştiriyoruz.
+                Özel güvenlik temel eğitimi, yenileme eğitimi ve silah farkı eğitimi programlarımızla sektöre nitelikli personel yetiştiriyoruz.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
