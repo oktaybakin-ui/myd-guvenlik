@@ -9,7 +9,6 @@ import TopBar from "./TopBar";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
-  { label: "Hakkımızda", href: "/hakkimizda" },
   {
     label: "Eğitimler",
     href: "/egitimler",
@@ -19,6 +18,7 @@ const navLinks = [
       { label: "Eğitim Dokümanları", href: "/egitim-dokumanlari" },
     ],
   },
+  { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "Hizmetler", href: "/hizmetler" },
   { label: "Projelerimiz", href: "/projelerimiz" },
   { label: "İletişim", href: "/iletisim" },

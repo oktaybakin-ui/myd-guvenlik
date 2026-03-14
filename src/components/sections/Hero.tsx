@@ -35,7 +35,7 @@ export default function Hero() {
           >
             <span className="w-10 h-[2px] bg-red rounded-full" />
             <span className="text-red text-[13px] font-semibold uppercase tracking-[0.2em]">
-              Güvenlik &amp; Entegre Hizmetler
+              Güvenlik Eğitimi &amp; Entegre Hizmetler
             </span>
           </motion.div>
 
@@ -50,10 +50,24 @@ export default function Hero() {
             Bizim <span className="text-gradient-red">Önceliğimiz</span>
           </motion.h1>
 
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 mb-8 max-w-2xl backdrop-blur-sm"
+          >
+            <p className="text-white font-semibold text-lg lg:text-xl">
+              🎓 Özel Güvenlik Eğitimlerinde <span className="text-red">Lider Kurum</span>
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
+              Temel, yenileme ve silah eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
+            </p>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             className="text-gray-400 text-base lg:text-lg leading-relaxed mb-10 max-w-2xl"
           >
             1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
