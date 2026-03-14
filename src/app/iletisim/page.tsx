@@ -2,11 +2,9 @@
 
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { useBranch } from "@/context/BranchContext";
+import { branches } from "@/data/branches";
 
 export default function IletisimPage() {
-  const { branch } = useBranch();
-
   const contactInfo = [
     {
       icon: FiPhone,
@@ -23,13 +21,6 @@ export default function IletisimPage() {
       cta: "E-posta Gönderin",
     },
     {
-      icon: FiMapPin,
-      title: `Adres — ${branch.label} Şubesi`,
-      lines: branch.address,
-      href: `https://maps.google.com/?q=${branch.mapQuery}`,
-      cta: "Yol Tarifi Alın",
-    },
-    {
       icon: FiClock,
       title: "Çalışma Saatleri",
       lines: ["Hafta İçi: 08:30 - 18:00", "Cumartesi: 09:00 - 14:00"],
@@ -41,7 +32,7 @@ export default function IletisimPage() {
       <section className="bg-dark pt-40 lg:pt-48 pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Contact Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-28">
+          <div className="grid sm:grid-cols-3 gap-10 mb-20">
             {contactInfo.map((info, i) => (
               <ScrollReveal key={info.title} delay={i * 0.1}>
                 <div className="bg-dark-light border border-border rounded-2xl p-9 group hover-lift h-full text-center">
@@ -62,26 +53,43 @@ export default function IletisimPage() {
             ))}
           </div>
 
+          {/* Isparta & Burdur Maps Side by Side */}
           <ScrollReveal>
-            <div className="grid lg:grid-cols-5 gap-12">
-              {/* Map */}
-              <div className="lg:col-span-2">
-                <div className="bg-dark-light border border-border rounded-2xl overflow-hidden h-full min-h-[520px]">
+            <div className="grid md:grid-cols-2 gap-8 mb-20">
+              {branches.map((b) => (
+                <div key={b.id} className="bg-dark-light border border-border rounded-2xl overflow-hidden">
+                  <div className="p-6 border-b border-border">
+                    <div className="flex items-center gap-3">
+                      <FiMapPin className="text-red" size={20} />
+                      <h3 className="text-xl font-bold">{b.label} Şubesi</h3>
+                    </div>
+                    <p className="text-gray-400 text-sm mt-2">{b.address.join(", ")}</p>
+                    <a
+                      href={`https://maps.google.com/?q=${b.mapQuery}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red text-sm mt-3 inline-block hover:text-white transition-colors font-semibold"
+                    >
+                      Yol Tarifi Alın →
+                    </a>
+                  </div>
                   <iframe
-                    src={branch.mapEmbed}
+                    src={b.mapEmbed}
                     width="100%"
-                    height="100%"
-                    style={{ border: 0, minHeight: 520, filter: "grayscale(100%) contrast(1.1) invert(92%) hue-rotate(180deg)" }}
+                    height="350"
+                    style={{ border: 0, filter: "grayscale(100%) contrast(1.1) invert(92%) hue-rotate(180deg)" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title={`MYD Güvenlik ${branch.label} Şubesi`}
+                    title={`MYD Güvenlik ${b.label} Şubesi`}
                   />
                 </div>
-              </div>
+              ))}
+            </div>
+          </ScrollReveal>
 
-              {/* Contact Form */}
-              <div className="lg:col-span-3">
+          <ScrollReveal>
+            <div className="max-w-4xl mx-auto">
                 <div className="bg-dark-light border border-border rounded-2xl p-10 lg:p-12">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="w-10 h-[2px] bg-red rounded-full" />
@@ -131,7 +139,6 @@ export default function IletisimPage() {
                     </button>
                   </form>
                 </div>
-              </div>
             </div>
           </ScrollReveal>
         </div>
