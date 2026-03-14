@@ -58,9 +58,9 @@ export default function Footer() {
           <p className="text-2xl lg:text-3xl font-bold text-white italic">&ldquo;Siz Sadece Asıl İşinize Odaklanın!&rdquo;</p>
         </div>
 
-        {/* Links - 2 columns centered */}
-        <div className="border-t border-gray-800 pt-8 flex justify-center">
-          <div className="grid sm:grid-cols-2 gap-10 max-w-2xl w-full text-center">
+        {/* Links - 3 columns wide layout */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {/* Quick Links */}
             <div>
               <h4 className="text-gray-600 text-[12px] uppercase tracking-[0.2em] font-semibold mb-5">Hızlı Bağlantılar</h4>
@@ -73,37 +73,44 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Contact */}
+            {/* Addresses */}
             <div>
-              <h4 className="text-gray-600 text-[12px] uppercase tracking-[0.2em] font-semibold mb-5">İletişim Bilgileri</h4>
+              <h4 className="text-gray-600 text-[12px] uppercase tracking-[0.2em] font-semibold mb-5">Adreslerimiz</h4>
               <div className="space-y-3">
                 {branches.map((b) => (
-                  <div key={b.id} className="flex items-start gap-3 justify-center">
+                  <div key={b.id} className="flex items-start gap-3">
                     <FiMapPin className="text-red mt-1 flex-shrink-0" size={14} />
                     <span className="text-gray-500 text-[15px]"><strong className="text-gray-400">{b.label}:</strong> {b.address.slice(0, 2).join(", ")}</span>
                   </div>
                 ))}
-                <div className="flex items-start gap-3 justify-center">
+                <div className="flex items-center gap-3">
+                  <FiMail className="text-red flex-shrink-0" size={14} />
+                  <a href="mailto:mayda.mehmet32@gmail.com" className="text-gray-500 text-[15px] hover:text-white transition-colors">mayda.mehmet32@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Phones */}
+            <div>
+              <h4 className="text-gray-600 text-[12px] uppercase tracking-[0.2em] font-semibold mb-5">Telefonlarımız</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
                   <FiPhone className="text-red mt-1 flex-shrink-0" size={14} />
                   <div className="text-gray-500 text-[15px]">
-                    <strong className="text-gray-400">Isparta:</strong>{" "}
+                    <strong className="text-gray-400">Isparta:</strong><br />
                     <a href="tel:+905069038502" className="hover:text-white transition-colors">0 (506) 903 85 02</a>{" / "}
-                    <a href="tel:+905550156576" className="hover:text-white transition-colors">0 (555) 015 65 76</a>{" / "}
+                    <a href="tel:+905550156576" className="hover:text-white transition-colors">0 (555) 015 65 76</a><br />
                     <a href="tel:+905056967978" className="hover:text-white transition-colors">0 (505) 696 79 78</a>{" / "}
                     <a href="tel:+902462322242" className="hover:text-white transition-colors">0 (246) 232 22 42</a>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 justify-center">
+                <div className="flex items-start gap-3">
                   <FiPhone className="text-red mt-1 flex-shrink-0" size={14} />
                   <div className="text-gray-500 text-[15px]">
-                    <strong className="text-gray-400">Burdur:</strong>{" "}
+                    <strong className="text-gray-400">Burdur:</strong><br />
                     <a href="tel:+905010723215" className="hover:text-white transition-colors">0 (501) 072 32 15</a>{" / "}
                     <a href="tel:+905069038502" className="hover:text-white transition-colors">0 (506) 903 85 02</a>
                   </div>
-                </div>
-                <div className="flex items-center gap-3 justify-center">
-                  <FiMail className="text-red flex-shrink-0" size={14} />
-                  <a href="mailto:mayda.mehmet32@gmail.com" className="text-gray-500 text-[15px] hover:text-white transition-colors">mayda.mehmet32@gmail.com</a>
                 </div>
               </div>
             </div>
