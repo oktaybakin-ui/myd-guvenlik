@@ -1,4 +1,4 @@
-import { FiShield, FiFileText, FiCamera, FiUsers, FiHome, FiTruck } from "react-icons/fi";
+import { FiShield, FiFileText, FiCamera, FiUsers, FiHome, FiTruck, FiAward } from "react-icons/fi";
 import type { IconType } from "react-icons";
 
 export interface ServiceData {
@@ -13,6 +13,21 @@ export interface ServiceData {
 }
 
 export const services: ServiceData[] = [
+  {
+    slug: "guvenlik-egitim-kurumu",
+    icon: FiAward,
+    title: "Özel Güvenlik Eğitim Kurumu",
+    shortDesc: "Temel, yenileme ve silah farkı eğitimleriyle sektöre nitelikli güvenlik personeli yetiştiriyoruz.",
+    desc: "Isparta ve Burdur şubelerimizde özel güvenlik temel eğitimi, yenileme eğitimi ve silah farkı eğitimi programlarımızla sektöre nitelikli güvenlik profesyonelleri kazandırıyoruz.",
+    features: ["Temel Güvenlik Eğitimi (120 Saat)", "Yenileme Eğitimi (60 Saat)", "Silah Farkı Eğitimi", "İlk Yardım Eğitimi", "Uzman Eğitmen Kadrosu", "Sertifikalı Program"],
+    details: [
+      "120 saatlik temel güvenlik eğitimi ile sektöre yeni adım atacak adaylara kapsamlı bir eğitim sunuyoruz.",
+      "60 saatlik yenileme eğitimi ile mevcut güvenlik personelinin yetkinliklerini güncel tutuyoruz.",
+      "Uygulamalı silah farkı eğitimi ile personelin silah kullanım yeterliliğini sağlıyoruz.",
+      "Isparta ve Burdur şubelerimizde uzman eğitmen kadromuzla eğitimlerimizi sürdürüyoruz.",
+    ],
+    image: "/egitim/afish-isparta.jpg",
+  },
   {
     slug: "ozel-guvenlik",
     icon: FiShield,
