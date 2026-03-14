@@ -54,24 +54,22 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight mb-8 max-w-3xl"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
           >
-            Güvenliğiniz
-            <br />
-            Bizim <span className="text-gradient-red">Önceliğimiz</span>
+            Güvenliğiniz Bizim <span className="text-gradient-red">Önceliğimiz</span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="bg-red/10 border-2 border-red/40 rounded-xl px-8 py-5 mb-8 max-w-2xl backdrop-blur-sm"
+            className="bg-red/10 border-2 border-red/40 rounded-xl px-8 py-5 mb-8 backdrop-blur-sm"
           >
             <p className="text-white font-bold text-2xl lg:text-3xl">
-              🎓 Özel Güvenlik Eğitimlerinde <span className="text-red">Lider Kurum</span>
+              🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red">Lider Kurum</span>
             </p>
             <p className="text-gray-300 text-lg lg:text-xl mt-2">
-              Temel, yenileme ve silah eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
+              Isparta ve Burdur şubelerimizde temel, yenileme ve silah eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
             </p>
           </motion.div>
 
@@ -79,7 +77,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-gray-400 text-base lg:text-lg leading-relaxed mb-10 max-w-2xl"
+            className="text-gray-400 text-base lg:text-lg leading-relaxed mb-10"
           >
             1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
           </motion.p>
