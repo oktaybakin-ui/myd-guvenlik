@@ -98,9 +98,6 @@ export default function Hero() {
             >
               Hizmetlerimiz için Teklif Alın <FiArrowRight size={18} />
             </Link>
-            <a href="tel:+905069038502" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-              Uzmanlarımıza Ulaşın: <span className="text-white">0 (506) 903 85 02</span>
-            </a>
           </motion.div>
         </div>
       </div>
