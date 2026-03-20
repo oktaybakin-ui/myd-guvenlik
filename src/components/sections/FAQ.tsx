@@ -31,13 +31,15 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(1);
 
   return (
-    <section className="bg-dark-light py-24 lg:py-32">
-      <div className="max-w-[900px] mx-auto px-6 lg:px-12">
+    <section className="relative bg-dark-light py-24 lg:py-32 overflow-hidden">
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-red/[0.02] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-[900px] mx-auto px-6 lg:px-12 relative">
         <ScrollReveal>
           <div className="text-center mb-14">
             <div className="flex items-center gap-3 justify-center mb-6">
-              <span className="w-10 h-[2px] bg-red rounded-full" />
-              <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+              <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+              <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">
                 Sıkça Sorulan Sorular
               </span>
             </div>
@@ -50,16 +52,16 @@ export default function FAQ() {
         <div className="space-y-0">
           {faqs.map((faq, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <div className="border-b border-border">
+              <div className="border-b border-white/[0.06]">
                 <button
                   onClick={() => setOpenIdx(openIdx === i ? null : i)}
                   className="w-full flex items-center justify-between py-6 text-left cursor-pointer group"
                 >
-                  <span className={`text-base lg:text-lg font-semibold pr-8 transition-colors ${openIdx === i ? "text-red" : "text-white group-hover:text-gray-300"}`}>
+                  <span className={`text-base lg:text-lg font-semibold pr-8 transition-colors duration-300 ${openIdx === i ? "text-red" : "text-white group-hover:text-gray-300"}`}>
                     {faq.q}
                   </span>
-                  <span className="flex-shrink-0 text-gray-500">
-                    {openIdx === i ? <FiMinus size={20} /> : <FiPlus size={20} />}
+                  <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openIdx === i ? "bg-red/10 text-red" : "text-gray-500"}`}>
+                    {openIdx === i ? <FiMinus size={18} /> : <FiPlus size={18} />}
                   </span>
                 </button>
                 <div className={`accordion-content ${openIdx === i ? "open" : ""}`}>

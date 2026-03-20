@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -45,19 +45,22 @@ export default function Navbar() {
       <TopBar hidden={scrolled} />
 
       <nav
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-500 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-md shadow-xl shadow-black/30 border-b border-gray-800/50"
+            ? "bg-dark/80 backdrop-blur-2xl shadow-2xl shadow-black/20 border-b border-white/[0.04]"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="bg-white rounded-lg p-1.5">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
+            <div className="bg-white rounded-lg p-1.5 transition-transform duration-300 group-hover:scale-105">
               <Image src="/logo.jpg" alt="MYD Özel Güvenlik" width={34} height={34} className="rounded" />
             </div>
-            <span className="text-xl font-bold tracking-wide"><span className="text-red">MYD</span> <span className="text-white">ÖZEL GÜVENLİK</span></span>
+            <span className="text-xl font-bold tracking-wide">
+              <span className="text-red">MYD</span>{" "}
+              <span className="text-white">ÖZEL GÜVENLİK</span>
+            </span>
           </Link>
 
           {/* Desktop Menu */}
@@ -67,25 +70,25 @@ export default function Navbar() {
                 <li key={link.href} className="relative group">
                   <Link
                     href={link.href}
-                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors inline-flex items-center gap-1 ${
+                    className={`nav-link text-[13px] font-medium uppercase tracking-[0.1em] transition-colors inline-flex items-center gap-1 ${
                       pathname === link.href || pathname === "/egitim-sartlari" || pathname === "/egitim-dokumanlari"
                         ? "text-white active"
                         : "text-gray-400 hover:text-white"
                     }`}
                   >
                     {link.label}
-                    <FiChevronDown size={13} className="transition-transform group-hover:rotate-180" />
+                    <FiChevronDown size={12} className="transition-transform duration-300 group-hover:rotate-180" />
                   </Link>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-dark-card border border-border rounded-xl shadow-2xl shadow-black/40 py-2 min-w-[280px]">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <div className="bg-dark-card/95 backdrop-blur-xl border border-white/[0.06] rounded-xl shadow-2xl shadow-black/50 py-2 min-w-[280px]">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className={`block px-5 py-3 text-sm transition-colors ${
+                          className={`block px-5 py-3 text-sm transition-all duration-200 ${
                             pathname === child.href
                               ? "text-red bg-red/5"
-                              : "text-gray-400 hover:text-white hover:bg-white/5"
+                              : "text-gray-400 hover:text-white hover:bg-white/[0.03] hover:pl-6"
                           }`}
                         >
                           {child.label}
@@ -98,7 +101,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`nav-link text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
+                    className={`nav-link text-[13px] font-medium uppercase tracking-[0.1em] transition-colors ${
                       pathname === link.href ? "text-white active" : "text-gray-400 hover:text-white"
                     }`}
                   >
@@ -118,7 +121,7 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Toggle */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-white p-2">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-white p-2 cursor-pointer">
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
@@ -126,8 +129,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-dark/98 backdrop-blur-xl z-40 lg:hidden flex items-center justify-center">
-          <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-white p-2">
+        <div className="fixed inset-0 bg-dark/98 backdrop-blur-2xl z-40 lg:hidden flex items-center justify-center">
+          <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-white p-2 cursor-pointer">
             <FiX size={28} />
           </button>
           <nav className="text-center">

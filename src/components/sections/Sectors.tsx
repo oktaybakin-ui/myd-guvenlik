@@ -21,14 +21,15 @@ export default function Sectors() {
         backgroundPosition: "center 30%",
       }}
     >
-      <div className="absolute inset-0 bg-black/80" />
-      <div className="absolute inset-0 bg-gradient-to-b from-red-dark/10 via-transparent to-dark/90" />
+      <div className="absolute inset-0 bg-black/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-red-dark/8 via-transparent to-dark/95" />
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "48px 48px" }} />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
         <ScrollReveal>
           <div className="flex items-center gap-3 justify-center mb-6">
-            <span className="w-10 h-[2px] bg-red rounded-full" />
-            <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+            <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+            <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">
               Hizmet Verdiğimiz Sektörler
             </span>
           </div>
@@ -42,13 +43,13 @@ export default function Sectors() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-gray-300 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-14">
+          <p className="text-gray-300/70 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-14">
             Farklı sektörlerin ihtiyaçlarına özel planlanan entegre hizmet yapımızla operasyonel verimlilik ve sürdürülebilirlik sağlıyoruz.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 lg:gap-4">
             {sectors.map((s) => (
               <span
                 key={s}

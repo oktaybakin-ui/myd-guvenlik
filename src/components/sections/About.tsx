@@ -36,13 +36,16 @@ export default function About() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-dark-light py-20 lg:py-28">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="relative bg-dark-light py-20 lg:py-28 overflow-hidden">
+      {/* Subtle accent */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red/[0.02] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left: Image */}
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden img-zoom border border-border">
+              <div className="rounded-2xl overflow-hidden img-zoom border border-white/[0.06]">
                 <Image
                   src="/hero.png"
                   alt="MYD Güvenlik Ekibi"
@@ -51,7 +54,7 @@ export default function About() {
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-7 py-5 shadow-2xl shadow-red/25 animate-float hidden sm:block">
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-red to-red-dark text-white rounded-2xl px-7 py-5 shadow-2xl shadow-red/20 animate-float hidden sm:block">
                 <div className="stat-value text-4xl font-bold">10+</div>
                 <div className="text-sm font-medium text-white/80 mt-1">Yıllık Tecrübe</div>
               </div>
@@ -62,8 +65,8 @@ export default function About() {
           <ScrollReveal delay={0.15}>
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[2px] bg-red rounded-full" />
-                <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+                <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+                <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">
                   Biz MYD Güvenlik&apos;iz
                 </span>
               </div>
@@ -80,11 +83,11 @@ export default function About() {
               {/* Stats row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
                 {aboutStats.map((stat, i) => (
-                  <div key={i}>
-                    <div className="text-2xl font-bold text-white stat-value">
+                  <div key={i} className="group">
+                    <div className="text-2xl font-bold text-white stat-value group-hover:text-red transition-colors">
                       {stat.static || <AnimatedCounter end={stat.value!} suffix={stat.suffix!} />}
                     </div>
-                    <div className="text-[11px] text-gray-500 uppercase tracking-[0.12em] font-medium mt-1">
+                    <div className="text-[10px] text-gray-500 uppercase tracking-[0.15em] font-medium mt-1">
                       {stat.label}
                     </div>
                   </div>
@@ -92,7 +95,7 @@ export default function About() {
               </div>
 
               {/* Tabs */}
-              <div className="border-b border-border mb-6">
+              <div className="border-b border-white/[0.06] mb-6">
                 <div className="flex gap-6 sm:gap-8">
                   {tabs.map((tab, i) => (
                     <button

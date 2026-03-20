@@ -13,8 +13,8 @@ export default function SectionTitle({ label, title, highlight, description, cen
     <div className={center ? "text-center" : ""}>
       <ScrollReveal>
         <div className={`flex items-center gap-3 mb-6 ${center ? "justify-center" : ""}`}>
-          <span className="w-10 h-[2px] bg-red rounded-full" />
-          <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">{label}</span>
+          <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+          <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">{label}</span>
         </div>
       </ScrollReveal>
       <ScrollReveal delay={0.1}>

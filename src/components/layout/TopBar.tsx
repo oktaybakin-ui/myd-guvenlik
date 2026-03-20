@@ -17,24 +17,24 @@ export default function TopBar({ hidden }: { hidden: boolean }) {
 
   return (
     <div
-      className={`bg-dark-card text-white text-[13px] transition-transform duration-300 border-b border-white/[0.06] ${hidden ? "-translate-y-full" : "translate-y-0"}`}
+      className={`bg-surface-dark text-white text-[13px] transition-all duration-500 border-b border-white/[0.04] ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-10 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <a href="mailto:mayda.mehmet32@gmail.com" className="hidden sm:flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors">
-            <FiMail size={13} />
-            <span>mayda.mehmet32@gmail.com</span>
+          <a href="mailto:mayda.mehmet32@gmail.com" className="hidden sm:flex items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+            <FiMail size={12} />
+            <span className="text-[12px]">mayda.mehmet32@gmail.com</span>
           </a>
 
           {/* Branch Selector */}
-          <div className="flex items-center gap-1 text-[12px]">
-            <FiMapPin size={12} className="text-red" />
+          <div className="flex items-center gap-1.5 text-[12px]">
+            <FiMapPin size={11} className="text-red" />
             {branches.map((b, i) => (
               <span key={b.id}>
-                {i > 0 && <span className="text-gray-600 mx-1">|</span>}
+                {i > 0 && <span className="text-gray-700 mx-1">|</span>}
                 <button
                   onClick={() => setBranchId(b.id)}
-                  className={`font-medium transition-colors ${
+                  className={`font-medium transition-colors cursor-pointer ${
                     branch.id === b.id
                       ? "text-red"
                       : "text-gray-500 hover:text-white"
@@ -54,9 +54,9 @@ export default function TopBar({ hidden }: { hidden: boolean }) {
               href={s.href}
               target={s.href !== "#" ? "_blank" : undefined}
               rel={s.href !== "#" ? "noopener noreferrer" : undefined}
-              className="text-gray-500 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-white transition-colors"
             >
-              <s.Icon size={14} />
+              <s.Icon size={13} />
             </a>
           ))}
         </div>

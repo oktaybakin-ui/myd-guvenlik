@@ -7,12 +7,15 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function CTA() {
   return (
-    <section className="bg-dark py-20 lg:py-28">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="relative bg-dark py-20 lg:py-28 overflow-hidden noise-overlay">
+      {/* Accent glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-red/[0.04] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left: Image */}
           <ScrollReveal direction="left">
-            <div className="relative rounded-2xl overflow-hidden border border-border img-zoom">
+            <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] img-zoom">
               <Image
                 src="/services/services1.png"
                 alt="İletişim"
@@ -20,7 +23,7 @@ export default function CTA() {
                 height={500}
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
             </div>
           </ScrollReveal>
 
@@ -28,8 +31,8 @@ export default function CTA() {
           <ScrollReveal delay={0.15}>
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[2px] bg-red rounded-full" />
-                <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+                <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+                <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">
                   Bize Ulaşın
                 </span>
               </div>

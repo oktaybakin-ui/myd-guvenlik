@@ -16,12 +16,14 @@ const advantages = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-dark py-20 lg:py-28">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="relative bg-dark py-20 lg:py-28 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red/[0.02] rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left: Image */}
           <ScrollReveal direction="left">
-            <div className="relative rounded-2xl overflow-hidden border border-border img-zoom">
+            <div className="relative rounded-2xl overflow-hidden border border-white/[0.06] img-zoom">
               <Image
                 src="/services/services1.png"
                 alt="MYD Güvenlik Neden Biz"
@@ -37,8 +39,8 @@ export default function WhyUs() {
           <ScrollReveal delay={0.15}>
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[2px] bg-red rounded-full" />
-                <span className="text-red text-[13px] font-semibold tracking-[0.2em] uppercase">
+                <span className="w-12 h-[2px] bg-gradient-to-r from-red to-red-light rounded-full" />
+                <span className="text-red text-xs font-semibold tracking-[0.25em] uppercase">
                   Neden MYD Güvenlik?
                 </span>
               </div>
@@ -53,9 +55,9 @@ export default function WhyUs() {
               </p>
 
               <div className="space-y-4 mb-10">
-                {advantages.map((item) => (
-                  <div key={item} className="flex items-start gap-4">
-                    <div className="w-6 h-6 bg-red/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                {advantages.map((item, i) => (
+                  <div key={item} className="flex items-start gap-4 group">
+                    <div className="w-6 h-6 bg-red/[0.08] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-red/20 transition-colors">
                       <FiCheckCircle className="text-red" size={14} />
                     </div>
                     <span className="text-gray-300 text-[15px] leading-relaxed">{item}</span>
