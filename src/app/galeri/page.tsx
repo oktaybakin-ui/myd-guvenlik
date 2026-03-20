@@ -68,8 +68,10 @@ export default function GaleriPage() {
                   <Image
                     src={src}
                     alt={`MYD Güvenlik Galeri ${i + 1}`}
-                    width={600}
-                    height={800}
+                    width={800}
+                    height={1000}
+                    quality={95}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
@@ -118,8 +120,10 @@ export default function GaleriPage() {
             <Image
               src={photos[lightbox]}
               alt={`MYD Güvenlik Galeri ${lightbox + 1}`}
-              width={1200}
-              height={1600}
+              width={1920}
+              height={1920}
+              quality={100}
+              sizes="90vw"
               className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-lg"
             />
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">
