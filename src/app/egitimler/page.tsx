@@ -18,7 +18,7 @@ const trainings = [
     hours: "120 Saat",
     desc: "Silahlı görev yapacak adaylar için silah bilgisi, atış eğitimi ve ileri güvenlik tekniklerini kapsayan genişletilmiş eğitim programıdır.",
     features: ["Silah bilgisi", "Atış eğitimi", "Taktik müdahale", "Tehdit değerlendirme", "Yakın savunma", "Mevzuat bilgisi"],
-    image: "/services/services3.png",
+    image: "/services/services1.png",
   },
   {
     title: "Yenileme Eğitimi",

@@ -70,6 +70,10 @@ export default function Hero() {
             </p>
             <p className="text-gray-300 text-lg lg:text-xl mt-2">
               Isparta ve Burdur şubelerimizde temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
+              <span className="inline-flex flex-wrap gap-x-5 gap-y-1 ml-3 text-white font-semibold">
+                <a href="tel:+905069038502" className="hover:text-red transition-colors"><span className="text-gray-400 font-normal">Isparta:</span> 0 (506) 903 85 02</a>
+                <a href="tel:+905010723215" className="hover:text-red transition-colors"><span className="text-gray-400 font-normal">Burdur:</span> 0 (501) 072 32 15</a>
+              </span>
             </p>
           </motion.div>
 
@@ -94,12 +98,9 @@ export default function Hero() {
             >
               Hizmetlerimiz için Teklif Alın <FiArrowRight size={18} />
             </Link>
-            <div>
-              <span className="text-gray-500 text-sm">Uzmanlarımıza Ulaşın:</span>
-              <a href="tel:+905069038502" className="block text-white font-semibold text-lg hover:text-red transition-colors">
-                0 (506) 903 85 02
-              </a>
-            </div>
+            <a href="tel:+905069038502" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+              Uzmanlarımıza Ulaşın: <span className="text-white">0 (506) 903 85 02</span>
+            </a>
           </motion.div>
         </div>
       </div>
