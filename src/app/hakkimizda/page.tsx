@@ -7,9 +7,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const stats = [
-  { icon: FiShield, value: 1000, suffix: "+", label: "Uzman Personel" },
-  { icon: FiUsers, value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
-  { icon: FiAward, value: 10, suffix: "+", label: "Yıllık Deneyim" },
+  { icon: FiShield, value: 270, suffix: "+", label: "ÖGG" },
+  { icon: FiUsers, value: 25, suffix: "", label: "Kurumsal İş Ortağı" },
+  { icon: FiAward, value: 5, suffix: "", label: "Hizmet Kategorisi" },
   { icon: FiClock, value: 7, suffix: "/24", label: "Kesintisiz Hizmet" },
 ];
 
@@ -36,7 +36,7 @@ const timeline = [
   { year: "2018", title: "Entegre Hizmetler", desc: "Temizlik, lojistik ve personel yönetimi hizmetleri portföye eklendi." },
   { year: "2020", title: "Dijital Dönüşüm", desc: "GPS takip, dijital raporlama ve personel yönetim sistemi devreye alındı." },
   { year: "2022", title: "ISO Sertifikası", desc: "ISO 9001 Kalite Yönetim Sistemi sertifikası alınarak standartlar belgelendi." },
-  { year: "2024", title: "1000+ Personel", desc: "Aktif personel sayısı 1000'i aşarak sektördeki konumunu güçlendirdi." },
+  { year: "2024", title: "270+ ÖGG", desc: "Aktif özel güvenlik görevlisi sayısı 270'i aşarak sektördeki konumunu güçlendirdi." },
 ];
 
 export default function HakkimizdaPage() {
