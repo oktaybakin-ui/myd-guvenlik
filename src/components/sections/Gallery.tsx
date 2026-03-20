@@ -34,6 +34,11 @@ const photos = [
   "/galeri/IMG_1743.JPG",
   "/galeri/d3c61ef7-9302-4f67-8b8d-272766f88ac8.JPG",
   "/galeri/e0a9b6f2-4c12-4e47-8cf8-6e492d01dbc2.JPG",
+  "/galeri/e3aa50c7-f292-4617-9401-097ac580aef2.jpg",
+  "/galeri/f7faf41f-6b8e-4c9e-8765-8086a5d72d14.jpg",
+  "/galeri/498cec63-8bd9-45f7-8d6b-c988f17a3403.jpg",
+  "/galeri/5072922d-26ea-4333-9103-10f5ee5df196.JPG",
+  "/galeri/d77fe647-baed-424a-bcef-db788da1da06.JPG",
 ];
 
 export default function Gallery() {
@@ -66,14 +71,14 @@ export default function Gallery() {
             onMouseLeave={() => setPaused(false)}
           >
             {/* Main image */}
-            <div className="relative rounded-2xl overflow-hidden border border-border aspect-[16/9]">
+            <div className="relative rounded-2xl overflow-hidden border border-border aspect-[16/9] bg-black">
               {photos.map((src, i) => (
                 <Image
                   key={src}
                   src={src}
                   alt={`MYD Güvenlik Galeri ${i + 1}`}
                   fill
-                  className={`object-cover transition-opacity duration-1000 ${
+                  className={`object-contain transition-opacity duration-1000 ${
                     current === i ? "opacity-100" : "opacity-0"
                   }`}
                   priority={i === 0}
