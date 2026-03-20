@@ -15,11 +15,11 @@ export default function Home() {
     <>
       <Hero />
       <Training />
+      <Gallery />
       <Services />
       <About />
       <Sectors />
       <WhyUs />
-      <Gallery />
       <References />
       <VideoGallery />
       <Instagram />

@@ -69,34 +69,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="badge-premium rounded-2xl px-8 py-6 mb-8 max-w-3xl"
+            className="badge-premium rounded-full px-6 py-3 mb-10 inline-flex items-center gap-3 flex-wrap text-sm lg:text-base"
           >
-            <p className="text-white font-bold text-xl lg:text-2xl leading-tight">
-              🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red-light">Lider Kurum</span>
-            </p>
-            <p className="text-gray-300 text-base lg:text-lg mt-3 leading-relaxed">
-              Isparta ve Burdur şubelerimizde temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.
-              <span className="flex flex-wrap gap-x-6 gap-y-2 mt-3 text-white font-semibold text-sm">
-                <a href="tel:+905069038502" className="hover:text-red-light transition-colors inline-flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-red rounded-full" />
-                  <span className="text-gray-400 font-normal">Isparta:</span> 0 (506) 903 85 02
-                </a>
-                <a href="tel:+905010723215" className="hover:text-red-light transition-colors inline-flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-red rounded-full" />
-                  <span className="text-gray-400 font-normal">Burdur:</span> 0 (501) 072 32 15
-                </a>
-              </span>
-            </p>
+            <span className="text-white font-bold">🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red-light">Lider Kurum</span></span>
+            <span className="text-gray-500">|</span>
+            <span className="text-gray-300">Temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.</span>
+            <span className="text-gray-500">|</span>
+            <a href="tel:+905069038502" className="text-white font-semibold hover:text-red-light transition-colors"><span className="text-gray-400 font-normal">Isparta:</span> 0 (506) 903 85 02</a>
+            <a href="tel:+905010723215" className="text-white font-semibold hover:text-red-light transition-colors"><span className="text-gray-400 font-normal">Burdur:</span> 0 (501) 072 32 15</a>
+            <span className="text-gray-500">|</span>
+            <span className="text-gray-300">270&apos;i aşkın özel güvenlik görevlimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.</span>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="text-gray-400 text-base lg:text-lg leading-relaxed mb-10 max-w-2xl"
-          >
-            270&apos;i aşkın özel güvenlik görevlimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 15 }}
