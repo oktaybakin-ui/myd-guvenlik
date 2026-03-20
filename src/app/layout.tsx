@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: "özel güvenlik, güvenlik hizmetleri, fiziki koruma, güvenlik eğitimi, MYD güvenlik, Isparta güvenlik",
   openGraph: {
     title: "MYD Özel Güvenlik Hizmetleri",
-    description: "1000+ eğitimli personel ile profesyonel güvenlik hizmetleri. 5188 sayılı kanun kapsamında yetkili.",
+    description: "270+ özel güvenlik görevlisi ile profesyonel güvenlik hizmetleri. 5188 sayılı kanun kapsamında yetkili.",
     url: "https://mydozelguvenlik.com",
     siteName: "MYD Özel Güvenlik",
     locale: "tr_TR",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MYD Özel Güvenlik Hizmetleri",
-    description: "1000+ eğitimli personel ile profesyonel güvenlik hizmetleri.",
+    description: "270+ özel güvenlik görevlisi ile profesyonel güvenlik hizmetleri.",
   },
 };
 

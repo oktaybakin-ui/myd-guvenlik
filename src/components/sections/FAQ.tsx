@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "MYD Güvenlik ile çalışmanın avantajları nelerdir?",
-    a: "10+ yıllık sektör deneyimi, 1000+ eğitimli personel, 7/24 kesintisiz hizmet, ISO sertifikalı kalite ve şeffaf raporlama anlayışı ile fark yaratıyoruz.",
+    a: "10+ yıllık sektör deneyimi, 270+ özel güvenlik görevlisi, 7/24 kesintisiz hizmet, ISO sertifikalı kalite ve şeffaf raporlama anlayışı ile fark yaratıyoruz.",
   },
 ];
 

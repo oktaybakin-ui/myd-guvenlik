@@ -64,7 +64,7 @@ const projects = [
 
 const projectStats = [
   { value: 30, suffix: "+", label: "Aktif Proje" },
-  { value: 1000, suffix: "+", label: "Saha Personeli" },
+  { value: 270, suffix: "+", label: "ÖGG" },
   { value: 6, suffix: "+", label: "Farklı Sektör" },
   { value: 10, suffix: "+", label: "Yıllık Deneyim" },
 ];

@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const advantages = [
   "Sektörel uzmanlık ve her sektöre özel güvenlik planlaması",
-  "1000+ eğitimli, sertifikalı personel kadrosu",
+  "270+ eğitimli, sertifikalı özel güvenlik görevlisi",
   "Dijital teknoloji entegrasyonu ile anlık takip",
   "7/24 aktif alarm izleme ve acil müdahale merkezi",
   "Şeffaf raporlama ve periyodik denetim sistemi",
