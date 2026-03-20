@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const stats = [
-  { value: 1000, suffix: "+", label: "Uzman Personel" },
-  { value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
-  { value: 25, suffix: "+", label: "Hizmet Kategorisi" },
+  { value: 270, suffix: "+", label: "ÖGG" },
+  { value: 25, suffix: "", label: "Kurumsal İş Ortağı" },
+  { value: 5, suffix: "", label: "Hizmet Kategorisi" },
   { label: "Kesintisiz Hizmet", static: "7/24" },
 ];
 
@@ -83,7 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="text-gray-400 text-base lg:text-lg leading-relaxed mb-10"
           >
-            1000&apos;i aşkın eğitimli personelimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
+            270&apos;i aşkın özel güvenlik görevlimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.
           </motion.p>
 
           <motion.div

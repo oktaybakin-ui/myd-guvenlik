@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FiAward, FiBookOpen, FiUsers, FiArrowRight, FiStar } from "react-icons/fi";
+import { FiAward, FiBookOpen, FiUsers, FiArrowRight } from "react-icons/fi";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const trainings = [
   { icon: FiAward, title: "Temel Güvenlik Eğitimi", hours: "120 Saat" },
   { icon: FiBookOpen, title: "Yenileme Eğitimi", hours: "60 Saat" },
   { icon: FiUsers, title: "Silah Farkı Eğitimi", hours: "Uygulamalı" },
-  { icon: FiStar, title: "İlk Yardım Eğitimi", hours: "Sertifikalı" },
 ];
 
 export default function Training() {
