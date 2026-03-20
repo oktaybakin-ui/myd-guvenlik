@@ -14,7 +14,7 @@ export default function CTA() {
           <ScrollReveal direction="left">
             <div className="relative rounded-2xl overflow-hidden border border-border img-zoom">
               <Image
-                src="/services/services3.png"
+                src="/services/services1.png"
                 alt="İletişim"
                 width={700}
                 height={500}
