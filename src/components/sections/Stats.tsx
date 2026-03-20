@@ -5,9 +5,9 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const stats = [
-  { icon: FiShield, value: 1000, suffix: "+", label: "Güvenlik Personeli" },
-  { icon: FiUsers, value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
-  { icon: FiAward, value: 10, suffix: "+", label: "Yıllık Deneyim" },
+  { icon: FiShield, value: 270, suffix: "+", label: "ÖGG" },
+  { icon: FiUsers, value: 25, suffix: "", label: "Kurumsal İş Ortağı" },
+  { icon: FiAward, value: 5, suffix: "", label: "Hizmet Kategorisi" },
   { icon: FiClock, value: 7, suffix: "/24", label: "Kesintisiz Hizmet" },
 ];
 

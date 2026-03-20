@@ -8,9 +8,9 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const aboutStats = [
-  { value: 1000, suffix: "+", label: "Uzman Personel" },
-  { value: 150, suffix: "+", label: "Kurumsal İş Ortağı" },
-  { value: 25, suffix: "+", label: "Hizmet Kategorisi" },
+  { value: 270, suffix: "+", label: "ÖGG" },
+  { value: 25, suffix: "", label: "Kurumsal İş Ortağı" },
+  { value: 5, suffix: "", label: "Hizmet Kategorisi" },
   { label: "Kesintisiz Hizmet", static: "7/24" },
 ];
 
