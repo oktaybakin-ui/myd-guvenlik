@@ -14,6 +14,7 @@ const references = [
   "Boğaziçi Koleji",
   "MG Gül Yağı Fabrikası",
   "Çokcanlar Tarım Makineleri",
+  "Özel Ata Hastanesi",
   "Karikatür Kafe",
   "Ustampark-2 Sitesi",
   "Ustampark-3 Sitesi",

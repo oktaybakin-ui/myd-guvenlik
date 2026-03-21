@@ -98,6 +98,15 @@ const projects = [
   },
   {
     icon: FiShield,
+    title: "Özel Ata Hastanesi",
+    location: "Isparta",
+    scope: "Güvenlik Hizmeti",
+    personnel: 2,
+    desc: "Özel Ata Hastanesinde güvenlik, giriş-çıkış kontrolü ve hasta güvenliği hizmetlerini profesyonel kadromuzla sağlıyoruz.",
+    highlights: ["Hastane Güvenliği", "Giriş-Çıkış Kontrolü"],
+  },
+  {
+    icon: FiShield,
     title: "MG Gül Yağı Fabrikası",
     location: "Isparta",
     scope: "Güvenlik Hizmeti",
