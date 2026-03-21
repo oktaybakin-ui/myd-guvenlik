@@ -39,6 +39,12 @@ const photos = [
   "/galeri/498cec63-8bd9-45f7-8d6b-c988f17a3403.jpg",
   "/galeri/5072922d-26ea-4333-9103-10f5ee5df196.JPG",
   "/galeri/d77fe647-baed-424a-bcef-db788da1da06.JPG",
+  "/galeri/galeri_32.jpg",
+  "/galeri/galeri_33.jpg",
+  "/galeri/galeri_34.jpg",
+  "/galeri/galeri_35.jpg",
+  "/galeri/galeri_36.jpg",
+  "/galeri/galeri_37.jpg",
 ];
 
 export default function Gallery() {

@@ -69,16 +69,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="badge-premium rounded-full px-6 py-3 mb-10 inline-flex items-center gap-3 flex-wrap text-sm lg:text-base"
+            className="mb-10 space-y-3"
           >
-            <span className="text-white font-bold">🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red-light">Lider Kurum</span></span>
-            <span className="text-gray-500">|</span>
-            <span className="text-gray-300">Temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz.</span>
-            <span className="text-gray-500">|</span>
-            <a href="tel:+905069038502" className="text-white font-semibold hover:text-red-light transition-colors"><span className="text-gray-400 font-normal">Isparta:</span> 0 (506) 903 85 02</a>
-            <a href="tel:+905010723215" className="text-white font-semibold hover:text-red-light transition-colors"><span className="text-gray-400 font-normal">Burdur:</span> 0 (501) 072 32 15</a>
-            <span className="text-gray-500">|</span>
-            <span className="text-gray-300">270&apos;i aşkın özel güvenlik görevlimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz.</span>
+            <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
+              🎓 Isparta &amp; Burdur&apos;da Özel Güvenlik Eğitimlerinde <span className="text-red-light font-bold">Lider Kurum</span> — Temel, yenileme ve silah farkı eğitimlerinde uzman kadromuzla geleceğin güvenlik profesyonellerini yetiştiriyoruz. <a href="tel:+905069038502" className="text-white font-semibold hover:text-red-light transition-colors">Isparta: 0 (506) 903 85 02</a> · <a href="tel:+905010723215" className="text-white font-semibold hover:text-red-light transition-colors">Burdur: 0 (501) 072 32 15</a>
+            </p>
+            <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
+              270&apos;i aşkın özel güvenlik görevlimiz ve entegre hizmet anlayışımızla kurumsal güvenliğinizi en üst düzeyde sağlıyoruz. Güvenlik, güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı alanlarında çözümler sunuyoruz.
+            </p>
           </motion.div>
 
           <motion.div

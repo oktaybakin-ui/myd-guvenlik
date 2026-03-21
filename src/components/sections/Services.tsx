@@ -15,7 +15,7 @@ export default function Services() {
           label="Hizmetlerimiz"
           title="Kapsamlı Güvenlik"
           highlight="Çözümleri"
-          description="İşletmenizin güvenlik ihtiyaçlarına özel, entegre ve profesyonel çözümler sunuyoruz."
+          description="Güvenlik, güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı alanlarında çözümler sunuyoruz."
         />
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mt-16">

@@ -28,7 +28,7 @@ const tabs = [
   {
     title: "Entegre Yönetim",
     content:
-      "Güvenlik, temizlik, personel yönetimi ve teknoloji çözümlerini tek çatı altında entegre ederek operasyonel verimlilik sağlıyoruz.",
+      "Güvenlik, güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı alanlarında tek çatı altında entegre çözümler sunarak operasyonel verimlilik sağlıyoruz.",
   },
 ];
 
