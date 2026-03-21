@@ -1,6 +1,6 @@
 "use client";
 
-import { FiShield, FiUsers, FiHome, FiTruck, FiMapPin, FiArrowRight } from "react-icons/fi";
+import { FiShield, FiUsers, FiHome, FiMapPin, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -8,64 +8,55 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 const projects = [
   {
     icon: FiShield,
-    title: "Organize Sanayi Bölgeleri",
-    location: "Isparta / Burdur",
-    scope: "Güvenlik & Lojistik",
+    title: "AKFEN Şehir Hastaneleri",
+    location: "Isparta / Eskişehir / Tekirdağ",
+    scope: "Özel Güvenlik",
     personnel: 120,
-    desc: "Birden fazla organize sanayi bölgesinde 7/24 güvenlik, giriş-çıkış kontrol ve lojistik destek hizmeti sağlıyoruz.",
-    highlights: ["7/24 Nöbet Sistemi", "Araç Giriş-Çıkış Kontrolü", "CCTV İzleme"],
-  },
-  {
-    icon: FiHome,
-    title: "Toplu Konut & Site Yönetimi",
-    location: "Isparta / Antalya",
-    scope: "Güvenlik & Yönetim",
-    personnel: 85,
-    desc: "Büyük ölçekli site ve toplu konut projelerinde güvenlik, temizlik ve teknik yönetim hizmetlerini entegre olarak sunuyoruz.",
-    highlights: ["Site Güvenliği", "Temizlik Yönetimi", "Teknik Bakım"],
+    desc: "AKFEN Isparta, Eskişehir ve Tekirdağ Şehir Hastanelerinde 7/24 güvenlik hizmeti, hasta ve ziyaretçi yönlendirme ve acil müdahale koordinasyonu sağlıyoruz.",
+    highlights: ["Hastane Güvenliği", "Ziyaretçi Kontrolü", "Acil Müdahale"],
   },
   {
     icon: FiUsers,
-    title: "Kamu Kurum ve Kuruluşları",
-    location: "Isparta / Bölgesel",
-    scope: "Özel Güvenlik",
-    personnel: 250,
-    desc: "Devlet kurumları, hastaneler ve eğitim kurumlarında mevzuata uygun profesyonel güvenlik hizmeti veriyoruz.",
-    highlights: ["Hastane Güvenliği", "Kurum Güvenliği", "Eğitim Tesisleri"],
-  },
-  {
-    icon: FiTruck,
-    title: "Lojistik & Depo Tesisleri",
-    location: "Isparta / Burdur",
-    scope: "Güvenlik & Lojistik",
-    personnel: 60,
-    desc: "Büyük ölçekli depo ve lojistik merkezlerinde sevkiyat güvenliği, personel yönetimi ve operasyonel destek sağlıyoruz.",
-    highlights: ["Depo Güvenliği", "Sevkiyat Kontrolü", "Personel Yönetimi"],
-  },
-  {
-    icon: FiShield,
-    title: "AVM & Ticari Tesisler",
+    title: "ERN HOLDİNG Kara Havacılık Okulu",
     location: "Isparta",
-    scope: "Güvenlik & Temizlik",
-    personnel: 95,
-    desc: "Alışveriş merkezleri ve ticari tesislerde güvenlik, temizlik ve müşteri yönlendirme hizmetlerini profesyonel ekibimizle yürütüyoruz.",
-    highlights: ["Tesis Güvenliği", "Hijyen Yönetimi", "Müşteri Yönlendirme"],
+    scope: "Özel Güvenlik",
+    personnel: 40,
+    desc: "Kara Havacılık Okulu bünyesinde giriş-çıkış kontrolü, çevre güvenliği ve tesis koruma hizmetlerini profesyonel kadromuzla yürütüyoruz.",
+    highlights: ["Tesis Koruma", "Giriş-Çıkış Kontrolü", "Çevre Güvenliği"],
   },
   {
     icon: FiHome,
-    title: "Enerji & Endüstriyel Tesisler",
-    location: "Bölgesel",
-    scope: "Güvenlik & Operasyon",
-    personnel: 70,
-    desc: "Enerji santralleri ve endüstriyel tesislerde yüksek güvenlik standartlarına uygun koruma ve operasyon desteği sunuyoruz.",
-    highlights: ["Tesis Koruma", "Çevre Güvenliği", "Risk Yönetimi"],
+    title: "AKFEN 5000 Kişilik Öğrenci Yurdu",
+    location: "Isparta",
+    scope: "Güvenlik & Yönetim",
+    personnel: 35,
+    desc: "5000 kişi kapasiteli öğrenci yurdunda güvenlik, giriş-çıkış kontrolü ve genel düzen sağlama hizmetlerini kesintisiz olarak sunuyoruz.",
+    highlights: ["Yurt Güvenliği", "Kimlik Kontrolü", "7/24 Nöbet"],
+  },
+  {
+    icon: FiShield,
+    title: "AEK Koleji",
+    location: "Isparta",
+    scope: "Özel Güvenlik",
+    personnel: 10,
+    desc: "Eğitim kurumunda öğrenci ve personel güvenliğini sağlayarak, okul giriş-çıkış kontrolü ve kampüs güvenliği hizmeti veriyoruz.",
+    highlights: ["Okul Güvenliği", "Öğrenci Güvenliği", "Kampüs Kontrolü"],
+  },
+  {
+    icon: FiHome,
+    title: "Site Yönetim Danışmanlığı",
+    location: "Isparta",
+    scope: "Güvenlik & Site Yönetimi",
+    personnel: 45,
+    desc: "Ustampark-2, Ustampark-3, Metrocity ve Serracity sitelerinde güvenlik, site yönetim danışmanlığı ve genel düzen hizmetlerini profesyonel ekibimizle sağlıyoruz.",
+    highlights: ["Site Güvenliği", "Yönetim Danışmanlığı", "Genel Düzen"],
   },
 ];
 
 const projectStats = [
-  { value: 30, suffix: "+", label: "Aktif Proje" },
+  { value: 10, suffix: "+", label: "Aktif Proje" },
   { value: 270, suffix: "+", label: "ÖGG" },
-  { value: 6, suffix: "+", label: "Farklı Sektör" },
+  { value: 5, suffix: "", label: "Hizmet Kategorisi" },
   { value: 10, suffix: "+", label: "Yıllık Deneyim" },
 ];
 
@@ -85,7 +76,7 @@ export default function ProjelerimizPage() {
                 Hizmet Verdiğimiz <span className="text-gradient-red">Projeler</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
-                Organize sanayi bölgelerinden kamu kurumlarına, site yönetiminden endüstriyel tesislere kadar geniş bir yelpazede hizmet sunuyoruz.
+                Şehir hastanelerinden eğitim kurumlarına, öğrenci yurtlarından site yönetimine kadar geniş bir yelpazede profesyonel güvenlik hizmeti sunuyoruz.
               </p>
             </div>
           </ScrollReveal>
