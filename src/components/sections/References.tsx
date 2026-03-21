@@ -5,9 +5,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { FiCheck } from "react-icons/fi";
 
 const references = [
-  "AKFEN Isparta Şehir Hastanesi",
-  "AKFEN Eskişehir Şehir Hastanesi",
-  "AKFEN Tekirdağ Şehir Hastanesi",
+  "AKFEN Isparta Şehir Hastanesi Şantiyesi",
+  "AKFEN Eskişehir Şehir Hastanesi Şantiyesi",
+  "AKFEN Tekirdağ Şehir Hastanesi Şantiyesi",
   "ERN HOLDİNG Kara Havacılık Okulu",
   "AKFEN 5000 Kişilik Öğrenci Yurdu",
   "AEK Koleji",
