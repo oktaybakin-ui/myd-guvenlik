@@ -8,6 +8,8 @@ const videos = [
   { src: "/videos/video2.mp4", title: "MYD Güvenlik Saha" },
   { src: "/videos/video3.mp4", title: "MYD Güvenlik Tanıtım" },
   { src: "/videos/video4.mp4", title: "MYD Güvenlik" },
+  { src: "/videos/video5.mp4", title: "MYD Güvenlik Operasyon" },
+  { src: "/videos/video6.mp4", title: "MYD Güvenlik Ekip" },
 ];
 
 export default function VideoGallery() {
@@ -40,7 +42,7 @@ export default function VideoGallery() {
           </div>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((video, i) => (
             <ScrollReveal key={video.src} delay={i * 0.15}>
               <div className={`bg-dark-light border rounded-2xl overflow-hidden group hover-lift transition-all duration-300 ${activeIndex === i ? "border-red ring-1 ring-red/30" : "border-border"}`}>
