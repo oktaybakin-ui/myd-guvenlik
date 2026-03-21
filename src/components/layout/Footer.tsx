@@ -44,7 +44,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-gray-500 text-base leading-relaxed mb-8 max-w-lg">
-            Güvenlik, temizlik, lojistik ve personel yönetiminde profesyonel çözümler sunuyoruz.
+            Güvenlik, güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı alanlarında çözümler sunuyoruz.
           </p>
           <div className="flex gap-3">
             {socials.map((s, i) => (

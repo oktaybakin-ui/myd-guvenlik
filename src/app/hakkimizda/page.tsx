@@ -124,7 +124,7 @@ export default function HakkimizdaPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-5">Misyonumuz</h3>
                 <p className="text-gray-400 text-base leading-relaxed">
-                  Güvenlik, temizlik, lojistik ve personel yönetiminde sektör standartlarının üzerinde hizmet sunarak müşterilerimizin operasyonel süreçlerini güvenilir, verimli ve sürdürülebilir hale getirmek. 5188 sayılı kanun kapsamında, yasal mevzuata tam uyumlu çözümler üretmek.
+                  Güvenlik, güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı alanlarında sektör standartlarının üzerinde hizmet sunarak müşterilerimizin operasyonel süreçlerini güvenilir, verimli ve sürdürülebilir hale getirmek. 5188 sayılı kanun kapsamında, yasal mevzuata tam uyumlu çözümler üretmek.
                 </p>
               </div>
             </ScrollReveal>
