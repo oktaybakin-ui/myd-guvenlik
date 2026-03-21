@@ -15,7 +15,7 @@ export default function Sectors() {
     <section
       className="relative py-20 lg:py-28 overflow-hidden"
       style={{
-        backgroundImage: "url('/services/services4.png')",
+        backgroundImage: "url('/services/services1.png')",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center 30%",

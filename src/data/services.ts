@@ -86,7 +86,7 @@ export const services: ServiceData[] = [
       "Düzenli temizlik programları ile çalışma ortamlarınızın sürekli temiz kalmasını sağlıyoruz.",
       "İş güvenliği standartlarına uygun kimyasal ve ekipman kullanımı ile hizmet veriyoruz.",
     ],
-    image: "/services/services4.png",
+    image: "/services/services1.png",
   },
   {
     slug: "lojistik-destek",
