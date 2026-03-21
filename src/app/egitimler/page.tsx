@@ -25,7 +25,7 @@ const trainings = [
     hours: "60 Saat",
     desc: "Kimlik kartı süresini dolduran özel güvenlik görevlilerinin mesleki yeterliliklerini güncellemek için düzenlenen periyodik eğitim programıdır.",
     features: ["Güncel mevzuat", "İleri iletişim", "Pratik tatbikatlar", "İlk yardım yenileme", "Teknoloji kullanımı", "Saha uygulamaları"],
-    image: "/services/services4.png",
+    image: "/galeri/IMG_1720.JPG",
   },
   {
     title: "Silah Fark Eğitimi",
