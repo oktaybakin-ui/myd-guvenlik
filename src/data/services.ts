@@ -1,4 +1,4 @@
-import { FiShield, FiFileText, FiCamera, FiUsers, FiHome, FiTruck, FiAward } from "react-icons/fi";
+import { FiShield, FiFileText, FiDroplet, FiUsers, FiHome, FiTruck, FiAward } from "react-icons/fi";
 import type { IconType } from "react-icons";
 
 export interface ServiceData {
@@ -71,11 +71,11 @@ export const services: ServiceData[] = [
       "Acil durum eylem planları oluşturarak olası senaryolara karşı hazırlıklı olmanızı sağlıyoruz.",
       "Periyodik denetim ve değerlendirmelerle güvenlik seviyenizi sürekli güncel tutuyoruz.",
     ],
-    image: "/services/services3.png",
+    image: "/services/services2.png",
   },
   {
     slug: "temizlik-hijyen",
-    icon: FiCamera,
+    icon: FiDroplet,
     title: "Temizlik & Hijyen Hizmetleri",
     shortDesc: "Endüstriyel ve kurumsal alanlarda profesyonel temizlik, hijyen yönetimi ve dezenfeksiyon hizmetleri sunuyoruz.",
     desc: "Endüstriyel tesisler, ofisler, hastaneler ve kurumsal alanlarda profesyonel temizlik, hijyen yönetimi ve dezenfeksiyon hizmetleri sunuyoruz.",

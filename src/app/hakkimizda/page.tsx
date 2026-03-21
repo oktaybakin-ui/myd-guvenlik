@@ -33,7 +33,7 @@ const values = [
 const timeline = [
   { year: "2014", title: "Kuruluş", desc: "MYD Özel Güvenlik, Isparta merkezli olarak güvenlik sektörüne adım attı." },
   { year: "2016", title: "Kurumsal Büyüme", desc: "İlk büyük kurumsal sözleşmeler imzalanarak hizmet portföyü genişletildi." },
-  { year: "2018", title: "Entegre Hizmetler", desc: "Temizlik, lojistik ve personel yönetimi hizmetleri portföye eklendi." },
+  { year: "2018", title: "Entegre Hizmetler", desc: "Güvenlik danışmanlığı ve profesyonel site yönetim danışmanlığı hizmetleri portföye eklendi." },
   { year: "2020", title: "Dijital Dönüşüm", desc: "GPS takip, dijital raporlama ve personel yönetim sistemi devreye alındı." },
   { year: "2022", title: "ISO Sertifikası", desc: "ISO 9001 Kalite Yönetim Sistemi sertifikası alınarak standartlar belgelendi." },
   { year: "2024", title: "270+ ÖGG", desc: "Aktif özel güvenlik görevlisi sayısı 270'i aşarak sektördeki konumunu güçlendirdi." },
@@ -69,7 +69,7 @@ export default function HakkimizdaPage() {
             <ScrollReveal direction="left">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden img-zoom border border-border shadow-2xl">
-                  <Image src="/hero.png" alt="MYD Güvenlik" width={640} height={480} className="w-full h-auto object-cover aspect-[4/3]" />
+                  <Image src="/hero.png" alt="MYD Güvenlik" width={640} height={480} quality={100} className="w-full h-auto object-cover aspect-[4/3]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-red text-white rounded-2xl px-8 py-6 shadow-2xl shadow-red/20 hidden sm:block">

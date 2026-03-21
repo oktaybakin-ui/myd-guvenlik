@@ -53,6 +53,7 @@ export default function EgitimlerPage() {
                         alt={t.title}
                         width={640}
                         height={420}
+                        quality={100}
                         className="w-full h-auto object-cover aspect-[3/2]"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />

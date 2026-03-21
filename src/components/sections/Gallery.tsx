@@ -84,7 +84,7 @@ export default function Gallery() {
                   src={src}
                   alt={`MYD Güvenlik Galeri ${i + 1}`}
                   fill
-                  quality={95}
+                  quality={100}
                   sizes="(max-width: 768px) 100vw, 1400px"
                   className={`object-contain transition-opacity duration-1000 ${
                     current === i ? "opacity-100" : "opacity-0"

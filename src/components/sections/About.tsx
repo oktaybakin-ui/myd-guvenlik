@@ -51,6 +51,7 @@ export default function About() {
                   alt="MYD Güvenlik Ekibi"
                   width={700}
                   height={500}
+                  quality={100}
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
               </div>
