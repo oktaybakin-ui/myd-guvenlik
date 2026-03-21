@@ -11,10 +11,23 @@ const references = [
   "ERN HOLDİNG Kara Havacılık Okulu",
   "AKFEN 5000 Kişilik Öğrenci Yurdu",
   "AEK Koleji",
+  "Boğaziçi Koleji",
+  "MG Gül Yağı Fabrikası",
+  "Çokcanlar Tarım Makineleri",
+  "Karikatür Kafe",
   "Ustampark-2 Sitesi",
   "Ustampark-3 Sitesi",
   "Metrocity Sitesi",
   "Serracity Sitesi",
+  "Hayat Ağacı Evleri",
+  "Ustam Gökçay Evleri",
+  "Metro Vizyon Sitesi",
+  "Metro Prestij Sitesi",
+  "Metroklas Sitesi",
+  "Koçal Yaşam Sitesi",
+  "Yeni Yaka Sitesi",
+  "Kadızade Konutları",
+  "Kadızade Yaşam Evleri",
 ];
 
 const categories = [
